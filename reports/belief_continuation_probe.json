@@ -1,0 +1,2992 @@
+{
+  "initial_sha256": "505985d5d667df43bc9cd0a6de5475d9fe6108f600167ee30b1a3560a80adcca",
+  "lr": 0.002,
+  "fresh_adam": true,
+  "seed_base": 670000,
+  "layouts": 256,
+  "episodes": 1024,
+  "eval_seed_base": 680000,
+  "games": 512,
+  "opening": "random",
+  "batches": [
+    {
+      "layouts": 16,
+      "wins": 21,
+      "samples": 120,
+      "epochs": [
+        {
+          "loss": -0.5937500447034836,
+          "grad_norm": 0.8835766315460205,
+          "approx_kl": 7.450580596923829e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.6010985672473907,
+          "grad_norm": 0.8778371214866638,
+          "approx_kl": 7.355387012163798e-05,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.6083037555217743,
+          "grad_norm": 0.8715798258781433,
+          "approx_kl": 0.00029800161719322204,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 12,
+      "samples": 97,
+      "epochs": [
+        {
+          "loss": -0.06250001303851604,
+          "grad_norm": 0.3340408504009247,
+          "approx_kl": -6.144808739730992e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.06441145483404398,
+          "grad_norm": 0.33417636156082153,
+          "approx_kl": 7.479153957563577e-05,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.06630022171884775,
+          "grad_norm": 0.3341556489467621,
+          "approx_kl": 0.0002730464197925686,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "samples": 105,
+      "epochs": [
+        {
+          "loss": -0.21874987334012985,
+          "grad_norm": 0.3476680815219879,
+          "approx_kl": 0.0,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.21880176663398743,
+          "grad_norm": 0.3492145538330078,
+          "approx_kl": 1.8926461537679038e-05,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.21965890377759933,
+          "grad_norm": 0.34929633140563965,
+          "approx_kl": 5.0607181730724516e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "samples": 61,
+      "epochs": [
+        {
+          "loss": -0.13541662693023682,
+          "grad_norm": 0.23352846503257751,
+          "approx_kl": -9.771253241867316e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.13562388718128204,
+          "grad_norm": 0.23275640606880188,
+          "approx_kl": 2.6675521350297772e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.1360030621290207,
+          "grad_norm": 0.2322218120098114,
+          "approx_kl": 9.317867091444671e-06,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 38,
+      "samples": 64,
+      "epochs": [
+        {
+          "loss": -0.291666716337204,
+          "grad_norm": 0.5828045010566711,
+          "approx_kl": 4.656612873077393e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.29232537746429443,
+          "grad_norm": 0.5836729407310486,
+          "approx_kl": 2.636108547449112e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.29330942034721375,
+          "grad_norm": 0.5847358107566833,
+          "approx_kl": 1.2800097465515137e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "samples": 61,
+      "epochs": [
+        {
+          "loss": 0.01041673868894577,
+          "grad_norm": 0.16870136559009552,
+          "approx_kl": -1.9542506483734632e-09,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": 0.01005912572145462,
+          "grad_norm": 0.16876299679279327,
+          "approx_kl": 1.6073711582871734e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": 0.00953567773103714,
+          "grad_norm": 0.16892018914222717,
+          "approx_kl": 6.938566927049981e-06,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 20,
+      "samples": 125,
+      "epochs": [
+        {
+          "loss": -0.46874991059303284,
+          "grad_norm": 0.24305357038974762,
+          "approx_kl": 9.5367431640625e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.4694390594959259,
+          "grad_norm": 0.23968999087810516,
+          "approx_kl": 3.5399198532104493e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.47044311463832855,
+          "grad_norm": 0.23513062298297882,
+          "approx_kl": 1.784747838973999e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "samples": 121,
+      "epochs": [
+        {
+          "loss": -0.21874989569187164,
+          "grad_norm": 0.7969188094139099,
+          "approx_kl": -1.477801110133652e-09,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.21991022676229477,
+          "grad_norm": 0.7976782321929932,
+          "approx_kl": 2.4881244690950253e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.22265389561653137,
+          "grad_norm": 0.7982462048530579,
+          "approx_kl": 1.5635135745214035e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 34,
+      "samples": 38,
+      "epochs": [
+        {
+          "loss": 0.0,
+          "grad_norm": 0.356340616941452,
+          "approx_kl": 0.0,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.00019375421106815338,
+          "grad_norm": 0.3568015694618225,
+          "approx_kl": 6.642780805888929e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.0005896603688597679,
+          "grad_norm": 0.3567658066749573,
+          "approx_kl": 2.7535777342946905e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "samples": 131,
+      "epochs": [
+        {
+          "loss": -0.43749985843896866,
+          "grad_norm": 0.3631470501422882,
+          "approx_kl": 2.2749864418088024e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.43852609395980835,
+          "grad_norm": 0.3628600835800171,
+          "approx_kl": 4.851579211140407e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.4397297240793705,
+          "grad_norm": 0.362729549407959,
+          "approx_kl": 1.974312858727142e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "samples": 146,
+      "epochs": [
+        {
+          "loss": -0.09375007823109627,
+          "grad_norm": 0.138412207365036,
+          "approx_kl": 1.0206274790306613e-09,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.09455109387636185,
+          "grad_norm": 0.13874153792858124,
+          "approx_kl": 6.339117272259438e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.09539710730314255,
+          "grad_norm": 0.13929668068885803,
+          "approx_kl": 2.542362637715797e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "samples": 93,
+      "epochs": [
+        {
+          "loss": -0.270833395421505,
+          "grad_norm": 0.41014301776885986,
+          "approx_kl": -6.409101588751681e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.2710826024413109,
+          "grad_norm": 0.4113244414329529,
+          "approx_kl": 9.001262726322298e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.27157168090343475,
+          "grad_norm": 0.41227036714553833,
+          "approx_kl": 3.480526708787487e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "samples": 81,
+      "epochs": [
+        {
+          "loss": -0.1354166567325592,
+          "grad_norm": 0.4972662627696991,
+          "approx_kl": 7.358598120418595e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.13515988737344742,
+          "grad_norm": 0.4977009892463684,
+          "approx_kl": 3.699443222563944e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.1351831778883934,
+          "grad_norm": 0.497835248708725,
+          "approx_kl": 1.2819597750534246e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "samples": 110,
+      "epochs": [
+        {
+          "loss": -0.04166658967733383,
+          "grad_norm": 0.4138651192188263,
+          "approx_kl": 2.7093020352450285e-09,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.04203787073493004,
+          "grad_norm": 0.4140317738056183,
+          "approx_kl": 1.5952370383522726e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.04272352531552315,
+          "grad_norm": 0.41436171531677246,
+          "approx_kl": 6.578185341574929e-06,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 21,
+      "samples": 136,
+      "epochs": [
+        {
+          "loss": -0.729166567325592,
+          "grad_norm": 0.35374292731285095,
+          "approx_kl": 4.3826944687787224e-10,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.729496642947197,
+          "grad_norm": 0.353421151638031,
+          "approx_kl": 1.2850060182459214e-06,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.730493426322937,
+          "grad_norm": 0.3527747392654419,
+          "approx_kl": 7.559709689196418e-06,
+          "clipped_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "samples": 92,
+      "epochs": [
+        {
+          "loss": -0.12500004097819328,
+          "grad_norm": 0.35124969482421875,
+          "approx_kl": 0.0,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.12681826949119568,
+          "grad_norm": 0.34092098474502563,
+          "approx_kl": 1.5438088904256407e-05,
+          "clipped_fraction": 0.0
+        },
+        {
+          "loss": -0.12888312712311745,
+          "grad_norm": 0.3290049731731415,
+          "approx_kl": 7.272171585456185e-05,
+          "clipped_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "wins": [
+    248,
+    251
+  ],
+  "paired": {
+    "pairs": 512,
+    "baseline": "live",
+    "challenger": "continued",
+    "live_only": 5,
+    "continued_only": 8,
+    "win_rate_delta": 0.0059,
+    "win_rate_delta_ci95_paired_bootstrap": [
+      -0.0078,
+      0.0195
+    ],
+    "p_value": 0.581055
+  },
+  "boards": [
+    {
+      "seed": 680000,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680001,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680002,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680003,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680004,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680005,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680006,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680007,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680008,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680009,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680010,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680011,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680012,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680013,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680014,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680015,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680016,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680017,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680018,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680019,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680020,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680021,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680022,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680023,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680024,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680025,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680026,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680027,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680028,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680029,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680030,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680031,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680032,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680033,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680034,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680035,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680036,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680037,
+      "live": "win",
+      "continued": "guess"
+    },
+    {
+      "seed": 680038,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680039,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680040,
+      "live": "win",
+      "continued": "guess"
+    },
+    {
+      "seed": 680041,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680042,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680043,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680044,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680045,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680046,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680047,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680048,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680049,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680050,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680051,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680052,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680053,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680054,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680055,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680056,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680057,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680058,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680059,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680060,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680061,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680062,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680063,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680064,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680065,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680066,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680067,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680068,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680069,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680070,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680071,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680072,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680073,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680074,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680075,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680076,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680077,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680078,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680079,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680080,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680081,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680082,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680083,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680084,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680085,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680086,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680087,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680088,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680089,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680090,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680091,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680092,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680093,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680094,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680095,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680096,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680097,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680098,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680099,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680100,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680101,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680102,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680103,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680104,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680105,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680106,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680107,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680108,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680109,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680110,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680111,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680112,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680113,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680114,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680115,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680116,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680117,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680118,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680119,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680120,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680121,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680122,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680123,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680124,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680125,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680126,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680127,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680128,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680129,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680130,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680131,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680132,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680133,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680134,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680135,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680136,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680137,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680138,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680139,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680140,
+      "live": "win",
+      "continued": "guess"
+    },
+    {
+      "seed": 680141,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680142,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680143,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680144,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680145,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680146,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680147,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680148,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680149,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680150,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680151,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680152,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680153,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680154,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680155,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680156,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680157,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680158,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680159,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680160,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680161,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680162,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680163,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680164,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680165,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680166,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680167,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680168,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680169,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680170,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680171,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680172,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680173,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680174,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680175,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680176,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680177,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680178,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680179,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680180,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680181,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680182,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680183,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680184,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680185,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680186,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680187,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680188,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680189,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680190,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680191,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680192,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680193,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680194,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680195,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680196,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680197,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680198,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680199,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680200,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680201,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680202,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680203,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680204,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680205,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680206,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680207,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680208,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680209,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680210,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680211,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680212,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680213,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680214,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680215,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680216,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680217,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680218,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680219,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680220,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680221,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680222,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680223,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680224,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680225,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680226,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680227,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680228,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680229,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680230,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680231,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680232,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680233,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680234,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680235,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680236,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680237,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680238,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680239,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680240,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680241,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680242,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680243,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680244,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680245,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680246,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680247,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680248,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680249,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680250,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680251,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680252,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680253,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680254,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680255,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680256,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680257,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680258,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680259,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680260,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680261,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680262,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680263,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680264,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680265,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680266,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680267,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680268,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680269,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680270,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680271,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680272,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680273,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680274,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680275,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680276,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680277,
+      "live": "win",
+      "continued": "guess"
+    },
+    {
+      "seed": 680278,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680279,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680280,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680281,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680282,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680283,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680284,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680285,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680286,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680287,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680288,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680289,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680290,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680291,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680292,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680293,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680294,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680295,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680296,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680297,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680298,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680299,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680300,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680301,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680302,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680303,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680304,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680305,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680306,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680307,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680308,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680309,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680310,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680311,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680312,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680313,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680314,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680315,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680316,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680317,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680318,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680319,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680320,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680321,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680322,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680323,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680324,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680325,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680326,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680327,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680328,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680329,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680330,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680331,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680332,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680333,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680334,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680335,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680336,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680337,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680338,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680339,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680340,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680341,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680342,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680343,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680344,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680345,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680346,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680347,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680348,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680349,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680350,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680351,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680352,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680353,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680354,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680355,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680356,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680357,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680358,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680359,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680360,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680361,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680362,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680363,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680364,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680365,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680366,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680367,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680368,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680369,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680370,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680371,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680372,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680373,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680374,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680375,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680376,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680377,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680378,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680379,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680380,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680381,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680382,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680383,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680384,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680385,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680386,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680387,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680388,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680389,
+      "live": "win",
+      "continued": "guess"
+    },
+    {
+      "seed": 680390,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680391,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680392,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680393,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680394,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680395,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680396,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680397,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680398,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680399,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680400,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680401,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680402,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680403,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680404,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680405,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680406,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680407,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680408,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680409,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680410,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680411,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680412,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680413,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680414,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680415,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680416,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680417,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680418,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680419,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680420,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680421,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680422,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680423,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680424,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680425,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680426,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680427,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680428,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680429,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680430,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680431,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680432,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680433,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680434,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680435,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680436,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680437,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680438,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680439,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680440,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680441,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680442,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680443,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680444,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680445,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680446,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680447,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680448,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680449,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680450,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680451,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680452,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680453,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680454,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680455,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680456,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680457,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680458,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680459,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680460,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680461,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680462,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680463,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680464,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680465,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680466,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680467,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680468,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680469,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680470,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680471,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680472,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680473,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680474,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680475,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680476,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680477,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680478,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680479,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680480,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680481,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680482,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680483,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680484,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680485,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680486,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680487,
+      "live": "guess",
+      "continued": "win"
+    },
+    {
+      "seed": 680488,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680489,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680490,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680491,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680492,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680493,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680494,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680495,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680496,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680497,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680498,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680499,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680500,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680501,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680502,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680503,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680504,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680505,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680506,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680507,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680508,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680509,
+      "live": "guess",
+      "continued": "guess"
+    },
+    {
+      "seed": 680510,
+      "live": "win",
+      "continued": "win"
+    },
+    {
+      "seed": 680511,
+      "live": "guess",
+      "continued": "guess"
+    }
+  ]
+}

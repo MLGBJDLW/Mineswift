@@ -1,0 +1,1875 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "opening": "random",
+  "games": 256,
+  "seed_base": 480000,
+  "train_seed_base": 470000,
+  "train_games": 512,
+  "model_seed": 17,
+  "checkpoint": "models\\rl_guess.pt",
+  "guess_selection": "greedy",
+  "policies": {
+    "endgame": {
+      "policy": "endgame",
+      "games": 256,
+      "wins": 133,
+      "elapsed_s": 17.259,
+      "win_rate": 0.5195,
+      "ci95": [
+        0.4585,
+        0.58
+      ],
+      "losses_logic": 0,
+      "losses_guess": 123,
+      "stuck": 0,
+      "mean_moves": 210.77,
+      "mean_ms_per_move": 1.51,
+      "degraded": 2,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      },
+      "endgame_reached_games": 134,
+      "endgame_changed_games": 24,
+      "endgame_solved": 183,
+      "endgame_switches": 27
+    },
+    "rl": {
+      "policy": "rl",
+      "games": 256,
+      "wins": 92,
+      "elapsed_s": 78.112,
+      "win_rate": 0.3594,
+      "ci95": [
+        0.3031,
+        0.4198
+      ],
+      "losses_logic": 0,
+      "losses_guess": 164,
+      "stuck": 0,
+      "mean_moves": 188.56,
+      "mean_ms_per_move": 1.61,
+      "degraded": 0,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    }
+  },
+  "paired": {
+    "pairs": 256,
+    "baseline": "endgame",
+    "challenger": "rl",
+    "endgame_only": 66,
+    "rl_only": 25,
+    "win_rate_delta": -0.1602,
+    "win_rate_delta_ci95_paired_bootstrap": [
+      -0.2305,
+      -0.0898
+    ],
+    "p_value": 2e-05
+  },
+  "boards": [
+    {
+      "seed": 480000,
+      "first_cell": 279,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480001,
+      "first_cell": 253,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480002,
+      "first_cell": 215,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480003,
+      "first_cell": 324,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480004,
+      "first_cell": 393,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480005,
+      "first_cell": 37,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480006,
+      "first_cell": 238,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480007,
+      "first_cell": 442,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480008,
+      "first_cell": 35,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480009,
+      "first_cell": 107,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480010,
+      "first_cell": 3,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480011,
+      "first_cell": 276,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480012,
+      "first_cell": 122,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480013,
+      "first_cell": 139,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480014,
+      "first_cell": 309,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480015,
+      "first_cell": 40,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480016,
+      "first_cell": 257,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480017,
+      "first_cell": 403,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480018,
+      "first_cell": 127,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480019,
+      "first_cell": 287,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480020,
+      "first_cell": 226,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480021,
+      "first_cell": 70,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480022,
+      "first_cell": 247,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480023,
+      "first_cell": 25,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480024,
+      "first_cell": 462,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480025,
+      "first_cell": 383,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480026,
+      "first_cell": 352,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480027,
+      "first_cell": 307,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480028,
+      "first_cell": 229,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480029,
+      "first_cell": 19,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480030,
+      "first_cell": 34,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480031,
+      "first_cell": 360,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480032,
+      "first_cell": 71,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480033,
+      "first_cell": 264,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480034,
+      "first_cell": 81,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480035,
+      "first_cell": 258,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480036,
+      "first_cell": 63,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480037,
+      "first_cell": 40,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480038,
+      "first_cell": 61,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480039,
+      "first_cell": 48,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480040,
+      "first_cell": 441,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480041,
+      "first_cell": 368,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480042,
+      "first_cell": 353,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480043,
+      "first_cell": 309,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480044,
+      "first_cell": 366,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480045,
+      "first_cell": 328,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480046,
+      "first_cell": 297,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480047,
+      "first_cell": 318,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480048,
+      "first_cell": 209,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480049,
+      "first_cell": 358,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480050,
+      "first_cell": 136,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480051,
+      "first_cell": 450,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480052,
+      "first_cell": 316,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480053,
+      "first_cell": 460,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480054,
+      "first_cell": 453,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480055,
+      "first_cell": 338,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480056,
+      "first_cell": 287,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480057,
+      "first_cell": 274,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480058,
+      "first_cell": 15,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480059,
+      "first_cell": 288,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480060,
+      "first_cell": 103,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480061,
+      "first_cell": 231,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480062,
+      "first_cell": 397,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480063,
+      "first_cell": 17,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480064,
+      "first_cell": 232,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480065,
+      "first_cell": 436,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480066,
+      "first_cell": 247,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480067,
+      "first_cell": 338,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480068,
+      "first_cell": 122,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480069,
+      "first_cell": 344,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480070,
+      "first_cell": 305,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480071,
+      "first_cell": 389,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 6
+    },
+    {
+      "seed": 480072,
+      "first_cell": 164,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480073,
+      "first_cell": 299,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480074,
+      "first_cell": 273,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480075,
+      "first_cell": 128,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480076,
+      "first_cell": 256,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480077,
+      "first_cell": 330,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480078,
+      "first_cell": 253,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480079,
+      "first_cell": 367,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480080,
+      "first_cell": 363,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480081,
+      "first_cell": 15,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 6
+    },
+    {
+      "seed": 480082,
+      "first_cell": 255,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480083,
+      "first_cell": 24,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480084,
+      "first_cell": 64,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480085,
+      "first_cell": 301,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480086,
+      "first_cell": 262,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480087,
+      "first_cell": 426,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480088,
+      "first_cell": 429,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480089,
+      "first_cell": 239,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480090,
+      "first_cell": 89,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480091,
+      "first_cell": 418,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480092,
+      "first_cell": 422,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480093,
+      "first_cell": 412,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480094,
+      "first_cell": 306,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480095,
+      "first_cell": 219,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480096,
+      "first_cell": 464,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480097,
+      "first_cell": 290,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480098,
+      "first_cell": 63,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480099,
+      "first_cell": 421,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480100,
+      "first_cell": 20,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480101,
+      "first_cell": 240,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480102,
+      "first_cell": 424,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480103,
+      "first_cell": 215,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480104,
+      "first_cell": 265,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480105,
+      "first_cell": 226,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480106,
+      "first_cell": 463,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480107,
+      "first_cell": 253,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480108,
+      "first_cell": 166,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480109,
+      "first_cell": 402,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480110,
+      "first_cell": 428,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480111,
+      "first_cell": 164,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480112,
+      "first_cell": 0,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480113,
+      "first_cell": 104,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 7
+    },
+    {
+      "seed": 480114,
+      "first_cell": 273,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480115,
+      "first_cell": 188,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480116,
+      "first_cell": 216,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480117,
+      "first_cell": 2,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 6
+    },
+    {
+      "seed": 480118,
+      "first_cell": 65,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480119,
+      "first_cell": 2,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480120,
+      "first_cell": 373,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480121,
+      "first_cell": 390,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480122,
+      "first_cell": 333,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480123,
+      "first_cell": 454,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480124,
+      "first_cell": 92,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480125,
+      "first_cell": 408,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480126,
+      "first_cell": 45,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480127,
+      "first_cell": 232,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480128,
+      "first_cell": 23,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480129,
+      "first_cell": 138,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480130,
+      "first_cell": 347,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480131,
+      "first_cell": 162,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480132,
+      "first_cell": 182,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480133,
+      "first_cell": 72,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480134,
+      "first_cell": 26,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480135,
+      "first_cell": 362,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480136,
+      "first_cell": 431,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480137,
+      "first_cell": 461,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480138,
+      "first_cell": 382,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480139,
+      "first_cell": 314,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480140,
+      "first_cell": 31,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480141,
+      "first_cell": 65,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480142,
+      "first_cell": 132,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 6
+    },
+    {
+      "seed": 480143,
+      "first_cell": 36,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480144,
+      "first_cell": 400,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480145,
+      "first_cell": 162,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480146,
+      "first_cell": 336,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480147,
+      "first_cell": 297,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480148,
+      "first_cell": 27,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480149,
+      "first_cell": 98,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480150,
+      "first_cell": 362,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480151,
+      "first_cell": 275,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480152,
+      "first_cell": 3,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480153,
+      "first_cell": 393,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480154,
+      "first_cell": 356,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480155,
+      "first_cell": 8,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480156,
+      "first_cell": 336,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480157,
+      "first_cell": 143,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480158,
+      "first_cell": 442,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480159,
+      "first_cell": 65,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480160,
+      "first_cell": 258,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480161,
+      "first_cell": 10,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480162,
+      "first_cell": 216,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480163,
+      "first_cell": 19,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480164,
+      "first_cell": 211,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480165,
+      "first_cell": 324,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480166,
+      "first_cell": 78,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480167,
+      "first_cell": 51,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480168,
+      "first_cell": 36,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480169,
+      "first_cell": 116,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480170,
+      "first_cell": 462,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480171,
+      "first_cell": 371,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480172,
+      "first_cell": 410,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480173,
+      "first_cell": 404,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480174,
+      "first_cell": 403,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480175,
+      "first_cell": 351,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480176,
+      "first_cell": 433,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480177,
+      "first_cell": 243,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480178,
+      "first_cell": 133,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480179,
+      "first_cell": 277,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480180,
+      "first_cell": 217,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480181,
+      "first_cell": 103,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480182,
+      "first_cell": 121,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480183,
+      "first_cell": 146,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480184,
+      "first_cell": 164,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480185,
+      "first_cell": 322,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480186,
+      "first_cell": 218,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480187,
+      "first_cell": 222,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480188,
+      "first_cell": 188,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480189,
+      "first_cell": 337,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480190,
+      "first_cell": 283,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480191,
+      "first_cell": 332,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480192,
+      "first_cell": 171,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480193,
+      "first_cell": 73,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480194,
+      "first_cell": 85,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480195,
+      "first_cell": 97,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480196,
+      "first_cell": 37,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480197,
+      "first_cell": 126,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480198,
+      "first_cell": 322,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480199,
+      "first_cell": 479,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480200,
+      "first_cell": 187,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480201,
+      "first_cell": 346,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480202,
+      "first_cell": 424,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480203,
+      "first_cell": 219,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480204,
+      "first_cell": 185,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480205,
+      "first_cell": 392,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480206,
+      "first_cell": 51,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480207,
+      "first_cell": 174,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480208,
+      "first_cell": 137,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480209,
+      "first_cell": 47,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480210,
+      "first_cell": 342,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480211,
+      "first_cell": 380,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480212,
+      "first_cell": 47,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 5
+    },
+    {
+      "seed": 480213,
+      "first_cell": 379,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480214,
+      "first_cell": 449,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480215,
+      "first_cell": 324,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480216,
+      "first_cell": 384,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480217,
+      "first_cell": 283,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480218,
+      "first_cell": 382,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480219,
+      "first_cell": 369,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480220,
+      "first_cell": 217,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 4
+    },
+    {
+      "seed": 480221,
+      "first_cell": 259,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480222,
+      "first_cell": 257,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480223,
+      "first_cell": 160,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480224,
+      "first_cell": 409,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480225,
+      "first_cell": 194,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480226,
+      "first_cell": 447,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 11
+    },
+    {
+      "seed": 480227,
+      "first_cell": 294,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480228,
+      "first_cell": 444,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480229,
+      "first_cell": 96,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480230,
+      "first_cell": 368,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480231,
+      "first_cell": 234,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480232,
+      "first_cell": 456,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480233,
+      "first_cell": 116,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480234,
+      "first_cell": 396,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480235,
+      "first_cell": 290,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480236,
+      "first_cell": 257,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480237,
+      "first_cell": 182,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480238,
+      "first_cell": 274,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480239,
+      "first_cell": 177,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480240,
+      "first_cell": 456,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480241,
+      "first_cell": 394,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480242,
+      "first_cell": 265,
+      "endgame": "guess",
+      "rl": "win",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480243,
+      "first_cell": 125,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480244,
+      "first_cell": 423,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480245,
+      "first_cell": 458,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480246,
+      "first_cell": 100,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480247,
+      "first_cell": 443,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480248,
+      "first_cell": 119,
+      "endgame": "win",
+      "rl": "win",
+      "rl_guesses": 0
+    },
+    {
+      "seed": 480249,
+      "first_cell": 218,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480250,
+      "first_cell": 70,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 2
+    },
+    {
+      "seed": 480251,
+      "first_cell": 110,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480252,
+      "first_cell": 25,
+      "endgame": "win",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480253,
+      "first_cell": 222,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 3
+    },
+    {
+      "seed": 480254,
+      "first_cell": 364,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    },
+    {
+      "seed": 480255,
+      "first_cell": 257,
+      "endgame": "guess",
+      "rl": "guess",
+      "rl_guesses": 1
+    }
+  ]
+}

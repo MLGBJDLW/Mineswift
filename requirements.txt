@@ -1,0 +1,4 @@
+numpy>=1.26
+pytest>=8
+# optional: needed for the learned scorer (ms/model.py) and RL experiment (ms/rl.py)
+# torch>=2.3  (CPU build is enough)

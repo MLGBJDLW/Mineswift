@@ -1,0 +1,27 @@
+name: 游戏适配或操作问题
+description: 报告棋盘识别、点击、重开或速度问题
+body:
+  - type: input
+    id: game
+    attributes:
+      label: 游戏与盘型
+      placeholder: 例如 minesweeper.online，经典初级 9×9、10 雷
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 请写明 Mineswift 版本、Windows 版本、浏览器或桌面程序，以及显示缩放比例。
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 如何复现
+      description: 你是点选窗口还是输入网址？哪一步出现了什么现象？你原本预期是什么？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 棋盘裁图或日志片段
+      description: 可选。请只附与本局相关的画面或事件，去掉其他窗口、账号和个人路径。

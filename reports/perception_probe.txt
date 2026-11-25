@@ -1,0 +1,42 @@
+
+== geometry: worst error in px ===============================
+  theme               tight     sloppy   tight aa   n
+  block 20              n/a    0.94 px        n/a   8
+  block 24              n/a    0.94 px        n/a   8
+  block 30          0.97 px    0.94 px    0.04 px   8
+  wide 30           0.97 px    0.94 px    0.04 px   8
+
+== geometry: bevel+separator themes, rect hugging the grid ===
+  (this is the case that used to land one cell - 27..29 px - off)
+  pixel sweep    worst 0.32 px   over 0.5 px: 0/35
+  antialiased    worst 0.97 px   over 0.5 px: 35/35
+
+== reading: per-theme detection and digit agreement ==========
+  theme              covered   flags  digits ok  wrong  unreadable
+  block light      1920/1920 1920/1920        177      0           1
+  block small      1920/1920 1883/1920         93      0          56
+  wide light       1920/1920 1920/1920         36      0         142
+  seg7 light       1920/1920 1835/1920         93      0           0
+
+== reading: recall per digit (a missing glyph shows up here, not in the total)
+  digit         1       2       3       4       5       6       7       8
+  seen        101     108      33       9       1       0       0       0
+  read        101     108      33       9       0       0       0       0
+  wrong         0       0       0       0       0       0       0       0
+  overall recall 251/252 = 99.6%, errors 0
+
+== rejection: inputs that must raise Unreadable ==============
+  random noise               rejected: lattice contrast too low (2.6 < 6.0)
+  flat colour                rejected: no edges at all on the horizontal axis
+  no lattice on screen       rejected: no edges at all on the horizontal axis
+  wrong row count            rejected: no lattice inside the rect (quality 0.00 < 0.5); che
+  washed out (4% contrast)   rejected: lattice contrast too low (0.5 < 6.0)
+
+== frame agreement: what read_stable refuses =================
+  identical frames           accepted (expected)
+  one cell changed           rejected: 1 cell(s) below confidence 0.30: (0,4) p=0.00
+
+== timing ====================================================
+  fit_grid             20.5 ms
+  calibrate            24.3 ms  (fit + palette)
+  read (480 cells)     34.2 ms  per frame

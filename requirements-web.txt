@@ -1,0 +1,7 @@
+-r requirements.txt
+pillow>=11.2.1
+comtypes>=1.4; sys_platform == "win32"
+torch>=2.3
+playwright>=1.50,<2
+opencv-python-headless>=4.10,<6
+mss>=10.2,<11; sys_platform == "win32"

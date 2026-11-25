@@ -1,0 +1,33 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 1000,
+  "seed_base": 0,
+  "policies": {
+    "exact": {
+      "policy": "exact",
+      "games": 1000,
+      "win_rate": 0.511,
+      "ci95": [
+        0.48,
+        0.5419
+      ],
+      "losses_logic": 0,
+      "losses_guess": 489,
+      "stuck": 0,
+      "mean_moves": 220.34,
+      "mean_ms_per_move": 2.16,
+      "degraded": 4,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 512,
+  "seed_base": 440000,
+  "jobs": 12,
+  "opening": "random",
+  "policies": {
+    "endgame": {
+      "policy": "endgame",
+      "games": 512,
+      "wins": 275,
+      "elapsed_s": 23.141,
+      "win_rate": 0.5371,
+      "ci95": [
+        0.4938,
+        0.5799
+      ],
+      "losses_logic": 0,
+      "losses_guess": 237,
+      "stuck": 0,
+      "mean_moves": 210.58,
+      "mean_ms_per_move": 2.09,
+      "degraded": 5,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      },
+      "endgame_reached_games": 246,
+      "endgame_changed_games": 49,
+      "endgame_solved": 358,
+      "endgame_switches": 59
+    },
+    "rollout": {
+      "policy": "rollout",
+      "games": 512,
+      "wins": 276,
+      "elapsed_s": 76.369,
+      "win_rate": 0.5391,
+      "ci95": [
+        0.4958,
+        0.5818
+      ],
+      "losses_logic": 0,
+      "losses_guess": 236,
+      "stuck": 0,
+      "mean_moves": 210.72,
+      "mean_ms_per_move": 7.12,
+      "degraded": 5,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      },
+      "endgame_reached_games": 245,
+      "endgame_changed_games": 47,
+      "endgame_solved": 357,
+      "endgame_switches": 59,
+      "rollout_games": 167,
+      "rollout_changed_games": 36,
+      "rollout_comparisons": 349,
+      "rollout_switches": 44
+    }
+  },
+  "paired": [
+    {
+      "pairs": 512,
+      "baseline": "endgame",
+      "challenger": "rollout",
+      "endgame_only": 2,
+      "rollout_only": 3,
+      "win_rate_delta": 0.002,
+      "win_rate_delta_ci95_paired_bootstrap": [
+        -0.0059,
+        0.0098
+      ],
+      "p_value": 1.0
+    }
+  ]
+}

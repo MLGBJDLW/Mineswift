@@ -1,0 +1,216 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 512,
+  "seed_base": 470000,
+  "model_seed": 17,
+  "action_seed": 18,
+  "opening": "random",
+  "batch": 16,
+  "lr": 0.003,
+  "wins": 185,
+  "guesses": 1100,
+  "games_with_guesses": 431,
+  "wins_with_guesses": 104,
+  "proof_budget_exhaustions": 0,
+  "updates": 32,
+  "parameter_delta_l2": 1.1537058645237943,
+  "batches": [
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 42,
+      "grad_norm": 0.30358877778053284
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 40,
+      "grad_norm": 0.38581547141075134
+    },
+    {
+      "games": 16,
+      "wins": 3,
+      "guesses": 41,
+      "grad_norm": 0.305713951587677
+    },
+    {
+      "games": 16,
+      "wins": 8,
+      "guesses": 23,
+      "grad_norm": 0.24887476861476898
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 24,
+      "grad_norm": 0.2894291281700134
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 37,
+      "grad_norm": 0.2941434979438782
+    },
+    {
+      "games": 16,
+      "wins": 3,
+      "guesses": 38,
+      "grad_norm": 0.3015456199645996
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 26,
+      "grad_norm": 0.21695277094841003
+    },
+    {
+      "games": 16,
+      "wins": 8,
+      "guesses": 46,
+      "grad_norm": 0.3743322193622589
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 29,
+      "grad_norm": 0.3140770196914673
+    },
+    {
+      "games": 16,
+      "wins": 8,
+      "guesses": 43,
+      "grad_norm": 0.40867310762405396
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 54,
+      "grad_norm": 0.3113088011741638
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 34,
+      "grad_norm": 0.2596307098865509
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 24,
+      "grad_norm": 0.22081787884235382
+    },
+    {
+      "games": 16,
+      "wins": 8,
+      "guesses": 41,
+      "grad_norm": 0.23762574791908264
+    },
+    {
+      "games": 16,
+      "wins": 6,
+      "guesses": 33,
+      "grad_norm": 0.22221839427947998
+    },
+    {
+      "games": 16,
+      "wins": 4,
+      "guesses": 39,
+      "grad_norm": 0.24064336717128754
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 47,
+      "grad_norm": 0.256064772605896
+    },
+    {
+      "games": 16,
+      "wins": 7,
+      "guesses": 24,
+      "grad_norm": 0.21131671965122223
+    },
+    {
+      "games": 16,
+      "wins": 3,
+      "guesses": 42,
+      "grad_norm": 0.3350658416748047
+    },
+    {
+      "games": 16,
+      "wins": 4,
+      "guesses": 34,
+      "grad_norm": 0.341368168592453
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 36,
+      "grad_norm": 0.4593260586261749
+    },
+    {
+      "games": 16,
+      "wins": 7,
+      "guesses": 44,
+      "grad_norm": 0.48029476404190063
+    },
+    {
+      "games": 16,
+      "wins": 4,
+      "guesses": 25,
+      "grad_norm": 0.2971556782722473
+    },
+    {
+      "games": 16,
+      "wins": 7,
+      "guesses": 13,
+      "grad_norm": 0.2118263691663742
+    },
+    {
+      "games": 16,
+      "wins": 4,
+      "guesses": 41,
+      "grad_norm": 0.23044593632221222
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 27,
+      "grad_norm": 0.27011364698410034
+    },
+    {
+      "games": 16,
+      "wins": 5,
+      "guesses": 27,
+      "grad_norm": 0.30361735820770264
+    },
+    {
+      "games": 16,
+      "wins": 4,
+      "guesses": 35,
+      "grad_norm": 0.3017946183681488
+    },
+    {
+      "games": 16,
+      "wins": 10,
+      "guesses": 31,
+      "grad_norm": 0.22690492868423462
+    },
+    {
+      "games": 16,
+      "wins": 7,
+      "guesses": 30,
+      "grad_norm": 0.2089187204837799
+    },
+    {
+      "games": 16,
+      "wins": 8,
+      "guesses": 30,
+      "grad_norm": 0.21833588182926178
+    }
+  ]
+}

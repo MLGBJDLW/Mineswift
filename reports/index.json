@@ -1,0 +1,97 @@
+{
+  "expert_1000.json": {
+    "cfg": {
+      "rows": 16,
+      "cols": 30,
+      "mines": 99,
+      "first_click_safe": true
+    },
+    "games": 1000,
+    "seed_base": 0,
+    "policies": {
+      "exact": {
+        "policy": "exact",
+        "games": 1000,
+        "win_rate": 0.511,
+        "ci95": [
+          0.48,
+          0.5419
+        ],
+        "losses_logic": 0,
+        "losses_guess": 489,
+        "stuck": 0,
+        "mean_moves": 220.34,
+        "mean_ms_per_move": 2.16,
+        "degraded": 4,
+        "cfg": {
+          "rows": 16,
+          "cols": 30,
+          "mines": 99,
+          "first_click_safe": true
+        }
+      }
+    }
+  },
+  "learned_vs_exact_400.json": {
+    "cfg": {
+      "rows": 16,
+      "cols": 30,
+      "mines": 99,
+      "first_click_safe": true
+    },
+    "games": 400,
+    "seed_base": 0,
+    "policies": {
+      "exact": {
+        "policy": "exact",
+        "games": 400,
+        "win_rate": 0.5225,
+        "ci95": [
+          0.4736,
+          0.571
+        ],
+        "losses_logic": 0,
+        "losses_guess": 191,
+        "stuck": 0,
+        "mean_moves": 219.27,
+        "mean_ms_per_move": 2.14,
+        "degraded": 1,
+        "cfg": {
+          "rows": 16,
+          "cols": 30,
+          "mines": 99,
+          "first_click_safe": true
+        }
+      },
+      "learned": {
+        "policy": "learned",
+        "games": 400,
+        "win_rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0095
+        ],
+        "losses_logic": 350,
+        "losses_guess": 50,
+        "stuck": 0,
+        "mean_moves": 5.28,
+        "mean_ms_per_move": 50.46,
+        "degraded": 0,
+        "cfg": {
+          "rows": 16,
+          "cols": 30,
+          "mines": 99,
+          "first_click_safe": true
+        }
+      }
+    },
+    "paired": [
+      {
+        "pairs": 400,
+        "exact_only": 209,
+        "learned_only": 0,
+        "p_value": 0.0
+      }
+    ]
+  }
+}

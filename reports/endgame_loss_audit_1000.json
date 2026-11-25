@@ -1,0 +1,56 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "seed_base": 320000,
+  "games": 1000,
+  "policy": "endgame",
+  "jobs": 12,
+  "counts": [
+    {
+      "outcome": "loss",
+      "phase": "exact_endgame",
+      "swap_witness": false,
+      "games": 135
+    },
+    {
+      "outcome": "loss",
+      "phase": "exact_endgame",
+      "swap_witness": true,
+      "games": 120
+    },
+    {
+      "outcome": "loss",
+      "phase": "inside_endgame_limits_but_not_solved",
+      "swap_witness": false,
+      "games": 7
+    },
+    {
+      "outcome": "loss",
+      "phase": "outside_endgame_limits",
+      "swap_witness": false,
+      "games": 193
+    },
+    {
+      "outcome": "loss",
+      "phase": "outside_endgame_limits",
+      "swap_witness": true,
+      "games": 3
+    },
+    {
+      "outcome": "loss",
+      "phase": "sampled",
+      "swap_witness": false,
+      "games": 1
+    },
+    {
+      "outcome": "win",
+      "phase": "",
+      "swap_witness": false,
+      "games": 541
+    }
+  ]
+}

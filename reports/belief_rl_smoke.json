@@ -1,0 +1,32 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "opening": "random",
+  "seed_base": 490000,
+  "layouts": 16,
+  "episodes": 64,
+  "group": 4,
+  "model_seed": 29,
+  "batch": 16,
+  "epochs": 3,
+  "lr": 0.012,
+  "parameter_delta_l2": 0.6657718279704434,
+  "batches": [
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 104,
+      "samples": 60,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.37885329127311707
+    }
+  ],
+  "wins": 33,
+  "guesses": 104,
+  "mixed_groups": 11,
+  "samples": 60
+}

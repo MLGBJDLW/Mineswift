@@ -1,0 +1,41 @@
+# Python 环境、缓存与本机配置
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.nexa/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# 构建产物与临时运行记录
+/dist/
+/build/
+/release/
+*.log
+/runs/
+/reports/web/
+/reports/local/
+/experiments/local/
+/*-replay.json
+/replay*.json
+/reports/*_replay.json
+/data/**/*.jsonl
+
+# 仅发布运行程序和复现实验用到的五个权重
+/models/**
+!/models/belief_rl.pt
+!/models/rl_guess.pt
+!/models/raw_group_rl.pt
+!/models/value_rl.pt
+!/models/guess_scorer.pt

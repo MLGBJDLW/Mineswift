@@ -1,0 +1,4983 @@
+{
+  "games": 384,
+  "seed_base": 640000,
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "opening": "random",
+  "weights_sha256": "505985d5d667df43bc9cd0a6de5475d9fe6108f600167ee30b1a3560a80adcca",
+  "outcomes": {
+    "live": {
+      "win": 201,
+      "guess": 183
+    },
+    "wider": {
+      "win": 203,
+      "guess": 181
+    },
+    "endgame": {
+      "win": 191,
+      "guess": 193
+    }
+  },
+  "paired": [
+    {
+      "pairs": 384,
+      "baseline": "live",
+      "challenger": "wider",
+      "live_only": 1,
+      "wider_only": 3,
+      "win_rate_delta": 0.0052,
+      "win_rate_delta_ci95_paired_bootstrap": [
+        -0.0052,
+        0.0156
+      ],
+      "p_value": 0.625
+    },
+    {
+      "pairs": 384,
+      "baseline": "live",
+      "challenger": "endgame",
+      "live_only": 42,
+      "endgame_only": 32,
+      "win_rate_delta": -0.026,
+      "win_rate_delta_ci95_paired_bootstrap": [
+        -0.0703,
+        0.0182
+      ],
+      "p_value": 0.295413
+    }
+  ],
+  "live_losses": {
+    "total": 183,
+    "swap_witness": 51,
+    "higher_immediate_risk": 16,
+    "exactly_solved": 109,
+    "suboptimal_terminal_action": 3
+  },
+  "boards": [
+    {
+      "seed": 640000,
+      "first_cell": 219,
+      "live": "win",
+      "live_seconds": 0.1635,
+      "wider": "win",
+      "wider_seconds": 0.1615,
+      "endgame": "win"
+    },
+    {
+      "seed": 640001,
+      "first_cell": 372,
+      "death": {
+        "cell": 418,
+        "mine_risk": 0.25,
+        "min_risk": 0.25,
+        "rollout_worlds": 8,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4106,
+      "wider": "guess",
+      "wider_seconds": 0.7263,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640002,
+      "first_cell": 310,
+      "live": "win",
+      "live_seconds": 0.2094,
+      "wider": "win",
+      "wider_seconds": 0.1982,
+      "endgame": "win"
+    },
+    {
+      "seed": 640003,
+      "first_cell": 230,
+      "death": {
+        "cell": 40,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 10,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4055,
+      "wider": "guess",
+      "wider_seconds": 0.4558,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640004,
+      "first_cell": 162,
+      "live": "win",
+      "live_seconds": 0.1438,
+      "wider": "win",
+      "wider_seconds": 0.144,
+      "endgame": "win"
+    },
+    {
+      "seed": 640005,
+      "first_cell": 426,
+      "live": "win",
+      "live_seconds": 0.1275,
+      "wider": "win",
+      "wider_seconds": 0.1284,
+      "endgame": "win"
+    },
+    {
+      "seed": 640006,
+      "first_cell": 119,
+      "death": {
+        "cell": 440,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 9,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.279,
+      "wider": "guess",
+      "wider_seconds": 0.3175,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640007,
+      "first_cell": 245,
+      "live": "win",
+      "live_seconds": 0.1834,
+      "wider": "win",
+      "wider_seconds": 0.1898,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640008,
+      "first_cell": 199,
+      "live": "win",
+      "live_seconds": 0.1266,
+      "wider": "win",
+      "wider_seconds": 0.1267,
+      "endgame": "win"
+    },
+    {
+      "seed": 640009,
+      "first_cell": 358,
+      "death": {
+        "cell": 4,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 5,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1567,
+      "wider": "guess",
+      "wider_seconds": 0.1568,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640010,
+      "first_cell": 203,
+      "live": "win",
+      "live_seconds": 0.1451,
+      "wider": "win",
+      "wider_seconds": 0.1435,
+      "endgame": "win"
+    },
+    {
+      "seed": 640011,
+      "first_cell": 8,
+      "live": "win",
+      "live_seconds": 0.1513,
+      "wider": "win",
+      "wider_seconds": 0.1542,
+      "endgame": "win"
+    },
+    {
+      "seed": 640012,
+      "first_cell": 283,
+      "live": "win",
+      "live_seconds": 0.1734,
+      "wider": "win",
+      "wider_seconds": 0.181,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640013,
+      "first_cell": 473,
+      "death": {
+        "cell": 430,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.198,
+      "wider": "guess",
+      "wider_seconds": 0.1912,
+      "endgame": "win"
+    },
+    {
+      "seed": 640014,
+      "first_cell": 307,
+      "live": "win",
+      "live_seconds": 0.1404,
+      "wider": "win",
+      "wider_seconds": 0.1411,
+      "endgame": "win"
+    },
+    {
+      "seed": 640015,
+      "first_cell": 69,
+      "death": {
+        "cell": 184,
+        "mine_risk": 0.10470587760210037,
+        "min_risk": 0.0944698378443718,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0762,
+      "wider": "guess",
+      "wider_seconds": 0.0802,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640016,
+      "first_cell": 290,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.179,
+      "wider": "guess",
+      "wider_seconds": 0.1719,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640017,
+      "first_cell": 164,
+      "live": "win",
+      "live_seconds": 0.1324,
+      "wider": "win",
+      "wider_seconds": 0.1323,
+      "endgame": "win"
+    },
+    {
+      "seed": 640018,
+      "first_cell": 320,
+      "death": {
+        "cell": 450,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1219,
+      "wider": "guess",
+      "wider_seconds": 0.1214,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640019,
+      "first_cell": 247,
+      "live": "win",
+      "live_seconds": 0.1656,
+      "wider": "win",
+      "wider_seconds": 0.1727,
+      "endgame": "win"
+    },
+    {
+      "seed": 640020,
+      "first_cell": 466,
+      "live": "win",
+      "live_seconds": 0.1559,
+      "wider": "win",
+      "wider_seconds": 0.1505,
+      "endgame": "win"
+    },
+    {
+      "seed": 640021,
+      "first_cell": 280,
+      "death": {
+        "cell": 416,
+        "mine_risk": 0.2857142984867096,
+        "min_risk": 0.2857142984867096,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1286,
+      "wider": "guess",
+      "wider_seconds": 0.1252,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640022,
+      "first_cell": 81,
+      "live": "win",
+      "live_seconds": 0.112,
+      "wider": "win",
+      "wider_seconds": 0.1118,
+      "endgame": "win"
+    },
+    {
+      "seed": 640023,
+      "first_cell": 141,
+      "death": {
+        "cell": 357,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1579,
+      "wider": "guess",
+      "wider_seconds": 0.157,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640024,
+      "first_cell": 246,
+      "death": {
+        "cell": 57,
+        "mine_risk": 0.30000001192092896,
+        "min_risk": 0.30000001192092896,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2305,
+      "wider": "guess",
+      "wider_seconds": 0.6632,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640025,
+      "first_cell": 61,
+      "death": {
+        "cell": 428,
+        "mine_risk": 0.25,
+        "min_risk": 0.125,
+        "rollout_worlds": 16,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3724,
+      "wider": "guess",
+      "wider_seconds": 0.4564,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640026,
+      "first_cell": 47,
+      "death": {
+        "cell": 438,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1639,
+      "wider": "guess",
+      "wider_seconds": 0.1633,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640027,
+      "first_cell": 98,
+      "live": "win",
+      "live_seconds": 0.1391,
+      "wider": "win",
+      "wider_seconds": 0.1366,
+      "endgame": "win"
+    },
+    {
+      "seed": 640028,
+      "first_cell": 205,
+      "live": "win",
+      "live_seconds": 0.1808,
+      "wider": "win",
+      "wider_seconds": 0.1784,
+      "endgame": "win"
+    },
+    {
+      "seed": 640029,
+      "first_cell": 381,
+      "live": "win",
+      "live_seconds": 0.1982,
+      "wider": "win",
+      "wider_seconds": 0.2001,
+      "endgame": "win"
+    },
+    {
+      "seed": 640030,
+      "first_cell": 117,
+      "live": "win",
+      "live_seconds": 0.138,
+      "wider": "win",
+      "wider_seconds": 0.1384,
+      "endgame": "win"
+    },
+    {
+      "seed": 640031,
+      "first_cell": 38,
+      "death": {
+        "cell": 58,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1835,
+      "wider": "guess",
+      "wider_seconds": 0.1832,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640032,
+      "first_cell": 210,
+      "death": {
+        "cell": 0,
+        "mine_risk": 0.2056277096271515,
+        "min_risk": 0.2056277096271515,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0041,
+      "wider": "guess",
+      "wider_seconds": 0.0014,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640033,
+      "first_cell": 110,
+      "live": "win",
+      "live_seconds": 0.1609,
+      "wider": "win",
+      "wider_seconds": 0.1567,
+      "endgame": "win"
+    },
+    {
+      "seed": 640034,
+      "first_cell": 275,
+      "death": {
+        "cell": 426,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1836,
+      "wider": "guess",
+      "wider_seconds": 0.1786,
+      "endgame": "win"
+    },
+    {
+      "seed": 640035,
+      "first_cell": 124,
+      "live": "win",
+      "live_seconds": 0.1464,
+      "wider": "win",
+      "wider_seconds": 0.1479,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640036,
+      "first_cell": 297,
+      "live": "win",
+      "live_seconds": 0.1187,
+      "wider": "win",
+      "wider_seconds": 0.1273,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640037,
+      "first_cell": 279,
+      "death": {
+        "cell": 32,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 2,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1269,
+      "wider": "guess",
+      "wider_seconds": 0.1279,
+      "endgame": "win"
+    },
+    {
+      "seed": 640038,
+      "first_cell": 466,
+      "live": "win",
+      "live_seconds": 0.1448,
+      "wider": "win",
+      "wider_seconds": 0.141,
+      "endgame": "win"
+    },
+    {
+      "seed": 640039,
+      "first_cell": 371,
+      "death": {
+        "cell": 33,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 3,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2021,
+      "wider": "guess",
+      "wider_seconds": 0.2037,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640040,
+      "first_cell": 337,
+      "live": "win",
+      "live_seconds": 0.1365,
+      "wider": "win",
+      "wider_seconds": 0.1419,
+      "endgame": "win"
+    },
+    {
+      "seed": 640041,
+      "first_cell": 289,
+      "death": {
+        "cell": 386,
+        "mine_risk": 0.13333334028720856,
+        "min_risk": 0.13333334028720856,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1032,
+      "wider": "guess",
+      "wider_seconds": 0.103,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640042,
+      "first_cell": 135,
+      "death": {
+        "cell": 36,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 6,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2895,
+      "wider": "guess",
+      "wider_seconds": 0.3132,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640043,
+      "first_cell": 209,
+      "live": "win",
+      "live_seconds": 0.1229,
+      "wider": "win",
+      "wider_seconds": 0.1224,
+      "endgame": "win"
+    },
+    {
+      "seed": 640044,
+      "first_cell": 205,
+      "live": "win",
+      "live_seconds": 0.1647,
+      "wider": "win",
+      "wider_seconds": 0.1634,
+      "endgame": "win"
+    },
+    {
+      "seed": 640045,
+      "first_cell": 387,
+      "death": {
+        "cell": 10,
+        "mine_risk": 0.2222222238779068,
+        "min_risk": 0.2222222238779068,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1281,
+      "wider": "guess",
+      "wider_seconds": 0.1325,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640046,
+      "first_cell": 13,
+      "death": {
+        "cell": 95,
+        "mine_risk": 0.09124978631734848,
+        "min_risk": 0.09124978631734848,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1602,
+      "wider": "guess",
+      "wider_seconds": 0.1579,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640047,
+      "first_cell": 383,
+      "live": "win",
+      "live_seconds": 0.1198,
+      "wider": "win",
+      "wider_seconds": 0.1189,
+      "endgame": "win"
+    },
+    {
+      "seed": 640048,
+      "first_cell": 248,
+      "live": "win",
+      "live_seconds": 0.4631,
+      "wider": "win",
+      "wider_seconds": 0.5481,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640049,
+      "first_cell": 336,
+      "death": {
+        "cell": 239,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 12,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2211,
+      "wider": "guess",
+      "wider_seconds": 0.2494,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640050,
+      "first_cell": 319,
+      "live": "win",
+      "live_seconds": 0.3109,
+      "wider": "win",
+      "wider_seconds": 0.3096,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640051,
+      "first_cell": 319,
+      "death": {
+        "cell": 30,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 3,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.119,
+      "wider": "guess",
+      "wider_seconds": 0.1205,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640052,
+      "first_cell": 412,
+      "live": "win",
+      "live_seconds": 0.1283,
+      "wider": "win",
+      "wider_seconds": 0.1282,
+      "endgame": "win"
+    },
+    {
+      "seed": 640053,
+      "first_cell": 223,
+      "death": {
+        "cell": 341,
+        "mine_risk": 0.08139535039663315,
+        "min_risk": 0.08139535039663315,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0335,
+      "wider": "guess",
+      "wider_seconds": 0.031,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640054,
+      "first_cell": 473,
+      "death": {
+        "cell": 448,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1424,
+      "wider": "guess",
+      "wider_seconds": 0.1377,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640055,
+      "first_cell": 472,
+      "death": {
+        "cell": 174,
+        "mine_risk": 0.12148936092853546,
+        "min_risk": 0.12148936092853546,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0915,
+      "wider": "guess",
+      "wider_seconds": 0.0908,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640056,
+      "first_cell": 174,
+      "live": "win",
+      "live_seconds": 0.256,
+      "wider": "win",
+      "wider_seconds": 0.2555,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640057,
+      "first_cell": 460,
+      "live": "win",
+      "live_seconds": 0.1385,
+      "wider": "win",
+      "wider_seconds": 0.1408,
+      "endgame": "win"
+    },
+    {
+      "seed": 640058,
+      "first_cell": 383,
+      "death": {
+        "cell": 36,
+        "mine_risk": 0.2461538463830948,
+        "min_risk": 0.2461538463830948,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1181,
+      "wider": "guess",
+      "wider_seconds": 0.1164,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640059,
+      "first_cell": 107,
+      "live": "win",
+      "live_seconds": 0.1448,
+      "wider": "win",
+      "wider_seconds": 0.1454,
+      "endgame": "win"
+    },
+    {
+      "seed": 640060,
+      "first_cell": 441,
+      "death": {
+        "cell": 34,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.263,
+      "wider": "guess",
+      "wider_seconds": 0.3011,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640061,
+      "first_cell": 126,
+      "live": "win",
+      "live_seconds": 0.1195,
+      "wider": "win",
+      "wider_seconds": 0.118,
+      "endgame": "win"
+    },
+    {
+      "seed": 640062,
+      "first_cell": 97,
+      "death": {
+        "cell": 207,
+        "mine_risk": 0.1111111119389534,
+        "min_risk": 0.1111111119389534,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1566,
+      "wider": "guess",
+      "wider_seconds": 0.1506,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640063,
+      "first_cell": 394,
+      "death": {
+        "cell": 331,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2021,
+      "wider": "guess",
+      "wider_seconds": 0.1944,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640064,
+      "first_cell": 397,
+      "live": "win",
+      "live_seconds": 0.1515,
+      "wider": "win",
+      "wider_seconds": 0.1485,
+      "endgame": "win"
+    },
+    {
+      "seed": 640065,
+      "first_cell": 204,
+      "live": "win",
+      "live_seconds": 0.1272,
+      "wider": "win",
+      "wider_seconds": 0.1278,
+      "endgame": "win"
+    },
+    {
+      "seed": 640066,
+      "first_cell": 238,
+      "live": "win",
+      "live_seconds": 0.4656,
+      "wider": "win",
+      "wider_seconds": 1.2934,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640067,
+      "first_cell": 46,
+      "live": "win",
+      "live_seconds": 0.1388,
+      "wider": "win",
+      "wider_seconds": 0.141,
+      "endgame": "win"
+    },
+    {
+      "seed": 640068,
+      "first_cell": 248,
+      "live": "win",
+      "live_seconds": 0.2311,
+      "wider": "win",
+      "wider_seconds": 0.2294,
+      "endgame": "win"
+    },
+    {
+      "seed": 640069,
+      "first_cell": 422,
+      "death": {
+        "cell": 301,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 300,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1562,
+      "wider": "guess",
+      "wider_seconds": 0.1523,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640070,
+      "first_cell": 363,
+      "death": {
+        "cell": 168,
+        "mine_risk": 0.09407665580511093,
+        "min_risk": 0.09407665580511093,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.093,
+      "wider": "guess",
+      "wider_seconds": 0.093,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640071,
+      "first_cell": 77,
+      "death": {
+        "cell": 447,
+        "mine_risk": 0.15789473056793213,
+        "min_risk": 0.15789473056793213,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1229,
+      "wider": "guess",
+      "wider_seconds": 0.1214,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640072,
+      "first_cell": 54,
+      "death": {
+        "cell": 451,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 450,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1763,
+      "wider": "guess",
+      "wider_seconds": 0.1784,
+      "endgame": "win"
+    },
+    {
+      "seed": 640073,
+      "first_cell": 116,
+      "live": "win",
+      "live_seconds": 0.3145,
+      "wider": "win",
+      "wider_seconds": 0.4129,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640074,
+      "first_cell": 24,
+      "death": {
+        "cell": 110,
+        "mine_risk": 0.15806488692760468,
+        "min_risk": 0.15806488692760468,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0212,
+      "wider": "guess",
+      "wider_seconds": 0.0194,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640075,
+      "first_cell": 245,
+      "live": "win",
+      "live_seconds": 0.1297,
+      "wider": "win",
+      "wider_seconds": 0.1274,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640076,
+      "first_cell": 363,
+      "live": "win",
+      "live_seconds": 0.1169,
+      "wider": "win",
+      "wider_seconds": 0.1187,
+      "endgame": "win"
+    },
+    {
+      "seed": 640077,
+      "first_cell": 3,
+      "live": "win",
+      "live_seconds": 0.1643,
+      "wider": "win",
+      "wider_seconds": 0.1619,
+      "endgame": "win"
+    },
+    {
+      "seed": 640078,
+      "first_cell": 329,
+      "death": {
+        "cell": 55,
+        "mine_risk": 0.25,
+        "min_risk": 0.25,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.5144,
+      "wider": "guess",
+      "wider_seconds": 0.582,
+      "endgame": "win"
+    },
+    {
+      "seed": 640079,
+      "first_cell": 279,
+      "live": "win",
+      "live_seconds": 0.3384,
+      "wider": "win",
+      "wider_seconds": 1.1257,
+      "endgame": "win"
+    },
+    {
+      "seed": 640080,
+      "first_cell": 347,
+      "live": "win",
+      "live_seconds": 0.1817,
+      "wider": "win",
+      "wider_seconds": 0.1819,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640081,
+      "first_cell": 272,
+      "live": "win",
+      "live_seconds": 0.3277,
+      "wider": "win",
+      "wider_seconds": 0.3845,
+      "endgame": "win"
+    },
+    {
+      "seed": 640082,
+      "first_cell": 88,
+      "death": {
+        "cell": 438,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 8,
+        "indistinguishable_partner": 468,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1712,
+      "wider": "guess",
+      "wider_seconds": 0.1746,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640083,
+      "first_cell": 256,
+      "live": "win",
+      "live_seconds": 0.2574,
+      "wider": "win",
+      "wider_seconds": 0.262,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640084,
+      "first_cell": 360,
+      "death": {
+        "cell": 238,
+        "mine_risk": 0.10891088843345642,
+        "min_risk": 0.10891088843345642,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1115,
+      "wider": "guess",
+      "wider_seconds": 0.1065,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640085,
+      "first_cell": 195,
+      "death": {
+        "cell": 39,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 9,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1582,
+      "wider": "guess",
+      "wider_seconds": 0.1518,
+      "endgame": "win"
+    },
+    {
+      "seed": 640086,
+      "first_cell": 275,
+      "live": "win",
+      "live_seconds": 0.1144,
+      "wider": "win",
+      "wider_seconds": 0.1151,
+      "endgame": "win"
+    },
+    {
+      "seed": 640087,
+      "first_cell": 411,
+      "death": {
+        "cell": 296,
+        "mine_risk": 0.21126478910446167,
+        "min_risk": 0.21126478910446167,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1122,
+      "wider": "guess",
+      "wider_seconds": 0.1143,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640088,
+      "first_cell": 405,
+      "death": {
+        "cell": 449,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 479,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2147,
+      "wider": "guess",
+      "wider_seconds": 0.2133,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640089,
+      "first_cell": 74,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.25,
+        "min_risk": 0.20481927692890167,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.13,
+      "wider": "guess",
+      "wider_seconds": 0.1332,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640090,
+      "first_cell": 274,
+      "death": {
+        "cell": 38,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 8,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2226,
+      "wider": "guess",
+      "wider_seconds": 0.2483,
+      "endgame": "win"
+    },
+    {
+      "seed": 640091,
+      "first_cell": 375,
+      "death": {
+        "cell": 301,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 300,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1488,
+      "wider": "guess",
+      "wider_seconds": 0.145,
+      "endgame": "win"
+    },
+    {
+      "seed": 640092,
+      "first_cell": 314,
+      "live": "win",
+      "live_seconds": 0.1373,
+      "wider": "win",
+      "wider_seconds": 0.1462,
+      "endgame": "win"
+    },
+    {
+      "seed": 640093,
+      "first_cell": 180,
+      "live": "win",
+      "live_seconds": 0.1968,
+      "wider": "win",
+      "wider_seconds": 0.203,
+      "endgame": "win"
+    },
+    {
+      "seed": 640094,
+      "first_cell": 88,
+      "live": "win",
+      "live_seconds": 0.1598,
+      "wider": "win",
+      "wider_seconds": 0.1615,
+      "endgame": "win"
+    },
+    {
+      "seed": 640095,
+      "first_cell": 186,
+      "live": "win",
+      "live_seconds": 0.1519,
+      "wider": "win",
+      "wider_seconds": 0.1519,
+      "endgame": "win"
+    },
+    {
+      "seed": 640096,
+      "first_cell": 129,
+      "death": {
+        "cell": 423,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 453,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2326,
+      "wider": "guess",
+      "wider_seconds": 0.2373,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640097,
+      "first_cell": 47,
+      "live": "win",
+      "live_seconds": 0.1381,
+      "wider": "win",
+      "wider_seconds": 0.1369,
+      "endgame": "win"
+    },
+    {
+      "seed": 640098,
+      "first_cell": 382,
+      "live": "win",
+      "live_seconds": 0.1489,
+      "wider": "win",
+      "wider_seconds": 0.1441,
+      "endgame": "win"
+    },
+    {
+      "seed": 640099,
+      "first_cell": 3,
+      "death": {
+        "cell": 430,
+        "mine_risk": 0.13333334028720856,
+        "min_risk": 0.13333334028720856,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1068,
+      "wider": "guess",
+      "wider_seconds": 0.1004,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640100,
+      "first_cell": 117,
+      "death": {
+        "cell": 424,
+        "mine_risk": 0.12072024494409561,
+        "min_risk": 0.12072024494409561,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1466,
+      "wider": "guess",
+      "wider_seconds": 0.1446,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640101,
+      "first_cell": 443,
+      "death": {
+        "cell": 57,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 6,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3618,
+      "wider": "guess",
+      "wider_seconds": 0.407,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640102,
+      "first_cell": 281,
+      "live": "win",
+      "live_seconds": 0.463,
+      "wider": "win",
+      "wider_seconds": 0.5418,
+      "endgame": "win"
+    },
+    {
+      "seed": 640103,
+      "first_cell": 406,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2487,
+      "wider": "guess",
+      "wider_seconds": 0.2475,
+      "endgame": "win"
+    },
+    {
+      "seed": 640104,
+      "first_cell": 99,
+      "death": {
+        "cell": 448,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 449,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1471,
+      "wider": "guess",
+      "wider_seconds": 0.1516,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640105,
+      "first_cell": 216,
+      "live": "win",
+      "live_seconds": 0.1444,
+      "wider": "win",
+      "wider_seconds": 0.1427,
+      "endgame": "win"
+    },
+    {
+      "seed": 640106,
+      "first_cell": 342,
+      "live": "win",
+      "live_seconds": 0.3165,
+      "wider": "win",
+      "wider_seconds": 0.3131,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640107,
+      "first_cell": 139,
+      "death": {
+        "cell": 142,
+        "mine_risk": 0.14711780846118927,
+        "min_risk": 0.14711780846118927,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0215,
+      "wider": "guess",
+      "wider_seconds": 0.0206,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640108,
+      "first_cell": 263,
+      "live": "win",
+      "live_seconds": 0.178,
+      "wider": "win",
+      "wider_seconds": 0.1753,
+      "endgame": "win"
+    },
+    {
+      "seed": 640109,
+      "first_cell": 112,
+      "live": "win",
+      "live_seconds": 0.1023,
+      "wider": "win",
+      "wider_seconds": 0.1038,
+      "endgame": "win"
+    },
+    {
+      "seed": 640110,
+      "first_cell": 340,
+      "death": {
+        "cell": 451,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 450,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3626,
+      "wider": "guess",
+      "wider_seconds": 0.3559,
+      "endgame": "win"
+    },
+    {
+      "seed": 640111,
+      "first_cell": 96,
+      "death": {
+        "cell": 122,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2428,
+      "wider": "guess",
+      "wider_seconds": 1.2278,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640112,
+      "first_cell": 292,
+      "live": "win",
+      "live_seconds": 0.1523,
+      "wider": "win",
+      "wider_seconds": 0.1538,
+      "endgame": "win"
+    },
+    {
+      "seed": 640113,
+      "first_cell": 308,
+      "death": {
+        "cell": 376,
+        "mine_risk": 0.08959009498357773,
+        "min_risk": 0.08959009498357773,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0937,
+      "wider": "guess",
+      "wider_seconds": 0.0894,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640114,
+      "first_cell": 400,
+      "death": {
+        "cell": 97,
+        "mine_risk": 0.13953489065170288,
+        "min_risk": 0.13953489065170288,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1345,
+      "wider": "guess",
+      "wider_seconds": 0.133,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640115,
+      "first_cell": 366,
+      "live": "win",
+      "live_seconds": 0.1302,
+      "wider": "win",
+      "wider_seconds": 0.1282,
+      "endgame": "win"
+    },
+    {
+      "seed": 640116,
+      "first_cell": 414,
+      "death": {
+        "cell": 361,
+        "mine_risk": 0.20000000298023224,
+        "min_risk": 0.20000000298023224,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1273,
+      "wider": "guess",
+      "wider_seconds": 0.1256,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640117,
+      "first_cell": 24,
+      "death": {
+        "cell": 5,
+        "mine_risk": 0.21875,
+        "min_risk": 0.21875,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.14,
+      "wider": "guess",
+      "wider_seconds": 0.1408,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640118,
+      "first_cell": 433,
+      "live": "win",
+      "live_seconds": 0.1443,
+      "wider": "win",
+      "wider_seconds": 0.1471,
+      "endgame": "win"
+    },
+    {
+      "seed": 640119,
+      "first_cell": 276,
+      "live": "win",
+      "live_seconds": 0.1458,
+      "wider": "win",
+      "wider_seconds": 0.1397,
+      "endgame": "win"
+    },
+    {
+      "seed": 640120,
+      "first_cell": 16,
+      "death": {
+        "cell": 422,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 12,
+        "indistinguishable_partner": 452,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1853,
+      "wider": "guess",
+      "wider_seconds": 0.1805,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640121,
+      "first_cell": 359,
+      "live": "win",
+      "live_seconds": 0.1312,
+      "wider": "win",
+      "wider_seconds": 0.1314,
+      "endgame": "win"
+    },
+    {
+      "seed": 640122,
+      "first_cell": 123,
+      "live": "win",
+      "live_seconds": 0.1423,
+      "wider": "win",
+      "wider_seconds": 0.1416,
+      "endgame": "win"
+    },
+    {
+      "seed": 640123,
+      "first_cell": 479,
+      "death": {
+        "cell": 460,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 9,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2274,
+      "wider": "guess",
+      "wider_seconds": 0.2404,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640124,
+      "first_cell": 389,
+      "live": "win",
+      "live_seconds": 0.1061,
+      "wider": "win",
+      "wider_seconds": 0.1055,
+      "endgame": "win"
+    },
+    {
+      "seed": 640125,
+      "first_cell": 330,
+      "death": {
+        "cell": 397,
+        "mine_risk": 0.1696842759847641,
+        "min_risk": 0.1696842759847641,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0202,
+      "wider": "guess",
+      "wider_seconds": 0.0191,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640126,
+      "first_cell": 402,
+      "death": {
+        "cell": 245,
+        "mine_risk": 0.1699172556400299,
+        "min_risk": 0.1391851305961609,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1957,
+      "wider": "guess",
+      "wider_seconds": 0.1955,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640127,
+      "first_cell": 257,
+      "death": {
+        "cell": 44,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1813,
+      "wider": "guess",
+      "wider_seconds": 0.1963,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640128,
+      "first_cell": 320,
+      "death": {
+        "cell": 431,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 461,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4615,
+      "wider": "guess",
+      "wider_seconds": 0.4554,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640129,
+      "first_cell": 41,
+      "live": "win",
+      "live_seconds": 0.1289,
+      "wider": "win",
+      "wider_seconds": 0.1272,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640130,
+      "first_cell": 381,
+      "death": {
+        "cell": 363,
+        "mine_risk": 0.0830959901213646,
+        "min_risk": 0.0709143802523613,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1484,
+      "wider": "guess",
+      "wider_seconds": 0.1473,
+      "endgame": "win"
+    },
+    {
+      "seed": 640131,
+      "first_cell": 18,
+      "live": "win",
+      "live_seconds": 0.1777,
+      "wider": "win",
+      "wider_seconds": 0.1803,
+      "endgame": "win"
+    },
+    {
+      "seed": 640132,
+      "first_cell": 61,
+      "live": "win",
+      "live_seconds": 0.1355,
+      "wider": "win",
+      "wider_seconds": 0.1358,
+      "endgame": "win"
+    },
+    {
+      "seed": 640133,
+      "first_cell": 240,
+      "live": "win",
+      "live_seconds": 0.1186,
+      "wider": "win",
+      "wider_seconds": 0.1182,
+      "endgame": "win"
+    },
+    {
+      "seed": 640134,
+      "first_cell": 184,
+      "live": "win",
+      "live_seconds": 0.1565,
+      "wider": "win",
+      "wider_seconds": 0.1576,
+      "endgame": "win"
+    },
+    {
+      "seed": 640135,
+      "first_cell": 27,
+      "death": {
+        "cell": 13,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 3,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1705,
+      "wider": "guess",
+      "wider_seconds": 0.1689,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640136,
+      "first_cell": 308,
+      "live": "win",
+      "live_seconds": 0.2157,
+      "wider": "win",
+      "wider_seconds": 0.2142,
+      "endgame": "win"
+    },
+    {
+      "seed": 640137,
+      "first_cell": 21,
+      "live": "win",
+      "live_seconds": 0.4551,
+      "wider": "win",
+      "wider_seconds": 0.5401,
+      "endgame": "win"
+    },
+    {
+      "seed": 640138,
+      "first_cell": 232,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 22,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1457,
+      "wider": "guess",
+      "wider_seconds": 0.1644,
+      "endgame": "win"
+    },
+    {
+      "seed": 640139,
+      "first_cell": 34,
+      "death": {
+        "cell": 449,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 479,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1781,
+      "wider": "guess",
+      "wider_seconds": 0.1802,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640140,
+      "first_cell": 236,
+      "live": "win",
+      "live_seconds": 0.1461,
+      "wider": "win",
+      "wider_seconds": 0.1425,
+      "endgame": "win"
+    },
+    {
+      "seed": 640141,
+      "first_cell": 93,
+      "live": "win",
+      "live_seconds": 0.1911,
+      "wider": "win",
+      "wider_seconds": 0.1879,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640142,
+      "first_cell": 79,
+      "live": "win",
+      "live_seconds": 0.1919,
+      "wider": "win",
+      "wider_seconds": 0.204,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640143,
+      "first_cell": 115,
+      "live": "win",
+      "live_seconds": 0.1723,
+      "wider": "win",
+      "wider_seconds": 0.1736,
+      "endgame": "win"
+    },
+    {
+      "seed": 640144,
+      "first_cell": 329,
+      "death": {
+        "cell": 41,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 8,
+        "indistinguishable_partner": 11,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1811,
+      "wider": "guess",
+      "wider_seconds": 0.1771,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640145,
+      "first_cell": 377,
+      "death": {
+        "cell": 388,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 9,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2061,
+      "wider": "guess",
+      "wider_seconds": 0.559,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640146,
+      "first_cell": 338,
+      "live": "win",
+      "live_seconds": 0.1483,
+      "wider": "win",
+      "wider_seconds": 0.1502,
+      "endgame": "win"
+    },
+    {
+      "seed": 640147,
+      "first_cell": 258,
+      "live": "win",
+      "live_seconds": 0.1332,
+      "wider": "win",
+      "wider_seconds": 0.1338,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640148,
+      "first_cell": 66,
+      "death": {
+        "cell": 28,
+        "mine_risk": 0.13333334028720856,
+        "min_risk": 0.06666667014360428,
+        "rollout_worlds": 15,
+        "indistinguishable_partner": 29,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.5071,
+      "wider": "guess",
+      "wider_seconds": 0.5246,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640149,
+      "first_cell": 340,
+      "death": {
+        "cell": 435,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2139,
+      "wider": "guess",
+      "wider_seconds": 0.2166,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640150,
+      "first_cell": 181,
+      "live": "win",
+      "live_seconds": 0.1506,
+      "wider": "win",
+      "wider_seconds": 0.1497,
+      "endgame": "win"
+    },
+    {
+      "seed": 640151,
+      "first_cell": 152,
+      "live": "win",
+      "live_seconds": 0.1416,
+      "wider": "win",
+      "wider_seconds": 0.1443,
+      "endgame": "win"
+    },
+    {
+      "seed": 640152,
+      "first_cell": 312,
+      "death": {
+        "cell": 435,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1821,
+      "wider": "guess",
+      "wider_seconds": 0.182,
+      "endgame": "win"
+    },
+    {
+      "seed": 640153,
+      "first_cell": 479,
+      "live": "win",
+      "live_seconds": 0.1716,
+      "wider": "win",
+      "wider_seconds": 0.1671,
+      "endgame": "win"
+    },
+    {
+      "seed": 640154,
+      "first_cell": 437,
+      "death": {
+        "cell": 57,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.295,
+      "wider": "guess",
+      "wider_seconds": 0.2832,
+      "endgame": "win"
+    },
+    {
+      "seed": 640155,
+      "first_cell": 341,
+      "death": {
+        "cell": 451,
+        "mine_risk": 0.20000000298023224,
+        "min_risk": 0.20000000298023224,
+        "rollout_worlds": 15,
+        "indistinguishable_partner": 450,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3654,
+      "wider": "guess",
+      "wider_seconds": 0.4071,
+      "endgame": "win"
+    },
+    {
+      "seed": 640156,
+      "first_cell": 174,
+      "death": {
+        "cell": 57,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 15,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3157,
+      "wider": "guess",
+      "wider_seconds": 0.3353,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640157,
+      "first_cell": 25,
+      "live": "win",
+      "live_seconds": 0.4422,
+      "wider": "win",
+      "wider_seconds": 1.5131,
+      "endgame": "win"
+    },
+    {
+      "seed": 640158,
+      "first_cell": 311,
+      "live": "win",
+      "live_seconds": 0.1584,
+      "wider": "win",
+      "wider_seconds": 0.1544,
+      "endgame": "win"
+    },
+    {
+      "seed": 640159,
+      "first_cell": 234,
+      "death": {
+        "cell": 91,
+        "mine_risk": 0.2068965584039688,
+        "min_risk": 0.2068965584039688,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1783,
+      "wider": "guess",
+      "wider_seconds": 0.1732,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640160,
+      "first_cell": 384,
+      "live": "win",
+      "live_seconds": 0.3217,
+      "wider": "win",
+      "wider_seconds": 0.3689,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640161,
+      "first_cell": 308,
+      "live": "win",
+      "live_seconds": 0.1524,
+      "wider": "win",
+      "wider_seconds": 0.1543,
+      "endgame": "win"
+    },
+    {
+      "seed": 640162,
+      "first_cell": 356,
+      "live": "win",
+      "live_seconds": 0.2164,
+      "wider": "win",
+      "wider_seconds": 0.2336,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640163,
+      "first_cell": 140,
+      "death": {
+        "cell": 116,
+        "mine_risk": 0.1785714328289032,
+        "min_risk": 0.1785714328289032,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1897,
+      "wider": "guess",
+      "wider_seconds": 0.1894,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640164,
+      "first_cell": 258,
+      "live": "win",
+      "live_seconds": 0.127,
+      "wider": "win",
+      "wider_seconds": 0.1266,
+      "endgame": "win"
+    },
+    {
+      "seed": 640165,
+      "first_cell": 13,
+      "live": "win",
+      "live_seconds": 0.1873,
+      "wider": "win",
+      "wider_seconds": 0.1873,
+      "endgame": "win"
+    },
+    {
+      "seed": 640166,
+      "first_cell": 164,
+      "live": "win",
+      "live_seconds": 0.1388,
+      "wider": "win",
+      "wider_seconds": 0.1355,
+      "endgame": "win"
+    },
+    {
+      "seed": 640167,
+      "first_cell": 206,
+      "live": "win",
+      "live_seconds": 0.2295,
+      "wider": "win",
+      "wider_seconds": 0.8147,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640168,
+      "first_cell": 434,
+      "live": "win",
+      "live_seconds": 0.1322,
+      "wider": "win",
+      "wider_seconds": 0.1311,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640169,
+      "first_cell": 276,
+      "death": {
+        "cell": 421,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1597,
+      "wider": "guess",
+      "wider_seconds": 0.1802,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640170,
+      "first_cell": 219,
+      "live": "win",
+      "live_seconds": 0.4364,
+      "wider": "win",
+      "wider_seconds": 0.497,
+      "endgame": "win"
+    },
+    {
+      "seed": 640171,
+      "first_cell": 304,
+      "death": {
+        "cell": 105,
+        "mine_risk": 0.14379101991653442,
+        "min_risk": 0.14379101991653442,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0563,
+      "wider": "guess",
+      "wider_seconds": 0.0446,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640172,
+      "first_cell": 423,
+      "live": "win",
+      "live_seconds": 0.1287,
+      "wider": "win",
+      "wider_seconds": 0.1262,
+      "endgame": "win"
+    },
+    {
+      "seed": 640173,
+      "first_cell": 12,
+      "live": "win",
+      "live_seconds": 0.3666,
+      "wider": "win",
+      "wider_seconds": 0.3709,
+      "endgame": "win"
+    },
+    {
+      "seed": 640174,
+      "first_cell": 144,
+      "live": "win",
+      "live_seconds": 0.158,
+      "wider": "win",
+      "wider_seconds": 0.1623,
+      "endgame": "win"
+    },
+    {
+      "seed": 640175,
+      "first_cell": 17,
+      "death": {
+        "cell": 322,
+        "mine_risk": 0.19333332777023315,
+        "min_risk": 0.1599999964237213,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1277,
+      "wider": "guess",
+      "wider_seconds": 0.1243,
+      "endgame": "win"
+    },
+    {
+      "seed": 640176,
+      "first_cell": 353,
+      "death": {
+        "cell": 440,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 12,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.5685,
+      "wider": "guess",
+      "wider_seconds": 0.6569,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640177,
+      "first_cell": 427,
+      "death": {
+        "cell": 334,
+        "mine_risk": 0.09269285947084427,
+        "min_risk": 0.09269285947084427,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0091,
+      "wider": "guess",
+      "wider_seconds": 0.0078,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640178,
+      "first_cell": 209,
+      "death": {
+        "cell": 373,
+        "mine_risk": 0.20970959961414337,
+        "min_risk": 0.20970959961414337,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0532,
+      "wider": "guess",
+      "wider_seconds": 0.0498,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640179,
+      "first_cell": 281,
+      "live": "win",
+      "live_seconds": 0.3173,
+      "wider": "win",
+      "wider_seconds": 0.318,
+      "endgame": "win"
+    },
+    {
+      "seed": 640180,
+      "first_cell": 145,
+      "death": {
+        "cell": 409,
+        "mine_risk": 0.11538461595773697,
+        "min_risk": 0.11538461595773697,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0226,
+      "wider": "guess",
+      "wider_seconds": 0.0214,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640181,
+      "first_cell": 369,
+      "live": "win",
+      "live_seconds": 0.1236,
+      "wider": "win",
+      "wider_seconds": 0.1282,
+      "endgame": "win"
+    },
+    {
+      "seed": 640182,
+      "first_cell": 470,
+      "death": {
+        "cell": 422,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 16,
+        "indistinguishable_partner": 452,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2523,
+      "wider": "guess",
+      "wider_seconds": 0.2473,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640183,
+      "first_cell": 104,
+      "death": {
+        "cell": 455,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 456,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1316,
+      "wider": "guess",
+      "wider_seconds": 0.1405,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640184,
+      "first_cell": 305,
+      "live": "win",
+      "live_seconds": 0.2016,
+      "wider": "win",
+      "wider_seconds": 0.2037,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640185,
+      "first_cell": 265,
+      "live": "win",
+      "live_seconds": 0.1609,
+      "wider": "win",
+      "wider_seconds": 0.1547,
+      "endgame": "win"
+    },
+    {
+      "seed": 640186,
+      "first_cell": 90,
+      "live": "win",
+      "live_seconds": 0.5789,
+      "wider": "win",
+      "wider_seconds": 0.6197,
+      "endgame": "win"
+    },
+    {
+      "seed": 640187,
+      "first_cell": 372,
+      "live": "win",
+      "live_seconds": 0.4782,
+      "wider": "win",
+      "wider_seconds": 0.5363,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640188,
+      "first_cell": 407,
+      "death": {
+        "cell": 20,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1254,
+      "wider": "guess",
+      "wider_seconds": 0.1236,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640189,
+      "first_cell": 304,
+      "live": "win",
+      "live_seconds": 0.2034,
+      "wider": "win",
+      "wider_seconds": 0.2113,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640190,
+      "first_cell": 420,
+      "death": {
+        "cell": 459,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 460,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1766,
+      "wider": "guess",
+      "wider_seconds": 0.7101,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640191,
+      "first_cell": 12,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 8,
+        "indistinguishable_partner": 22,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2757,
+      "wider": "guess",
+      "wider_seconds": 0.2635,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640192,
+      "first_cell": 334,
+      "live": "win",
+      "live_seconds": 0.2531,
+      "wider": "win",
+      "wider_seconds": 0.2624,
+      "endgame": "win"
+    },
+    {
+      "seed": 640193,
+      "first_cell": 345,
+      "death": {
+        "cell": 388,
+        "mine_risk": 0.375,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.154,
+      "wider": "guess",
+      "wider_seconds": 0.1499,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640194,
+      "first_cell": 118,
+      "live": "win",
+      "live_seconds": 0.1703,
+      "wider": "win",
+      "wider_seconds": 0.1663,
+      "endgame": "win"
+    },
+    {
+      "seed": 640195,
+      "first_cell": 194,
+      "death": {
+        "cell": 444,
+        "mine_risk": 0.1818181872367859,
+        "min_risk": 0.1818181872367859,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.2288,
+      "wider": "guess",
+      "wider_seconds": 0.2341,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640196,
+      "first_cell": 70,
+      "live": "win",
+      "live_seconds": 0.1921,
+      "wider": "win",
+      "wider_seconds": 0.1937,
+      "endgame": "win"
+    },
+    {
+      "seed": 640197,
+      "first_cell": 428,
+      "live": "win",
+      "live_seconds": 0.1985,
+      "wider": "win",
+      "wider_seconds": 0.1987,
+      "endgame": "win"
+    },
+    {
+      "seed": 640198,
+      "first_cell": 472,
+      "death": {
+        "cell": 43,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2652,
+      "wider": "guess",
+      "wider_seconds": 0.2652,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640199,
+      "first_cell": 270,
+      "live": "win",
+      "live_seconds": 0.2068,
+      "wider": "win",
+      "wider_seconds": 0.2061,
+      "endgame": "win"
+    },
+    {
+      "seed": 640200,
+      "first_cell": 77,
+      "death": {
+        "cell": 4,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 5,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2071,
+      "wider": "guess",
+      "wider_seconds": 0.2056,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640201,
+      "first_cell": 317,
+      "live": "win",
+      "live_seconds": 0.2117,
+      "wider": "win",
+      "wider_seconds": 0.2134,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640202,
+      "first_cell": 98,
+      "death": {
+        "cell": 103,
+        "mine_risk": 0.17145270109176636,
+        "min_risk": 0.17145270109176636,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1796,
+      "wider": "guess",
+      "wider_seconds": 0.1608,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640203,
+      "first_cell": 385,
+      "live": "win",
+      "live_seconds": 0.1737,
+      "wider": "win",
+      "wider_seconds": 0.1745,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640204,
+      "first_cell": 104,
+      "live": "win",
+      "live_seconds": 0.1897,
+      "wider": "win",
+      "wider_seconds": 0.1884,
+      "endgame": "win"
+    },
+    {
+      "seed": 640205,
+      "first_cell": 147,
+      "live": "win",
+      "live_seconds": 0.187,
+      "wider": "win",
+      "wider_seconds": 0.1862,
+      "endgame": "win"
+    },
+    {
+      "seed": 640206,
+      "first_cell": 127,
+      "live": "win",
+      "live_seconds": 0.238,
+      "wider": "win",
+      "wider_seconds": 0.2401,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640207,
+      "first_cell": 335,
+      "death": {
+        "cell": 388,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.6815,
+      "wider": "guess",
+      "wider_seconds": 0.788,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640208,
+      "first_cell": 194,
+      "death": {
+        "cell": 31,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1506,
+      "wider": "guess",
+      "wider_seconds": 0.1442,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640209,
+      "first_cell": 440,
+      "death": {
+        "cell": 478,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 479,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.288,
+      "wider": "guess",
+      "wider_seconds": 0.2844,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640210,
+      "first_cell": 310,
+      "death": {
+        "cell": 215,
+        "mine_risk": 0.14796039462089539,
+        "min_risk": 0.13090316951274872,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1053,
+      "wider": "guess",
+      "wider_seconds": 0.1029,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640211,
+      "first_cell": 456,
+      "live": "win",
+      "live_seconds": 0.1972,
+      "wider": "win",
+      "wider_seconds": 0.1916,
+      "endgame": "win"
+    },
+    {
+      "seed": 640212,
+      "first_cell": 341,
+      "live": "win",
+      "live_seconds": 0.1806,
+      "wider": "win",
+      "wider_seconds": 0.1805,
+      "endgame": "win"
+    },
+    {
+      "seed": 640213,
+      "first_cell": 176,
+      "death": {
+        "cell": 424,
+        "mine_risk": 0.4444444477558136,
+        "min_risk": 0.4444444477558136,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1972,
+      "wider": "guess",
+      "wider_seconds": 0.1954,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640214,
+      "first_cell": 78,
+      "death": {
+        "cell": 28,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 29,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1845,
+      "wider": "guess",
+      "wider_seconds": 0.1821,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640215,
+      "first_cell": 79,
+      "death": {
+        "cell": 477,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 3,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2287,
+      "wider": "guess",
+      "wider_seconds": 0.2274,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640216,
+      "first_cell": 24,
+      "live": "win",
+      "live_seconds": 0.2083,
+      "wider": "win",
+      "wider_seconds": 0.2239,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640217,
+      "first_cell": 142,
+      "live": "win",
+      "live_seconds": 0.1813,
+      "wider": "win",
+      "wider_seconds": 0.1747,
+      "endgame": "win"
+    },
+    {
+      "seed": 640218,
+      "first_cell": 214,
+      "live": "win",
+      "live_seconds": 0.1525,
+      "wider": "win",
+      "wider_seconds": 0.8687,
+      "endgame": "win"
+    },
+    {
+      "seed": 640219,
+      "first_cell": 68,
+      "live": "win",
+      "live_seconds": 0.1208,
+      "wider": "win",
+      "wider_seconds": 0.1223,
+      "endgame": "win"
+    },
+    {
+      "seed": 640220,
+      "first_cell": 230,
+      "live": "win",
+      "live_seconds": 0.1696,
+      "wider": "win",
+      "wider_seconds": 0.1651,
+      "endgame": "win"
+    },
+    {
+      "seed": 640221,
+      "first_cell": 60,
+      "live": "win",
+      "live_seconds": 0.1879,
+      "wider": "win",
+      "wider_seconds": 0.1824,
+      "endgame": "win"
+    },
+    {
+      "seed": 640222,
+      "first_cell": 20,
+      "live": "win",
+      "live_seconds": 0.2447,
+      "wider": "win",
+      "wider_seconds": 0.2318,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640223,
+      "first_cell": 403,
+      "death": {
+        "cell": 104,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2213,
+      "wider": "guess",
+      "wider_seconds": 0.2216,
+      "endgame": "win"
+    },
+    {
+      "seed": 640224,
+      "first_cell": 75,
+      "death": {
+        "cell": 121,
+        "mine_risk": 0.07692307978868484,
+        "min_risk": 0.07692307978868484,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1413,
+      "wider": "guess",
+      "wider_seconds": 0.1375,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640225,
+      "first_cell": 323,
+      "death": {
+        "cell": 391,
+        "mine_risk": 0.1111111119389534,
+        "min_risk": 0.1111111119389534,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 390,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2002,
+      "wider": "guess",
+      "wider_seconds": 0.8274,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640226,
+      "first_cell": 422,
+      "live": "win",
+      "live_seconds": 0.1689,
+      "wider": "win",
+      "wider_seconds": 0.1671,
+      "endgame": "win"
+    },
+    {
+      "seed": 640227,
+      "first_cell": 473,
+      "death": {
+        "cell": 279,
+        "mine_risk": 0.20000000298023224,
+        "min_risk": 0.20000000298023224,
+        "rollout_worlds": 10,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3457,
+      "wider": "guess",
+      "wider_seconds": 0.3795,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640228,
+      "first_cell": 153,
+      "live": "win",
+      "live_seconds": 0.1337,
+      "wider": "win",
+      "wider_seconds": 0.1336,
+      "endgame": "win"
+    },
+    {
+      "seed": 640229,
+      "first_cell": 81,
+      "death": {
+        "cell": 2,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 6,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2362,
+      "wider": "guess",
+      "wider_seconds": 0.2299,
+      "endgame": "win"
+    },
+    {
+      "seed": 640230,
+      "first_cell": 164,
+      "death": {
+        "cell": 21,
+        "mine_risk": 0.10963454842567444,
+        "min_risk": 0.08099865913391113,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1537,
+      "wider": "guess",
+      "wider_seconds": 0.156,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640231,
+      "first_cell": 146,
+      "death": {
+        "cell": 420,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 450,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1405,
+      "wider": "guess",
+      "wider_seconds": 0.1419,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640232,
+      "first_cell": 354,
+      "death": {
+        "cell": 419,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 6,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.5809,
+      "wider": "guess",
+      "wider_seconds": 0.7052,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640233,
+      "first_cell": 407,
+      "death": {
+        "cell": 447,
+        "mine_risk": 0.25,
+        "min_risk": 0.25,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3311,
+      "wider": "win",
+      "wider_seconds": 1.3029,
+      "endgame": "win"
+    },
+    {
+      "seed": 640234,
+      "first_cell": 298,
+      "death": {
+        "cell": 428,
+        "mine_risk": 0.0977182686328888,
+        "min_risk": 0.0977182686328888,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0945,
+      "wider": "guess",
+      "wider_seconds": 0.0954,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640235,
+      "first_cell": 169,
+      "live": "win",
+      "live_seconds": 0.2046,
+      "wider": "win",
+      "wider_seconds": 0.204,
+      "endgame": "win"
+    },
+    {
+      "seed": 640236,
+      "first_cell": 79,
+      "death": {
+        "cell": 58,
+        "mine_risk": 0.1666666716337204,
+        "min_risk": 0.1666666716337204,
+        "rollout_worlds": 18,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.352,
+      "wider": "guess",
+      "wider_seconds": 0.4105,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640237,
+      "first_cell": 454,
+      "death": {
+        "cell": 435,
+        "mine_risk": 0.4000000059604645,
+        "min_risk": 0.4000000059604645,
+        "rollout_worlds": 10,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2638,
+      "wider": "guess",
+      "wider_seconds": 0.2761,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640238,
+      "first_cell": 325,
+      "death": {
+        "cell": 285,
+        "mine_risk": 0.19075898826122284,
+        "min_risk": 0.19075898826122284,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0563,
+      "wider": "guess",
+      "wider_seconds": 0.0544,
+      "endgame": "win"
+    },
+    {
+      "seed": 640239,
+      "first_cell": 468,
+      "live": "win",
+      "live_seconds": 0.1357,
+      "wider": "win",
+      "wider_seconds": 0.1345,
+      "endgame": "win"
+    },
+    {
+      "seed": 640240,
+      "first_cell": 257,
+      "death": {
+        "cell": 111,
+        "mine_risk": 0.1306866854429245,
+        "min_risk": 0.1306866854429245,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1537,
+      "wider": "guess",
+      "wider_seconds": 0.1534,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640241,
+      "first_cell": 443,
+      "death": {
+        "cell": 301,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2367,
+      "wider": "guess",
+      "wider_seconds": 0.2433,
+      "endgame": "win"
+    },
+    {
+      "seed": 640242,
+      "first_cell": 143,
+      "live": "win",
+      "live_seconds": 0.1465,
+      "wider": "win",
+      "wider_seconds": 0.1488,
+      "endgame": "win"
+    },
+    {
+      "seed": 640243,
+      "first_cell": 57,
+      "death": {
+        "cell": 76,
+        "mine_risk": 0.07543224841356277,
+        "min_risk": 0.07543224841356277,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0579,
+      "wider": "guess",
+      "wider_seconds": 0.0565,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640244,
+      "first_cell": 214,
+      "death": {
+        "cell": 52,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 22,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.273,
+      "wider": "guess",
+      "wider_seconds": 0.2629,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640245,
+      "first_cell": 210,
+      "live": "win",
+      "live_seconds": 0.1629,
+      "wider": "win",
+      "wider_seconds": 0.1655,
+      "endgame": "win"
+    },
+    {
+      "seed": 640246,
+      "first_cell": 142,
+      "live": "win",
+      "live_seconds": 0.3154,
+      "wider": "win",
+      "wider_seconds": 0.3143,
+      "endgame": "win"
+    },
+    {
+      "seed": 640247,
+      "first_cell": 114,
+      "death": {
+        "cell": 46,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 16,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1555,
+      "wider": "guess",
+      "wider_seconds": 0.1534,
+      "endgame": "win"
+    },
+    {
+      "seed": 640248,
+      "first_cell": 246,
+      "live": "win",
+      "live_seconds": 0.1509,
+      "wider": "win",
+      "wider_seconds": 0.152,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640249,
+      "first_cell": 135,
+      "live": "win",
+      "live_seconds": 0.4968,
+      "wider": "win",
+      "wider_seconds": 1.2826,
+      "endgame": "win"
+    },
+    {
+      "seed": 640250,
+      "first_cell": 138,
+      "death": {
+        "cell": 429,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 459,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2658,
+      "wider": "guess",
+      "wider_seconds": 0.2614,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640251,
+      "first_cell": 294,
+      "death": {
+        "cell": 356,
+        "mine_risk": 0.19220665097236633,
+        "min_risk": 0.19220665097236633,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0105,
+      "wider": "guess",
+      "wider_seconds": 0.0088,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640252,
+      "first_cell": 407,
+      "live": "win",
+      "live_seconds": 0.1462,
+      "wider": "win",
+      "wider_seconds": 0.1443,
+      "endgame": "win"
+    },
+    {
+      "seed": 640253,
+      "first_cell": 19,
+      "death": {
+        "cell": 382,
+        "mine_risk": 0.12437810748815536,
+        "min_risk": 0.12437810748815536,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1129,
+      "wider": "guess",
+      "wider_seconds": 0.1137,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640254,
+      "first_cell": 332,
+      "live": "win",
+      "live_seconds": 0.1739,
+      "wider": "win",
+      "wider_seconds": 0.174,
+      "endgame": "win"
+    },
+    {
+      "seed": 640255,
+      "first_cell": 125,
+      "live": "win",
+      "live_seconds": 0.5951,
+      "wider": "win",
+      "wider_seconds": 0.7097,
+      "endgame": "win"
+    },
+    {
+      "seed": 640256,
+      "first_cell": 58,
+      "live": "win",
+      "live_seconds": 0.1521,
+      "wider": "win",
+      "wider_seconds": 0.1516,
+      "endgame": "win"
+    },
+    {
+      "seed": 640257,
+      "first_cell": 180,
+      "death": {
+        "cell": 34,
+        "mine_risk": 0.1090686246752739,
+        "min_risk": 0.1090686246752739,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0094,
+      "wider": "guess",
+      "wider_seconds": 0.0079,
+      "endgame": "win"
+    },
+    {
+      "seed": 640258,
+      "first_cell": 400,
+      "live": "win",
+      "live_seconds": 0.2484,
+      "wider": "win",
+      "wider_seconds": 0.2483,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640259,
+      "first_cell": 353,
+      "death": {
+        "cell": 59,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 6,
+        "indistinguishable_partner": 58,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1984,
+      "wider": "guess",
+      "wider_seconds": 0.1972,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640260,
+      "first_cell": 360,
+      "death": {
+        "cell": 303,
+        "mine_risk": 0.19839932024478912,
+        "min_risk": 0.19839932024478912,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0051,
+      "wider": "guess",
+      "wider_seconds": 0.0032,
+      "endgame": "win"
+    },
+    {
+      "seed": 640261,
+      "first_cell": 153,
+      "live": "win",
+      "live_seconds": 0.1936,
+      "wider": "win",
+      "wider_seconds": 0.1909,
+      "endgame": "win"
+    },
+    {
+      "seed": 640262,
+      "first_cell": 129,
+      "live": "win",
+      "live_seconds": 0.1397,
+      "wider": "win",
+      "wider_seconds": 0.1431,
+      "endgame": "win"
+    },
+    {
+      "seed": 640263,
+      "first_cell": 241,
+      "death": {
+        "cell": 443,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2361,
+      "wider": "guess",
+      "wider_seconds": 0.2356,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640264,
+      "first_cell": 180,
+      "live": "win",
+      "live_seconds": 0.1649,
+      "wider": "win",
+      "wider_seconds": 0.1713,
+      "endgame": "win"
+    },
+    {
+      "seed": 640265,
+      "first_cell": 175,
+      "live": "win",
+      "live_seconds": 0.2148,
+      "wider": "win",
+      "wider_seconds": 0.2055,
+      "endgame": "win"
+    },
+    {
+      "seed": 640266,
+      "first_cell": 455,
+      "death": {
+        "cell": 367,
+        "mine_risk": 0.12580333650112152,
+        "min_risk": 0.11182519048452377,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0133,
+      "wider": "guess",
+      "wider_seconds": 0.011,
+      "endgame": "win"
+    },
+    {
+      "seed": 640267,
+      "first_cell": 253,
+      "live": "win",
+      "live_seconds": 0.4709,
+      "wider": "win",
+      "wider_seconds": 0.5219,
+      "endgame": "win"
+    },
+    {
+      "seed": 640268,
+      "first_cell": 364,
+      "death": {
+        "cell": 149,
+        "mine_risk": 0.10166280716657639,
+        "min_risk": 0.10166280716657639,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1053,
+      "wider": "guess",
+      "wider_seconds": 0.1042,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640269,
+      "first_cell": 440,
+      "live": "win",
+      "live_seconds": 0.1327,
+      "wider": "win",
+      "wider_seconds": 0.1357,
+      "endgame": "win"
+    },
+    {
+      "seed": 640270,
+      "first_cell": 283,
+      "live": "win",
+      "live_seconds": 0.4157,
+      "wider": "win",
+      "wider_seconds": 0.415,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640271,
+      "first_cell": 418,
+      "death": {
+        "cell": 62,
+        "mine_risk": 0.1818181872367859,
+        "min_risk": 0.1818181872367859,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.07272727272727272
+      },
+      "live": "guess",
+      "live_seconds": 0.13,
+      "wider": "win",
+      "wider_seconds": 0.9772,
+      "endgame": "win"
+    },
+    {
+      "seed": 640272,
+      "first_cell": 10,
+      "death": {
+        "cell": 118,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1565,
+      "wider": "guess",
+      "wider_seconds": 0.1544,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640273,
+      "first_cell": 404,
+      "live": "win",
+      "live_seconds": 0.1612,
+      "wider": "win",
+      "wider_seconds": 0.1653,
+      "endgame": "win"
+    },
+    {
+      "seed": 640274,
+      "first_cell": 121,
+      "death": {
+        "cell": 292,
+        "mine_risk": 0.11405143141746521,
+        "min_risk": 0.11405143141746521,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1136,
+      "wider": "guess",
+      "wider_seconds": 0.1168,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640275,
+      "first_cell": 268,
+      "live": "win",
+      "live_seconds": 0.312,
+      "wider": "win",
+      "wider_seconds": 0.3157,
+      "endgame": "win"
+    },
+    {
+      "seed": 640276,
+      "first_cell": 253,
+      "death": {
+        "cell": 11,
+        "mine_risk": 0.2222222238779068,
+        "min_risk": 0.2222222238779068,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1405,
+      "wider": "guess",
+      "wider_seconds": 0.142,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640277,
+      "first_cell": 477,
+      "death": {
+        "cell": 121,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1916,
+      "wider": "guess",
+      "wider_seconds": 0.838,
+      "endgame": "win"
+    },
+    {
+      "seed": 640278,
+      "first_cell": 438,
+      "live": "win",
+      "live_seconds": 0.2384,
+      "wider": "win",
+      "wider_seconds": 0.2329,
+      "endgame": "win"
+    },
+    {
+      "seed": 640279,
+      "first_cell": 71,
+      "live": "win",
+      "live_seconds": 0.1943,
+      "wider": "win",
+      "wider_seconds": 0.182,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640280,
+      "first_cell": 34,
+      "death": {
+        "cell": 137,
+        "mine_risk": 0.21739129722118378,
+        "min_risk": 0.1304347813129425,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1361,
+      "wider": "guess",
+      "wider_seconds": 0.1377,
+      "endgame": "win"
+    },
+    {
+      "seed": 640281,
+      "first_cell": 74,
+      "death": {
+        "cell": 475,
+        "mine_risk": 0.22801697254180908,
+        "min_risk": 0.22801697254180908,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1095,
+      "wider": "guess",
+      "wider_seconds": 0.1104,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640282,
+      "first_cell": 358,
+      "death": {
+        "cell": 120,
+        "mine_risk": 0.1527777761220932,
+        "min_risk": 0.1527777761220932,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.129,
+      "wider": "guess",
+      "wider_seconds": 0.1249,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640283,
+      "first_cell": 249,
+      "live": "win",
+      "live_seconds": 0.1766,
+      "wider": "win",
+      "wider_seconds": 0.1733,
+      "endgame": "win"
+    },
+    {
+      "seed": 640284,
+      "first_cell": 448,
+      "death": {
+        "cell": 474,
+        "mine_risk": 0.1449044644832611,
+        "min_risk": 0.1449044644832611,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0071,
+      "wider": "guess",
+      "wider_seconds": 0.0056,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640285,
+      "first_cell": 207,
+      "death": {
+        "cell": 479,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 6,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3697,
+      "wider": "guess",
+      "wider_seconds": 0.3673,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640286,
+      "first_cell": 380,
+      "live": "win",
+      "live_seconds": 0.2242,
+      "wider": "win",
+      "wider_seconds": 0.2278,
+      "endgame": "win"
+    },
+    {
+      "seed": 640287,
+      "first_cell": 288,
+      "live": "win",
+      "live_seconds": 0.1584,
+      "wider": "win",
+      "wider_seconds": 0.1576,
+      "endgame": "win"
+    },
+    {
+      "seed": 640288,
+      "first_cell": 55,
+      "live": "win",
+      "live_seconds": 0.2518,
+      "wider": "win",
+      "wider_seconds": 0.2496,
+      "endgame": "win"
+    },
+    {
+      "seed": 640289,
+      "first_cell": 238,
+      "live": "win",
+      "live_seconds": 0.1425,
+      "wider": "win",
+      "wider_seconds": 0.1453,
+      "endgame": "win"
+    },
+    {
+      "seed": 640290,
+      "first_cell": 312,
+      "live": "win",
+      "live_seconds": 0.1717,
+      "wider": "win",
+      "wider_seconds": 0.1738,
+      "endgame": "win"
+    },
+    {
+      "seed": 640291,
+      "first_cell": 282,
+      "live": "win",
+      "live_seconds": 0.1801,
+      "wider": "win",
+      "wider_seconds": 0.1844,
+      "endgame": "win"
+    },
+    {
+      "seed": 640292,
+      "first_cell": 165,
+      "live": "win",
+      "live_seconds": 0.1467,
+      "wider": "win",
+      "wider_seconds": 0.1436,
+      "endgame": "win"
+    },
+    {
+      "seed": 640293,
+      "first_cell": 175,
+      "live": "win",
+      "live_seconds": 0.1827,
+      "wider": "win",
+      "wider_seconds": 0.6542,
+      "endgame": "win"
+    },
+    {
+      "seed": 640294,
+      "first_cell": 403,
+      "live": "win",
+      "live_seconds": 0.34,
+      "wider": "win",
+      "wider_seconds": 0.3429,
+      "endgame": "win"
+    },
+    {
+      "seed": 640295,
+      "first_cell": 339,
+      "death": {
+        "cell": 362,
+        "mine_risk": 0.1433628350496292,
+        "min_risk": 0.1433628350496292,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1497,
+      "wider": "guess",
+      "wider_seconds": 0.1454,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640296,
+      "first_cell": 85,
+      "death": {
+        "cell": 286,
+        "mine_risk": 0.17072147130966187,
+        "min_risk": 0.14986297488212585,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0784,
+      "wider": "guess",
+      "wider_seconds": 0.0746,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640297,
+      "first_cell": 435,
+      "live": "win",
+      "live_seconds": 0.1584,
+      "wider": "win",
+      "wider_seconds": 0.1601,
+      "endgame": "win"
+    },
+    {
+      "seed": 640298,
+      "first_cell": 311,
+      "live": "win",
+      "live_seconds": 0.1862,
+      "wider": "win",
+      "wider_seconds": 0.1842,
+      "endgame": "win"
+    },
+    {
+      "seed": 640299,
+      "first_cell": 228,
+      "live": "win",
+      "live_seconds": 0.1675,
+      "wider": "win",
+      "wider_seconds": 0.1664,
+      "endgame": "win"
+    },
+    {
+      "seed": 640300,
+      "first_cell": 475,
+      "death": {
+        "cell": 339,
+        "mine_risk": 0.20801863074302673,
+        "min_risk": 0.19704481959342957,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1257,
+      "wider": "guess",
+      "wider_seconds": 0.1251,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640301,
+      "first_cell": 467,
+      "live": "win",
+      "live_seconds": 0.1919,
+      "wider": "guess",
+      "wider_seconds": 1.6519,
+      "endgame": "win"
+    },
+    {
+      "seed": 640302,
+      "first_cell": 216,
+      "death": {
+        "cell": 432,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1402,
+      "wider": "guess",
+      "wider_seconds": 0.1415,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640303,
+      "first_cell": 131,
+      "live": "win",
+      "live_seconds": 0.1875,
+      "wider": "win",
+      "wider_seconds": 0.1824,
+      "endgame": "win"
+    },
+    {
+      "seed": 640304,
+      "first_cell": 471,
+      "live": "win",
+      "live_seconds": 0.2307,
+      "wider": "win",
+      "wider_seconds": 0.2259,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640305,
+      "first_cell": 349,
+      "death": {
+        "cell": 447,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 9,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2739,
+      "wider": "guess",
+      "wider_seconds": 0.2732,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640306,
+      "first_cell": 433,
+      "death": {
+        "cell": 57,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1979,
+      "wider": "win",
+      "wider_seconds": 0.5098,
+      "endgame": "win"
+    },
+    {
+      "seed": 640307,
+      "first_cell": 79,
+      "live": "win",
+      "live_seconds": 0.282,
+      "wider": "win",
+      "wider_seconds": 0.2884,
+      "endgame": "win"
+    },
+    {
+      "seed": 640308,
+      "first_cell": 54,
+      "death": {
+        "cell": 2,
+        "mine_risk": 0.25,
+        "min_risk": 0.25,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4257,
+      "wider": "guess",
+      "wider_seconds": 0.442,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640309,
+      "first_cell": 180,
+      "live": "win",
+      "live_seconds": 0.1642,
+      "wider": "win",
+      "wider_seconds": 0.1634,
+      "endgame": "win"
+    },
+    {
+      "seed": 640310,
+      "first_cell": 397,
+      "death": {
+        "cell": 410,
+        "mine_risk": 0.0955289974808693,
+        "min_risk": 0.0955289974808693,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0432,
+      "wider": "guess",
+      "wider_seconds": 0.0424,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640311,
+      "first_cell": 445,
+      "live": "win",
+      "live_seconds": 0.7017,
+      "wider": "win",
+      "wider_seconds": 0.8701,
+      "endgame": "win"
+    },
+    {
+      "seed": 640312,
+      "first_cell": 34,
+      "live": "win",
+      "live_seconds": 0.1982,
+      "wider": "win",
+      "wider_seconds": 0.1995,
+      "endgame": "win"
+    },
+    {
+      "seed": 640313,
+      "first_cell": 410,
+      "death": {
+        "cell": 37,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2976,
+      "wider": "guess",
+      "wider_seconds": 0.2994,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640314,
+      "first_cell": 292,
+      "death": {
+        "cell": 181,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 8,
+        "indistinguishable_partner": 180,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2792,
+      "wider": "guess",
+      "wider_seconds": 0.2891,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640315,
+      "first_cell": 265,
+      "death": {
+        "cell": 302,
+        "mine_risk": 0.1111111119389534,
+        "min_risk": 0.1111111119389534,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1805,
+      "wider": "guess",
+      "wider_seconds": 0.1822,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640316,
+      "first_cell": 132,
+      "death": {
+        "cell": 421,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 451,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1192,
+      "wider": "guess",
+      "wider_seconds": 0.1148,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640317,
+      "first_cell": 134,
+      "live": "win",
+      "live_seconds": 0.1456,
+      "wider": "win",
+      "wider_seconds": 0.1478,
+      "endgame": "win"
+    },
+    {
+      "seed": 640318,
+      "first_cell": 382,
+      "live": "win",
+      "live_seconds": 0.1382,
+      "wider": "win",
+      "wider_seconds": 0.1411,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640319,
+      "first_cell": 433,
+      "death": {
+        "cell": 91,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 90,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1973,
+      "wider": "guess",
+      "wider_seconds": 0.1901,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640320,
+      "first_cell": 7,
+      "death": {
+        "cell": 97,
+        "mine_risk": 0.10337706655263901,
+        "min_risk": 0.10337706655263901,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0063,
+      "wider": "guess",
+      "wider_seconds": 0.0049,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640321,
+      "first_cell": 375,
+      "death": {
+        "cell": 38,
+        "mine_risk": 0.5,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 12,
+        "indistinguishable_partner": 8,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2554,
+      "wider": "guess",
+      "wider_seconds": 0.2569,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640322,
+      "first_cell": 332,
+      "death": {
+        "cell": 121,
+        "mine_risk": 0.125,
+        "min_risk": 0.125,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.041666666666666664
+      },
+      "live": "guess",
+      "live_seconds": 0.177,
+      "wider": "guess",
+      "wider_seconds": 0.135,
+      "endgame": "win"
+    },
+    {
+      "seed": 640323,
+      "first_cell": 274,
+      "death": {
+        "cell": 159,
+        "mine_risk": 0.07306867092847824,
+        "min_risk": 0.07306867092847824,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0242,
+      "wider": "guess",
+      "wider_seconds": 0.0227,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640324,
+      "first_cell": 319,
+      "death": {
+        "cell": 431,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 461,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2059,
+      "wider": "guess",
+      "wider_seconds": 0.2058,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640325,
+      "first_cell": 144,
+      "live": "win",
+      "live_seconds": 0.2582,
+      "wider": "win",
+      "wider_seconds": 0.2573,
+      "endgame": "win"
+    },
+    {
+      "seed": 640326,
+      "first_cell": 111,
+      "live": "win",
+      "live_seconds": 0.161,
+      "wider": "win",
+      "wider_seconds": 0.1591,
+      "endgame": "win"
+    },
+    {
+      "seed": 640327,
+      "first_cell": 463,
+      "death": {
+        "cell": 346,
+        "mine_risk": 0.19191686809062958,
+        "min_risk": 0.19191686809062958,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0186,
+      "wider": "guess",
+      "wider_seconds": 0.0168,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640328,
+      "first_cell": 298,
+      "death": {
+        "cell": 43,
+        "mine_risk": 0.05035611242055893,
+        "min_risk": 0.05035611242055893,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0452,
+      "wider": "guess",
+      "wider_seconds": 0.0471,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640329,
+      "first_cell": 154,
+      "death": {
+        "cell": 24,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 3,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.2946,
+      "wider": "guess",
+      "wider_seconds": 0.2889,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640330,
+      "first_cell": 303,
+      "live": "win",
+      "live_seconds": 0.1834,
+      "wider": "win",
+      "wider_seconds": 0.1836,
+      "endgame": "win"
+    },
+    {
+      "seed": 640331,
+      "first_cell": 230,
+      "death": {
+        "cell": 78,
+        "mine_risk": 0.012696432881057262,
+        "min_risk": 0.012696432881057262,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0107,
+      "wider": "guess",
+      "wider_seconds": 0.0098,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640332,
+      "first_cell": 203,
+      "death": {
+        "cell": 364,
+        "mine_risk": 0.1465844362974167,
+        "min_risk": 0.1465844362974167,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1233,
+      "wider": "guess",
+      "wider_seconds": 0.1209,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640333,
+      "first_cell": 369,
+      "live": "win",
+      "live_seconds": 0.2043,
+      "wider": "win",
+      "wider_seconds": 0.2049,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640334,
+      "first_cell": 373,
+      "live": "win",
+      "live_seconds": 0.1869,
+      "wider": "win",
+      "wider_seconds": 0.1887,
+      "endgame": "win"
+    },
+    {
+      "seed": 640335,
+      "first_cell": 254,
+      "death": {
+        "cell": 446,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 476,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3419,
+      "wider": "guess",
+      "wider_seconds": 0.3373,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640336,
+      "first_cell": 78,
+      "live": "win",
+      "live_seconds": 0.1971,
+      "wider": "win",
+      "wider_seconds": 0.1981,
+      "endgame": "win"
+    },
+    {
+      "seed": 640337,
+      "first_cell": 340,
+      "live": "win",
+      "live_seconds": 0.5082,
+      "wider": "win",
+      "wider_seconds": 0.6177,
+      "endgame": "win"
+    },
+    {
+      "seed": 640338,
+      "first_cell": 63,
+      "live": "win",
+      "live_seconds": 0.2004,
+      "wider": "win",
+      "wider_seconds": 0.1998,
+      "endgame": "win"
+    },
+    {
+      "seed": 640339,
+      "first_cell": 93,
+      "live": "win",
+      "live_seconds": 0.1584,
+      "wider": "win",
+      "wider_seconds": 0.161,
+      "endgame": "win"
+    },
+    {
+      "seed": 640340,
+      "first_cell": 98,
+      "death": {
+        "cell": 119,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 149,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1393,
+      "wider": "guess",
+      "wider_seconds": 0.1414,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640341,
+      "first_cell": 291,
+      "live": "win",
+      "live_seconds": 0.1831,
+      "wider": "win",
+      "wider_seconds": 0.1857,
+      "endgame": "win"
+    },
+    {
+      "seed": 640342,
+      "first_cell": 272,
+      "death": {
+        "cell": 31,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4025,
+      "wider": "guess",
+      "wider_seconds": 0.4801,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640343,
+      "first_cell": 269,
+      "live": "win",
+      "live_seconds": 0.1368,
+      "wider": "win",
+      "wider_seconds": 0.1416,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640344,
+      "first_cell": 317,
+      "death": {
+        "cell": 11,
+        "mine_risk": 0.19593679904937744,
+        "min_risk": 0.19593679904937744,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0604,
+      "wider": "guess",
+      "wider_seconds": 0.0588,
+      "endgame": "win"
+    },
+    {
+      "seed": 640345,
+      "first_cell": 330,
+      "death": {
+        "cell": 115,
+        "mine_risk": 0.1111111119389534,
+        "min_risk": 0.1111111119389534,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1547,
+      "wider": "guess",
+      "wider_seconds": 0.1494,
+      "endgame": "win"
+    },
+    {
+      "seed": 640346,
+      "first_cell": 29,
+      "live": "win",
+      "live_seconds": 0.1469,
+      "wider": "win",
+      "wider_seconds": 0.1495,
+      "endgame": "win"
+    },
+    {
+      "seed": 640347,
+      "first_cell": 439,
+      "live": "win",
+      "live_seconds": 0.1601,
+      "wider": "win",
+      "wider_seconds": 0.1557,
+      "endgame": "win"
+    },
+    {
+      "seed": 640348,
+      "first_cell": 83,
+      "live": "win",
+      "live_seconds": 0.2122,
+      "wider": "win",
+      "wider_seconds": 0.2043,
+      "endgame": "win"
+    },
+    {
+      "seed": 640349,
+      "first_cell": 332,
+      "live": "win",
+      "live_seconds": 0.1648,
+      "wider": "win",
+      "wider_seconds": 0.1637,
+      "endgame": "win"
+    },
+    {
+      "seed": 640350,
+      "first_cell": 435,
+      "death": {
+        "cell": 88,
+        "mine_risk": 0.25,
+        "min_risk": 0.25,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0125
+      },
+      "live": "guess",
+      "live_seconds": 0.1433,
+      "wider": "guess",
+      "wider_seconds": 0.1275,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640351,
+      "first_cell": 431,
+      "live": "win",
+      "live_seconds": 0.2716,
+      "wider": "win",
+      "wider_seconds": 0.2796,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640352,
+      "first_cell": 237,
+      "live": "win",
+      "live_seconds": 0.7934,
+      "wider": "win",
+      "wider_seconds": 0.9228,
+      "endgame": "win"
+    },
+    {
+      "seed": 640353,
+      "first_cell": 86,
+      "death": {
+        "cell": 298,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 299,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1515,
+      "wider": "guess",
+      "wider_seconds": 0.1474,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640354,
+      "first_cell": 419,
+      "live": "win",
+      "live_seconds": 0.1949,
+      "wider": "win",
+      "wider_seconds": 0.1963,
+      "endgame": "win"
+    },
+    {
+      "seed": 640355,
+      "first_cell": 113,
+      "live": "win",
+      "live_seconds": 0.1505,
+      "wider": "win",
+      "wider_seconds": 0.1518,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640356,
+      "first_cell": 100,
+      "live": "win",
+      "live_seconds": 0.1539,
+      "wider": "win",
+      "wider_seconds": 0.1529,
+      "endgame": "win"
+    },
+    {
+      "seed": 640357,
+      "first_cell": 308,
+      "live": "win",
+      "live_seconds": 0.1772,
+      "wider": "win",
+      "wider_seconds": 0.9024,
+      "endgame": "win"
+    },
+    {
+      "seed": 640358,
+      "first_cell": 163,
+      "death": {
+        "cell": 466,
+        "mine_risk": 0.3333333432674408,
+        "min_risk": 0.3333333432674408,
+        "rollout_worlds": 24,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4563,
+      "wider": "guess",
+      "wider_seconds": 0.5785,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640359,
+      "first_cell": 439,
+      "live": "win",
+      "live_seconds": 0.2434,
+      "wider": "win",
+      "wider_seconds": 0.2268,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640360,
+      "first_cell": 92,
+      "death": {
+        "cell": 450,
+        "mine_risk": 0.20454545319080353,
+        "min_risk": 0.20454545319080353,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 420,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.0074,
+      "wider": "guess",
+      "wider_seconds": 0.0059,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640361,
+      "first_cell": 420,
+      "live": "win",
+      "live_seconds": 0.1816,
+      "wider": "win",
+      "wider_seconds": 0.1816,
+      "endgame": "win"
+    },
+    {
+      "seed": 640362,
+      "first_cell": 372,
+      "live": "win",
+      "live_seconds": 0.1555,
+      "wider": "win",
+      "wider_seconds": 0.1582,
+      "endgame": "win"
+    },
+    {
+      "seed": 640363,
+      "first_cell": 5,
+      "death": {
+        "cell": 439,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 469,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1398,
+      "wider": "guess",
+      "wider_seconds": 0.1393,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640364,
+      "first_cell": 354,
+      "death": {
+        "cell": 58,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 59,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1532,
+      "wider": "guess",
+      "wider_seconds": 0.1446,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640365,
+      "first_cell": 472,
+      "death": {
+        "cell": 440,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1619,
+      "wider": "guess",
+      "wider_seconds": 0.1568,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640366,
+      "first_cell": 4,
+      "live": "win",
+      "live_seconds": 0.1783,
+      "wider": "win",
+      "wider_seconds": 0.1771,
+      "endgame": "win"
+    },
+    {
+      "seed": 640367,
+      "first_cell": 411,
+      "death": {
+        "cell": 268,
+        "mine_risk": 0.20392157137393951,
+        "min_risk": 0.20392157137393951,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 269,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1233,
+      "wider": "guess",
+      "wider_seconds": 0.1236,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640368,
+      "first_cell": 34,
+      "live": "win",
+      "live_seconds": 0.217,
+      "wider": "win",
+      "wider_seconds": 0.2117,
+      "endgame": "win"
+    },
+    {
+      "seed": 640369,
+      "first_cell": 338,
+      "live": "win",
+      "live_seconds": 0.1877,
+      "wider": "win",
+      "wider_seconds": 0.1849,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640370,
+      "first_cell": 262,
+      "death": {
+        "cell": 53,
+        "mine_risk": 0.15536722540855408,
+        "min_risk": 0.15536722540855408,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1352,
+      "wider": "guess",
+      "wider_seconds": 0.1383,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640371,
+      "first_cell": 124,
+      "death": {
+        "cell": 298,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": 299,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.3422,
+      "wider": "guess",
+      "wider_seconds": 0.3692,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640372,
+      "first_cell": 147,
+      "death": {
+        "cell": 28,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 29,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.4329,
+      "wider": "guess",
+      "wider_seconds": 0.9449,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640373,
+      "first_cell": 31,
+      "death": {
+        "cell": 22,
+        "mine_risk": 0.3499999940395355,
+        "min_risk": 0.25,
+        "rollout_worlds": 20,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.5081,
+      "wider": "guess",
+      "wider_seconds": 0.6013,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640374,
+      "first_cell": 273,
+      "live": "win",
+      "live_seconds": 0.2031,
+      "wider": "win",
+      "wider_seconds": 0.206,
+      "endgame": "win"
+    },
+    {
+      "seed": 640375,
+      "first_cell": 21,
+      "death": {
+        "cell": 46,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 16,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1687,
+      "wider": "guess",
+      "wider_seconds": 0.186,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640376,
+      "first_cell": 145,
+      "live": "win",
+      "live_seconds": 0.1363,
+      "wider": "win",
+      "wider_seconds": 0.1314,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640377,
+      "first_cell": 213,
+      "live": "win",
+      "live_seconds": 0.1624,
+      "wider": "win",
+      "wider_seconds": 0.1627,
+      "endgame": "win"
+    },
+    {
+      "seed": 640378,
+      "first_cell": 45,
+      "death": {
+        "cell": 33,
+        "mine_risk": 0.20000000298023224,
+        "min_risk": 0.20000000298023224,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": null
+      },
+      "live": "guess",
+      "live_seconds": 0.1575,
+      "wider": "guess",
+      "wider_seconds": 0.1583,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640379,
+      "first_cell": 257,
+      "live": "win",
+      "live_seconds": 0.6975,
+      "wider": "win",
+      "wider_seconds": 0.7771,
+      "endgame": "win"
+    },
+    {
+      "seed": 640380,
+      "first_cell": 24,
+      "death": {
+        "cell": 35,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 4,
+        "indistinguishable_partner": null,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1591,
+      "wider": "guess",
+      "wider_seconds": 0.1556,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640381,
+      "first_cell": 203,
+      "live": "win",
+      "live_seconds": 0.1048,
+      "wider": "win",
+      "wider_seconds": 0.1027,
+      "endgame": "win"
+    },
+    {
+      "seed": 640382,
+      "first_cell": 15,
+      "death": {
+        "cell": 478,
+        "mine_risk": 0.5,
+        "min_risk": 0.5,
+        "rollout_worlds": 0,
+        "indistinguishable_partner": 479,
+        "optimal_win_gap": 0.0
+      },
+      "live": "guess",
+      "live_seconds": 0.1411,
+      "wider": "guess",
+      "wider_seconds": 0.1403,
+      "endgame": "guess"
+    },
+    {
+      "seed": 640383,
+      "first_cell": 343,
+      "live": "win",
+      "live_seconds": 0.1323,
+      "wider": "win",
+      "wider_seconds": 0.1292,
+      "endgame": "win"
+    }
+  ]
+}

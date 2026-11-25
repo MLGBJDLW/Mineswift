@@ -1,0 +1,62 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 400,
+  "seed_base": 0,
+  "policies": {
+    "exact": {
+      "policy": "exact",
+      "games": 400,
+      "win_rate": 0.5225,
+      "ci95": [
+        0.4736,
+        0.571
+      ],
+      "losses_logic": 0,
+      "losses_guess": 191,
+      "stuck": 0,
+      "mean_moves": 219.27,
+      "mean_ms_per_move": 1.9,
+      "degraded": 1,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    },
+    "min_prob": {
+      "policy": "min_prob",
+      "games": 400,
+      "win_rate": 0.0,
+      "ci95": [
+        0.0,
+        0.0095
+      ],
+      "losses_logic": 0,
+      "losses_guess": 400,
+      "stuck": 0,
+      "mean_moves": 9.09,
+      "mean_ms_per_move": 2.27,
+      "degraded": 0,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    }
+  },
+  "paired": [
+    {
+      "pairs": 400,
+      "exact_only": 209,
+      "min_prob_only": 0,
+      "p_value": 0.0
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 24,
+  "seed_base": 460000,
+  "model_seed": 13,
+  "action_seed": 14,
+  "opening": "random",
+  "batch": 8,
+  "lr": 0.003,
+  "wins": 6,
+  "guesses": 51,
+  "games_with_guesses": 21,
+  "wins_with_guesses": 3,
+  "proof_budget_exhaustions": 0,
+  "updates": 3,
+  "parameter_delta_l2": 0.3908653276030843,
+  "batches": [
+    {
+      "games": 8,
+      "wins": 3,
+      "guesses": 23,
+      "grad_norm": 1.219735026359558
+    },
+    {
+      "games": 8,
+      "wins": 0,
+      "guesses": 19,
+      "grad_norm": 0.6626748442649841
+    },
+    {
+      "games": 8,
+      "wins": 3,
+      "guesses": 9,
+      "grad_norm": 0.6779271364212036
+    }
+  ]
+}

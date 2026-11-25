@@ -1,0 +1,42 @@
+name: Mineswift evaluation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+jobs:
+  reproduce:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install -r requirements-web.txt -c requirements-eval.txt
+      - run: python -m pytest -q
+      - run: python -m experiments.verify_release
+      - run: python -m experiments.release_eval --games 4 --jobs 1 --out replay.json
+      - name: Compare replay with the published boards
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          replay = json.loads(Path("replay.json").read_text())["boards"]
+          archived = json.loads(Path("reports/release_eval_830000.json").read_text())["boards"]
+          assert len(replay) == 4 and replay == archived[:4]
+  portable:
+    if: github.event_name == 'workflow_dispatch'
+    needs: reproduce
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install -r requirements-web.txt -c requirements-eval.txt pyinstaller==6.22.3
+      - run: python -m PyInstaller Mineswift.spec
+      - run: python packaging/portable_zip.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mineswift-Windows-x64
+          path: release/

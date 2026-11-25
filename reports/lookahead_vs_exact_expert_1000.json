@@ -1,0 +1,65 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "games": 1000,
+  "seed_base": 100000,
+  "jobs": 12,
+  "policies": {
+    "exact": {
+      "policy": "exact",
+      "games": 1000,
+      "wins": 505,
+      "elapsed_s": 54.934,
+      "win_rate": 0.505,
+      "ci95": [0.4741, 0.5359],
+      "losses_logic": 0,
+      "losses_guess": 495,
+      "stuck": 0,
+      "mean_moves": 218.48,
+      "mean_ms_per_move": 2.68,
+      "degraded": 15,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    },
+    "lookahead": {
+      "policy": "lookahead",
+      "games": 1000,
+      "wins": 509,
+      "elapsed_s": 63.195,
+      "win_rate": 0.509,
+      "ci95": [0.478, 0.5399],
+      "losses_logic": 0,
+      "losses_guess": 491,
+      "stuck": 0,
+      "mean_moves": 218.47,
+      "mean_ms_per_move": 3.21,
+      "degraded": 12,
+      "cfg": {
+        "rows": 16,
+        "cols": 30,
+        "mines": 99,
+        "first_click_safe": true
+      }
+    }
+  },
+  "paired": [
+    {
+      "pairs": 1000,
+      "baseline": "exact",
+      "challenger": "lookahead",
+      "exact_only": 31,
+      "lookahead_only": 35,
+      "win_rate_delta": 0.004,
+      "win_rate_delta_ci95_paired_bootstrap": [-0.012, 0.02],
+      "p_value": 0.712231
+    }
+  ]
+}

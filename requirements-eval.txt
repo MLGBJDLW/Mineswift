@@ -1,0 +1,4 @@
+# Numerical environment used for the archived Windows CPU evaluation.
+numpy==2.5.5
+torch==2.15.0
+pillow==13.0.0

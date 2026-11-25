@@ -1,0 +1,1049 @@
+{
+  "cfg": {
+    "rows": 16,
+    "cols": 30,
+    "mines": 99,
+    "first_click_safe": true
+  },
+  "opening": "random",
+  "seed_base": 500000,
+  "layouts": 2048,
+  "episodes": 8192,
+  "group": 4,
+  "model_seed": 29,
+  "batch": 16,
+  "epochs": 3,
+  "lr": 0.012,
+  "raw_only": false,
+  "parameter_delta_l2": 13.32822200587444,
+  "batches": [
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 160,
+      "samples": 74,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.09566648304462433
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 153,
+      "samples": 102,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.26927146315574646
+    },
+    {
+      "layouts": 16,
+      "wins": 23,
+      "guesses": 120,
+      "samples": 60,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.4178352653980255
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 148,
+      "samples": 65,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.04802809655666351
+    },
+    {
+      "layouts": 16,
+      "wins": 10,
+      "guesses": 149,
+      "samples": 51,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.1040700376033783
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 146,
+      "samples": 104,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.3073268532752991
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 109,
+      "samples": 77,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.45318692922592163
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 109,
+      "samples": 48,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.21974222362041473
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 149,
+      "samples": 87,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.25274503231048584
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "guesses": 143,
+      "samples": 109,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.7833265066146851
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 151,
+      "samples": 83,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.13362370431423187
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 85,
+      "samples": 42,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.1635376363992691
+    },
+    {
+      "layouts": 16,
+      "wins": 13,
+      "guesses": 151,
+      "samples": 72,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.1823987066745758
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 144,
+      "samples": 76,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.462040513753891
+    },
+    {
+      "layouts": 16,
+      "wins": 40,
+      "guesses": 113,
+      "samples": 75,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.28780582547187805
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 165,
+      "samples": 94,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.5821653604507446
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 167,
+      "samples": 81,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.11981864273548126
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 192,
+      "samples": 114,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.38531461358070374
+    },
+    {
+      "layouts": 16,
+      "wins": 21,
+      "guesses": 155,
+      "samples": 93,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.31658655405044556
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 126,
+      "samples": 91,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.14792701601982117
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 124,
+      "samples": 73,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.3414615988731384
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 163,
+      "samples": 97,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.2165813446044922
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 139,
+      "samples": 88,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.34407779574394226
+    },
+    {
+      "layouts": 16,
+      "wins": 23,
+      "guesses": 120,
+      "samples": 69,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.1360018402338028
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 157,
+      "samples": 110,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.4424278736114502
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 97,
+      "samples": 50,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.2817493975162506
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 174,
+      "samples": 88,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.14972910284996033
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 137,
+      "samples": 99,
+      "mixed_groups": 12,
+      "last_grad_norm": 0.15307897329330444
+    },
+    {
+      "layouts": 16,
+      "wins": 8,
+      "guesses": 213,
+      "samples": 66,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.2529506981372833
+    },
+    {
+      "layouts": 16,
+      "wins": 36,
+      "guesses": 109,
+      "samples": 51,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.223418191075325
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 138,
+      "samples": 77,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.280383437871933
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 145,
+      "samples": 92,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.447733998298645
+    },
+    {
+      "layouts": 16,
+      "wins": 20,
+      "guesses": 144,
+      "samples": 93,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.26228392124176025
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 200,
+      "samples": 138,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.3522247076034546
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 130,
+      "samples": 77,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.34723272919654846
+    },
+    {
+      "layouts": 16,
+      "wins": 20,
+      "guesses": 160,
+      "samples": 71,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.10552279651165009
+    },
+    {
+      "layouts": 16,
+      "wins": 19,
+      "guesses": 176,
+      "samples": 56,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.2784169316291809
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 151,
+      "samples": 57,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5670145153999329
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 120,
+      "samples": 57,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.22368410229682922
+    },
+    {
+      "layouts": 16,
+      "wins": 15,
+      "guesses": 220,
+      "samples": 125,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.11382234841585159
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 120,
+      "samples": 41,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.16097579896450043
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 144,
+      "samples": 68,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.1253867745399475
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 190,
+      "samples": 120,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.227583110332489
+    },
+    {
+      "layouts": 16,
+      "wins": 38,
+      "guesses": 95,
+      "samples": 70,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.11472450941801071
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 148,
+      "samples": 67,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.24597401916980743
+    },
+    {
+      "layouts": 16,
+      "wins": 21,
+      "guesses": 139,
+      "samples": 100,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.3105742931365967
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 154,
+      "samples": 68,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.2611640393733978
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 198,
+      "samples": 150,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.15205474197864532
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 223,
+      "samples": 125,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.32566481828689575
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 131,
+      "samples": 96,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5446656942367554
+    },
+    {
+      "layouts": 16,
+      "wins": 41,
+      "guesses": 95,
+      "samples": 85,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.4068531394004822
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 145,
+      "samples": 101,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5243048071861267
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "guesses": 138,
+      "samples": 102,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.2681339979171753
+    },
+    {
+      "layouts": 16,
+      "wins": 36,
+      "guesses": 106,
+      "samples": 44,
+      "mixed_groups": 4,
+      "last_grad_norm": 0.20125333964824677
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "guesses": 148,
+      "samples": 60,
+      "mixed_groups": 4,
+      "last_grad_norm": 0.2504870295524597
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 138,
+      "samples": 72,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.23949062824249268
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 135,
+      "samples": 50,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.28749343752861023
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 117,
+      "samples": 61,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.19901777803897858
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 168,
+      "samples": 104,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.35741057991981506
+    },
+    {
+      "layouts": 16,
+      "wins": 18,
+      "guesses": 160,
+      "samples": 93,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.1986772119998932
+    },
+    {
+      "layouts": 16,
+      "wins": 23,
+      "guesses": 151,
+      "samples": 70,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.19055311381816864
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 133,
+      "samples": 95,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.3731274902820587
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 146,
+      "samples": 102,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.1630762815475464
+    },
+    {
+      "layouts": 16,
+      "wins": 35,
+      "guesses": 101,
+      "samples": 74,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.2371109127998352
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "guesses": 147,
+      "samples": 92,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.4942820966243744
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "guesses": 143,
+      "samples": 89,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.4255274534225464
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 166,
+      "samples": 96,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.3177970051765442
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 163,
+      "samples": 64,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.31956568360328674
+    },
+    {
+      "layouts": 16,
+      "wins": 23,
+      "guesses": 162,
+      "samples": 84,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.2048930525779724
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 118,
+      "samples": 47,
+      "mixed_groups": 4,
+      "last_grad_norm": 0.3322659134864807
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "guesses": 124,
+      "samples": 74,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.3239128887653351
+    },
+    {
+      "layouts": 16,
+      "wins": 21,
+      "guesses": 160,
+      "samples": 98,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.401650607585907
+    },
+    {
+      "layouts": 16,
+      "wins": 37,
+      "guesses": 98,
+      "samples": 67,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.32130590081214905
+    },
+    {
+      "layouts": 16,
+      "wins": 18,
+      "guesses": 172,
+      "samples": 138,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.4091058671474457
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 130,
+      "samples": 69,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.13065595924854279
+    },
+    {
+      "layouts": 16,
+      "wins": 34,
+      "guesses": 92,
+      "samples": 37,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.13977377116680145
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 139,
+      "samples": 49,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.09495335817337036
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 170,
+      "samples": 93,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.18194513022899628
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 158,
+      "samples": 82,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.11239282786846161
+    },
+    {
+      "layouts": 16,
+      "wins": 39,
+      "guesses": 119,
+      "samples": 56,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.2186492383480072
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 170,
+      "samples": 121,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.39032530784606934
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 236,
+      "samples": 92,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.12018923461437225
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 145,
+      "samples": 81,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.34036555886268616
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 154,
+      "samples": 90,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.18919236958026886
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 189,
+      "samples": 108,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.32075345516204834
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 139,
+      "samples": 91,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.3831135034561157
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 113,
+      "samples": 64,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.20970740914344788
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 154,
+      "samples": 107,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.2594943940639496
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 171,
+      "samples": 107,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.14863848686218262
+    },
+    {
+      "layouts": 16,
+      "wins": 35,
+      "guesses": 157,
+      "samples": 124,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.31523531675338745
+    },
+    {
+      "layouts": 16,
+      "wins": 18,
+      "guesses": 166,
+      "samples": 84,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.6289334297180176
+    },
+    {
+      "layouts": 16,
+      "wins": 26,
+      "guesses": 144,
+      "samples": 66,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.19638054072856903
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 161,
+      "samples": 97,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.20331604778766632
+    },
+    {
+      "layouts": 16,
+      "wins": 23,
+      "guesses": 153,
+      "samples": 86,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.2664574086666107
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 183,
+      "samples": 102,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.20187778770923615
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 143,
+      "samples": 95,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.22518227994441986
+    },
+    {
+      "layouts": 16,
+      "wins": 39,
+      "guesses": 111,
+      "samples": 44,
+      "mixed_groups": 5,
+      "last_grad_norm": 0.4464707672595978
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 167,
+      "samples": 110,
+      "mixed_groups": 11,
+      "last_grad_norm": 0.322810560464859
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "guesses": 121,
+      "samples": 85,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.47858431935310364
+    },
+    {
+      "layouts": 16,
+      "wins": 22,
+      "guesses": 154,
+      "samples": 98,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.44769445061683655
+    },
+    {
+      "layouts": 16,
+      "wins": 32,
+      "guesses": 173,
+      "samples": 145,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.10788490623235703
+    },
+    {
+      "layouts": 16,
+      "wins": 27,
+      "guesses": 150,
+      "samples": 77,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.2764030694961548
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 126,
+      "samples": 97,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.2912582457065582
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 181,
+      "samples": 129,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.6138501167297363
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 127,
+      "samples": 72,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.40210920572280884
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 133,
+      "samples": 93,
+      "mixed_groups": 12,
+      "last_grad_norm": 0.47182774543762207
+    },
+    {
+      "layouts": 16,
+      "wins": 20,
+      "guesses": 194,
+      "samples": 103,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.6351498365402222
+    },
+    {
+      "layouts": 16,
+      "wins": 25,
+      "guesses": 137,
+      "samples": 66,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.09225578606128693
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 151,
+      "samples": 131,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.7371305227279663
+    },
+    {
+      "layouts": 16,
+      "wins": 34,
+      "guesses": 126,
+      "samples": 86,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5234845876693726
+    },
+    {
+      "layouts": 16,
+      "wins": 21,
+      "guesses": 180,
+      "samples": 67,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.205579474568367
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "guesses": 158,
+      "samples": 101,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.2706161439418793
+    },
+    {
+      "layouts": 16,
+      "wins": 31,
+      "guesses": 214,
+      "samples": 158,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.34688615798950195
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 152,
+      "samples": 100,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.16531983017921448
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 198,
+      "samples": 146,
+      "mixed_groups": 10,
+      "last_grad_norm": 0.2501258850097656
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 148,
+      "samples": 109,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5591263175010681
+    },
+    {
+      "layouts": 16,
+      "wins": 12,
+      "guesses": 192,
+      "samples": 26,
+      "mixed_groups": 4,
+      "last_grad_norm": 0.1250806301832199
+    },
+    {
+      "layouts": 16,
+      "wins": 38,
+      "guesses": 125,
+      "samples": 96,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.2706940174102783
+    },
+    {
+      "layouts": 16,
+      "wins": 16,
+      "guesses": 119,
+      "samples": 9,
+      "mixed_groups": 2,
+      "last_grad_norm": 0.20826348662376404
+    },
+    {
+      "layouts": 16,
+      "wins": 41,
+      "guesses": 112,
+      "samples": 88,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.5287660360336304
+    },
+    {
+      "layouts": 16,
+      "wins": 33,
+      "guesses": 142,
+      "samples": 89,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.4093729257583618
+    },
+    {
+      "layouts": 16,
+      "wins": 35,
+      "guesses": 141,
+      "samples": 81,
+      "mixed_groups": 7,
+      "last_grad_norm": 0.7142643332481384
+    },
+    {
+      "layouts": 16,
+      "wins": 24,
+      "guesses": 129,
+      "samples": 80,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.5999633073806763
+    },
+    {
+      "layouts": 16,
+      "wins": 30,
+      "guesses": 151,
+      "samples": 96,
+      "mixed_groups": 9,
+      "last_grad_norm": 0.2637394666671753
+    },
+    {
+      "layouts": 16,
+      "wins": 28,
+      "guesses": 141,
+      "samples": 51,
+      "mixed_groups": 4,
+      "last_grad_norm": 0.13333971798419952
+    },
+    {
+      "layouts": 16,
+      "wins": 20,
+      "guesses": 154,
+      "samples": 67,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.17439110577106476
+    },
+    {
+      "layouts": 16,
+      "wins": 29,
+      "guesses": 173,
+      "samples": 82,
+      "mixed_groups": 6,
+      "last_grad_norm": 0.28484487533569336
+    },
+    {
+      "layouts": 16,
+      "wins": 19,
+      "guesses": 188,
+      "samples": 107,
+      "mixed_groups": 8,
+      "last_grad_norm": 0.23406904935836792
+    }
+  ],
+  "wins": 3380,
+  "guesses": 18982,
+  "mixed_groups": 995,
+  "samples": 10889
+}

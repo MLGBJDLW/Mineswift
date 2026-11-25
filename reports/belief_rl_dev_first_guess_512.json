@@ -1,0 +1,3550 @@
+{
+  "seed_base": 520100,
+  "games": 512,
+  "opening": "random",
+  "solver_wins": 80,
+  "exact_endgames": 112,
+  "other_guesses": 320,
+  "mean_upper": 0.7851161913499776,
+  "upper_mean_se": 0.010145682491341132,
+  "exact_mean_first_action_win_gap": 0.008231074149433673,
+  "other_mean_first_click_risk_above_min": 0.0019445307949392354,
+  "boards": [
+    {
+      "seed": 520100,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520101,
+      "min_risk": 0.16129032258064516,
+      "chosen_risk": 0.16129032258064516,
+      "kind": "first_click_survival",
+      "upper": 0.8387096774193549
+    },
+    {
+      "seed": 520102,
+      "min_risk": 0.10007124419055137,
+      "chosen_risk": 0.10007124419055137,
+      "kind": "first_click_survival",
+      "upper": 0.8999287558094486
+    },
+    {
+      "seed": 520103,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520104,
+      "min_risk": 0.05504587155963303,
+      "chosen_risk": 0.05504587155963303,
+      "kind": "first_click_survival",
+      "upper": 0.944954128440367
+    },
+    {
+      "seed": 520105,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520106,
+      "min_risk": 0.0558858501783591,
+      "chosen_risk": 0.0558858501783591,
+      "kind": "first_click_survival",
+      "upper": 0.9441141498216409
+    },
+    {
+      "seed": 520107,
+      "min_risk": 0.1864437826066309,
+      "chosen_risk": 0.1864437826066309,
+      "kind": "first_click_survival",
+      "upper": 0.8135562173933691
+    },
+    {
+      "seed": 520108,
+      "min_risk": 0.1019108280254777,
+      "chosen_risk": 0.1019108280254777,
+      "kind": "first_click_survival",
+      "upper": 0.8980891719745223
+    },
+    {
+      "seed": 520109,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520110,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520111,
+      "min_risk": 0.15384615384615385,
+      "chosen_risk": 0.15384615384615385,
+      "kind": "first_click_survival",
+      "upper": 0.8461538461538461
+    },
+    {
+      "seed": 520112,
+      "min_risk": 0.13316297558205564,
+      "chosen_risk": 0.13316297558205564,
+      "kind": "first_click_survival",
+      "upper": 0.8668370244179444
+    },
+    {
+      "seed": 520113,
+      "min_risk": 0.04582184390360868,
+      "chosen_risk": 0.04582184390360868,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520114,
+      "min_risk": 0.1782608695652174,
+      "chosen_risk": 0.1782608695652174,
+      "kind": "first_click_survival",
+      "upper": 0.8217391304347826
+    },
+    {
+      "seed": 520115,
+      "min_risk": 0.06304985337243402,
+      "chosen_risk": 0.06304985337243402,
+      "kind": "first_click_survival",
+      "upper": 0.936950146627566
+    },
+    {
+      "seed": 520116,
+      "min_risk": 0.1595744680851064,
+      "chosen_risk": 0.1595744680851064,
+      "kind": "first_click_survival",
+      "upper": 0.8404255319148937
+    },
+    {
+      "seed": 520117,
+      "min_risk": 0.05605542862388546,
+      "chosen_risk": 0.05605542862388546,
+      "kind": "first_click_survival",
+      "upper": 0.9439445713761145
+    },
+    {
+      "seed": 520118,
+      "min_risk": 0.13636363636363635,
+      "chosen_risk": 0.13636363636363635,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520119,
+      "min_risk": 0.07323006017155294,
+      "chosen_risk": 0.07323006017155294,
+      "kind": "first_click_survival",
+      "upper": 0.926769939828447
+    },
+    {
+      "seed": 520120,
+      "min_risk": 0.3023255813953488,
+      "chosen_risk": 0.3023255813953488,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520121,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520122,
+      "min_risk": 0.1223109999409504,
+      "chosen_risk": 0.1223109999409504,
+      "kind": "first_click_survival",
+      "upper": 0.8776890000590496
+    },
+    {
+      "seed": 520123,
+      "min_risk": 0.375,
+      "chosen_risk": 0.375,
+      "kind": "exact_endgame",
+      "upper": 0.15625,
+      "chosen_then_optimal": 0.15625
+    },
+    {
+      "seed": 520124,
+      "min_risk": 0.07142857142857142,
+      "chosen_risk": 0.07142857142857142,
+      "kind": "first_click_survival",
+      "upper": 0.9285714285714286
+    },
+    {
+      "seed": 520125,
+      "min_risk": 0.06127329043026111,
+      "chosen_risk": 0.06127329043026111,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520126,
+      "min_risk": 0.060284475401302565,
+      "chosen_risk": 0.060284475401302565,
+      "kind": "first_click_survival",
+      "upper": 0.9397155245986974
+    },
+    {
+      "seed": 520127,
+      "min_risk": 0.10843864655523848,
+      "chosen_risk": 0.10843864655523848,
+      "kind": "first_click_survival",
+      "upper": 0.8915613534447615
+    },
+    {
+      "seed": 520128,
+      "min_risk": 0.0992040380508639,
+      "chosen_risk": 0.0992040380508639,
+      "kind": "first_click_survival",
+      "upper": 0.9007959619491361
+    },
+    {
+      "seed": 520129,
+      "min_risk": 0.07058140499295015,
+      "chosen_risk": 0.07058140499295015,
+      "kind": "first_click_survival",
+      "upper": 0.9294185950070498
+    },
+    {
+      "seed": 520130,
+      "min_risk": 0.08050402520126006,
+      "chosen_risk": 0.08050402520126006,
+      "kind": "first_click_survival",
+      "upper": 0.9194959747987399
+    },
+    {
+      "seed": 520131,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520132,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.3333333333333333,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520133,
+      "min_risk": 0.15673160802558883,
+      "chosen_risk": 0.15673160802558883,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520134,
+      "min_risk": 0.07420494699646643,
+      "chosen_risk": 0.08244994110718493,
+      "kind": "first_click_survival",
+      "upper": 0.9257950530035336
+    },
+    {
+      "seed": 520135,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "first_click_survival",
+      "upper": 0.8333333333333334
+    },
+    {
+      "seed": 520136,
+      "min_risk": 0.21204188481675393,
+      "chosen_risk": 0.21204188481675393,
+      "kind": "first_click_survival",
+      "upper": 0.7879581151832461
+    },
+    {
+      "seed": 520137,
+      "min_risk": 0.16820465591289996,
+      "chosen_risk": 0.16820465591289996,
+      "kind": "first_click_survival",
+      "upper": 0.8317953440871
+    },
+    {
+      "seed": 520138,
+      "min_risk": 0.18072289156626506,
+      "chosen_risk": 0.18072289156626506,
+      "kind": "first_click_survival",
+      "upper": 0.8192771084337349
+    },
+    {
+      "seed": 520139,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520140,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520141,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520142,
+      "min_risk": 0.05462822458270106,
+      "chosen_risk": 0.05462822458270106,
+      "kind": "first_click_survival",
+      "upper": 0.945371775417299
+    },
+    {
+      "seed": 520143,
+      "min_risk": 0.08317628482656751,
+      "chosen_risk": 0.10621572522453691,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520144,
+      "min_risk": 0.09328653396090947,
+      "chosen_risk": 0.09328653396090947,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520145,
+      "min_risk": 0.17096595220937574,
+      "chosen_risk": 0.17096595220937574,
+      "kind": "first_click_survival",
+      "upper": 0.8290340477906243
+    },
+    {
+      "seed": 520146,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520147,
+      "min_risk": 0.027147841255996515,
+      "chosen_risk": 0.027147841255996515,
+      "kind": "first_click_survival",
+      "upper": 0.9728521587440034
+    },
+    {
+      "seed": 520148,
+      "min_risk": 0.023564449553268196,
+      "chosen_risk": 0.023564449553268196,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520149,
+      "min_risk": 0.1206581352833638,
+      "chosen_risk": 0.1206581352833638,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520150,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "first_click_survival",
+      "upper": 0.8571428571428572
+    },
+    {
+      "seed": 520151,
+      "min_risk": 0.09778470835483558,
+      "chosen_risk": 0.09778470835483558,
+      "kind": "first_click_survival",
+      "upper": 0.9022152916451645
+    },
+    {
+      "seed": 520152,
+      "min_risk": 0.033882227955683714,
+      "chosen_risk": 0.033882227955683714,
+      "kind": "first_click_survival",
+      "upper": 0.9661177720443163
+    },
+    {
+      "seed": 520153,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520154,
+      "min_risk": 0.42857142857142855,
+      "chosen_risk": 0.42857142857142855,
+      "kind": "exact_endgame",
+      "upper": 0.4,
+      "chosen_then_optimal": 0.4
+    },
+    {
+      "seed": 520155,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520156,
+      "min_risk": 0.19047619047619047,
+      "chosen_risk": 0.19047619047619047,
+      "kind": "first_click_survival",
+      "upper": 0.8095238095238095
+    },
+    {
+      "seed": 520157,
+      "min_risk": 0.0136986301369863,
+      "chosen_risk": 0.0136986301369863,
+      "kind": "exact_endgame",
+      "upper": 0.9315068493150684,
+      "chosen_then_optimal": 0.9178082191780822
+    },
+    {
+      "seed": 520158,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520159,
+      "min_risk": 0.20349920554672832,
+      "chosen_risk": 0.20349920554672832,
+      "kind": "first_click_survival",
+      "upper": 0.7965007944532717
+    },
+    {
+      "seed": 520160,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.2857142857142857,
+      "chosen_then_optimal": 0.21428571428571427
+    },
+    {
+      "seed": 520161,
+      "min_risk": 0.13886606409202956,
+      "chosen_risk": 0.13886606409202956,
+      "kind": "first_click_survival",
+      "upper": 0.8611339359079704
+    },
+    {
+      "seed": 520162,
+      "min_risk": 0.125,
+      "chosen_risk": 0.125,
+      "kind": "first_click_survival",
+      "upper": 0.875
+    },
+    {
+      "seed": 520163,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520164,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520165,
+      "min_risk": 0.09913282963721266,
+      "chosen_risk": 0.09913282963721266,
+      "kind": "first_click_survival",
+      "upper": 0.9008671703627873
+    },
+    {
+      "seed": 520166,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520167,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520168,
+      "min_risk": 0.017640549215153407,
+      "chosen_risk": 0.017640549215153407,
+      "kind": "first_click_survival",
+      "upper": 0.9823594507848465
+    },
+    {
+      "seed": 520169,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520170,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.1,
+      "chosen_then_optimal": 0.1
+    },
+    {
+      "seed": 520171,
+      "min_risk": 0.0732262109715403,
+      "chosen_risk": 0.0732262109715403,
+      "kind": "first_click_survival",
+      "upper": 0.9267737890284597
+    },
+    {
+      "seed": 520172,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520173,
+      "min_risk": 0.07778592224726467,
+      "chosen_risk": 0.07778592224726467,
+      "kind": "first_click_survival",
+      "upper": 0.9222140777527353
+    },
+    {
+      "seed": 520174,
+      "min_risk": 0.056716417910447764,
+      "chosen_risk": 0.056716417910447764,
+      "kind": "first_click_survival",
+      "upper": 0.9432835820895522
+    },
+    {
+      "seed": 520175,
+      "min_risk": 0.04634543478962104,
+      "chosen_risk": 0.04634543478962104,
+      "kind": "first_click_survival",
+      "upper": 0.953654565210379
+    },
+    {
+      "seed": 520176,
+      "min_risk": 0.13934426229508196,
+      "chosen_risk": 0.13934426229508196,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520177,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "first_click_survival",
+      "upper": 0.8571428571428572
+    },
+    {
+      "seed": 520178,
+      "min_risk": 0.12349219773755214,
+      "chosen_risk": 0.12349219773755214,
+      "kind": "first_click_survival",
+      "upper": 0.8765078022624478
+    },
+    {
+      "seed": 520179,
+      "min_risk": 0.12077124604539405,
+      "chosen_risk": 0.12077124604539405,
+      "kind": "first_click_survival",
+      "upper": 0.879228753954606
+    },
+    {
+      "seed": 520180,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520181,
+      "min_risk": 0.11688311688311688,
+      "chosen_risk": 0.11688311688311688,
+      "kind": "exact_endgame",
+      "upper": 0.2727272727272727,
+      "chosen_then_optimal": 0.2597402597402597
+    },
+    {
+      "seed": 520182,
+      "min_risk": 0.039440203562340966,
+      "chosen_risk": 0.039440203562340966,
+      "kind": "first_click_survival",
+      "upper": 0.960559796437659
+    },
+    {
+      "seed": 520183,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.3469387755102041,
+      "chosen_then_optimal": 0.3469387755102041
+    },
+    {
+      "seed": 520184,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520185,
+      "min_risk": 0.0998003992015968,
+      "chosen_risk": 0.11976047904191617,
+      "kind": "first_click_survival",
+      "upper": 0.9001996007984032
+    },
+    {
+      "seed": 520186,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520187,
+      "min_risk": 0.11359262189853642,
+      "chosen_risk": 0.11359262189853642,
+      "kind": "first_click_survival",
+      "upper": 0.8864073781014636
+    },
+    {
+      "seed": 520188,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520189,
+      "min_risk": 0.07711442786069651,
+      "chosen_risk": 0.07711442786069651,
+      "kind": "first_click_survival",
+      "upper": 0.9228855721393034
+    },
+    {
+      "seed": 520190,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.6666666666666666,
+      "chosen_then_optimal": 0.6666666666666666
+    },
+    {
+      "seed": 520191,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520192,
+      "min_risk": 0.026409517727573946,
+      "chosen_risk": 0.026409517727573946,
+      "kind": "first_click_survival",
+      "upper": 0.9735904822724261
+    },
+    {
+      "seed": 520193,
+      "min_risk": 0.18517246422848943,
+      "chosen_risk": 0.18517246422848943,
+      "kind": "first_click_survival",
+      "upper": 0.8148275357715106
+    },
+    {
+      "seed": 520194,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.8571428571428571,
+      "chosen_then_optimal": 0.7857142857142857
+    },
+    {
+      "seed": 520195,
+      "min_risk": 0.08511777301927195,
+      "chosen_risk": 0.08511777301927195,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520196,
+      "min_risk": 0.12738853503184713,
+      "chosen_risk": 0.12738853503184713,
+      "kind": "first_click_survival",
+      "upper": 0.8726114649681529
+    },
+    {
+      "seed": 520197,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520198,
+      "min_risk": 0.083668903803132,
+      "chosen_risk": 0.083668903803132,
+      "kind": "first_click_survival",
+      "upper": 0.916331096196868
+    },
+    {
+      "seed": 520199,
+      "min_risk": 0.10388061858650094,
+      "chosen_risk": 0.10388061858650094,
+      "kind": "first_click_survival",
+      "upper": 0.8961193814134991
+    },
+    {
+      "seed": 520200,
+      "min_risk": 0.10714285714285714,
+      "chosen_risk": 0.10714285714285714,
+      "kind": "first_click_survival",
+      "upper": 0.8928571428571429
+    },
+    {
+      "seed": 520201,
+      "min_risk": 0.12905911740216486,
+      "chosen_risk": 0.12905911740216486,
+      "kind": "first_click_survival",
+      "upper": 0.8709408825978351
+    },
+    {
+      "seed": 520202,
+      "min_risk": 0.07738312563206991,
+      "chosen_risk": 0.07925442947042372,
+      "kind": "first_click_survival",
+      "upper": 0.92261687436793
+    },
+    {
+      "seed": 520203,
+      "min_risk": 0.11189121646453509,
+      "chosen_risk": 0.11273845399975499,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520204,
+      "min_risk": 0.14365522745411013,
+      "chosen_risk": 0.14365522745411013,
+      "kind": "first_click_survival",
+      "upper": 0.8563447725458899
+    },
+    {
+      "seed": 520205,
+      "min_risk": 0.22580645161290322,
+      "chosen_risk": 0.22580645161290322,
+      "kind": "first_click_survival",
+      "upper": 0.7741935483870968
+    },
+    {
+      "seed": 520206,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520207,
+      "min_risk": 0.09090909090909091,
+      "chosen_risk": 0.09090909090909091,
+      "kind": "exact_endgame",
+      "upper": 0.9090909090909091,
+      "chosen_then_optimal": 0.9090909090909091
+    },
+    {
+      "seed": 520208,
+      "min_risk": 0.10299003322259136,
+      "chosen_risk": 0.10299003322259136,
+      "kind": "first_click_survival",
+      "upper": 0.8970099667774086
+    },
+    {
+      "seed": 520209,
+      "min_risk": 0.1319253976961053,
+      "chosen_risk": 0.1319253976961053,
+      "kind": "first_click_survival",
+      "upper": 0.8680746023038947
+    },
+    {
+      "seed": 520210,
+      "min_risk": 0.09382151029748283,
+      "chosen_risk": 0.09382151029748283,
+      "kind": "first_click_survival",
+      "upper": 0.9061784897025171
+    },
+    {
+      "seed": 520211,
+      "min_risk": 0.08350116189000775,
+      "chosen_risk": 0.08350116189000775,
+      "kind": "first_click_survival",
+      "upper": 0.9164988381099922
+    },
+    {
+      "seed": 520212,
+      "min_risk": 0.14984227129337538,
+      "chosen_risk": 0.14984227129337538,
+      "kind": "first_click_survival",
+      "upper": 0.8501577287066246
+    },
+    {
+      "seed": 520213,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "exact_endgame",
+      "upper": 0.375,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520214,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520215,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520216,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.125,
+      "chosen_then_optimal": 0.125
+    },
+    {
+      "seed": 520217,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520218,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520219,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520220,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520221,
+      "min_risk": 0.16002397362900808,
+      "chosen_risk": 0.16002397362900808,
+      "kind": "first_click_survival",
+      "upper": 0.8399760263709919
+    },
+    {
+      "seed": 520222,
+      "min_risk": 0.24739080015461926,
+      "chosen_risk": 0.25125628140703515,
+      "kind": "first_click_survival",
+      "upper": 0.7526091998453808
+    },
+    {
+      "seed": 520223,
+      "min_risk": 0.09213863060016907,
+      "chosen_risk": 0.09213863060016907,
+      "kind": "first_click_survival",
+      "upper": 0.907861369399831
+    },
+    {
+      "seed": 520224,
+      "min_risk": 0.049092807060880136,
+      "chosen_risk": 0.049092807060880136,
+      "kind": "first_click_survival",
+      "upper": 0.9509071929391198
+    },
+    {
+      "seed": 520225,
+      "min_risk": 0.13333333333333333,
+      "chosen_risk": 0.13333333333333333,
+      "kind": "first_click_survival",
+      "upper": 0.8666666666666667
+    },
+    {
+      "seed": 520226,
+      "min_risk": 0.08653846153846154,
+      "chosen_risk": 0.10576923076923077,
+      "kind": "first_click_survival",
+      "upper": 0.9134615384615384
+    },
+    {
+      "seed": 520227,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520228,
+      "min_risk": 0.1717902350813743,
+      "chosen_risk": 0.1717902350813743,
+      "kind": "first_click_survival",
+      "upper": 0.8282097649186257
+    },
+    {
+      "seed": 520229,
+      "min_risk": 0.05010687072721043,
+      "chosen_risk": 0.05010687072721043,
+      "kind": "first_click_survival",
+      "upper": 0.9498931292727896
+    },
+    {
+      "seed": 520230,
+      "min_risk": 0.1284174388856371,
+      "chosen_risk": 0.1284174388856371,
+      "kind": "first_click_survival",
+      "upper": 0.8715825611143629
+    },
+    {
+      "seed": 520231,
+      "min_risk": 0.07505170885452575,
+      "chosen_risk": 0.07889293804786762,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520232,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520233,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520234,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520235,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520236,
+      "min_risk": 0.12435233160621761,
+      "chosen_risk": 0.12435233160621761,
+      "kind": "first_click_survival",
+      "upper": 0.8756476683937824
+    },
+    {
+      "seed": 520237,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520238,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520239,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.3333333333333333,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520240,
+      "min_risk": 0.07833333333333332,
+      "chosen_risk": 0.07833333333333332,
+      "kind": "first_click_survival",
+      "upper": 0.9216666666666666
+    },
+    {
+      "seed": 520241,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520242,
+      "min_risk": 0.12905990051414956,
+      "chosen_risk": 0.12905990051414956,
+      "kind": "first_click_survival",
+      "upper": 0.8709400994858505
+    },
+    {
+      "seed": 520243,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520244,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520245,
+      "min_risk": 0.18181818181818182,
+      "chosen_risk": 0.18181818181818182,
+      "kind": "exact_endgame",
+      "upper": 0.4090909090909091,
+      "chosen_then_optimal": 0.4090909090909091
+    },
+    {
+      "seed": 520246,
+      "min_risk": 0.06330106779328663,
+      "chosen_risk": 0.06330106779328663,
+      "kind": "first_click_survival",
+      "upper": 0.9366989322067134
+    },
+    {
+      "seed": 520247,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "exact_endgame",
+      "upper": 0.3,
+      "chosen_then_optimal": 0.3
+    },
+    {
+      "seed": 520248,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520249,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520250,
+      "min_risk": 0.030372196681775605,
+      "chosen_risk": 0.030372196681775605,
+      "kind": "first_click_survival",
+      "upper": 0.9696278033182244
+    },
+    {
+      "seed": 520251,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520252,
+      "min_risk": 0.04754317408496274,
+      "chosen_risk": 0.04754317408496274,
+      "kind": "first_click_survival",
+      "upper": 0.9524568259150372
+    },
+    {
+      "seed": 520253,
+      "min_risk": 0.11702127659574468,
+      "chosen_risk": 0.11702127659574468,
+      "kind": "first_click_survival",
+      "upper": 0.8829787234042553
+    },
+    {
+      "seed": 520254,
+      "min_risk": 0.10252904989747096,
+      "chosen_risk": 0.10252904989747096,
+      "kind": "first_click_survival",
+      "upper": 0.8974709501025291
+    },
+    {
+      "seed": 520255,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520256,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "first_click_survival",
+      "upper": 0.8
+    },
+    {
+      "seed": 520257,
+      "min_risk": 0.08340353833192923,
+      "chosen_risk": 0.08340353833192923,
+      "kind": "first_click_survival",
+      "upper": 0.9165964616680707
+    },
+    {
+      "seed": 520258,
+      "min_risk": 0.14864864864864866,
+      "chosen_risk": 0.14864864864864866,
+      "kind": "first_click_survival",
+      "upper": 0.8513513513513513
+    },
+    {
+      "seed": 520259,
+      "min_risk": 0.10360532567833468,
+      "chosen_risk": 0.12070165765298103,
+      "kind": "first_click_survival",
+      "upper": 0.8963946743216653
+    },
+    {
+      "seed": 520260,
+      "min_risk": 0.15151515151515152,
+      "chosen_risk": 0.15151515151515152,
+      "kind": "first_click_survival",
+      "upper": 0.8484848484848485
+    },
+    {
+      "seed": 520261,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520262,
+      "min_risk": 0.13997760358342665,
+      "chosen_risk": 0.13997760358342665,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520263,
+      "min_risk": 0.06451612903225806,
+      "chosen_risk": 0.06451612903225806,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520264,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "first_click_survival",
+      "upper": 0.8
+    },
+    {
+      "seed": 520265,
+      "min_risk": 0.12895927601809956,
+      "chosen_risk": 0.12895927601809956,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520266,
+      "min_risk": 0.16425120772946858,
+      "chosen_risk": 0.21424070573408946,
+      "kind": "first_click_survival",
+      "upper": 0.8357487922705314
+    },
+    {
+      "seed": 520267,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520268,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "first_click_survival",
+      "upper": 0.8571428571428572
+    },
+    {
+      "seed": 520269,
+      "min_risk": 0.055555555555555546,
+      "chosen_risk": 0.055555555555555546,
+      "kind": "first_click_survival",
+      "upper": 0.9444444444444444
+    },
+    {
+      "seed": 520270,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520271,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520272,
+      "min_risk": 0.11940298507462686,
+      "chosen_risk": 0.11940298507462686,
+      "kind": "exact_endgame",
+      "upper": 0.6417910447761194,
+      "chosen_then_optimal": 0.6119402985074627
+    },
+    {
+      "seed": 520273,
+      "min_risk": 0.047683462969225564,
+      "chosen_risk": 0.047683462969225564,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520274,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520275,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.6666666666666666,
+      "chosen_then_optimal": 0.6666666666666666
+    },
+    {
+      "seed": 520276,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520277,
+      "min_risk": 0.023400402106041763,
+      "chosen_risk": 0.023400402106041763,
+      "kind": "first_click_survival",
+      "upper": 0.9765995978939582
+    },
+    {
+      "seed": 520278,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520279,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520280,
+      "min_risk": 0.4,
+      "chosen_risk": 0.4,
+      "kind": "exact_endgame",
+      "upper": 0.4,
+      "chosen_then_optimal": 0.4
+    },
+    {
+      "seed": 520281,
+      "min_risk": 0.03230472516875603,
+      "chosen_risk": 0.03230472516875603,
+      "kind": "first_click_survival",
+      "upper": 0.967695274831244
+    },
+    {
+      "seed": 520282,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520283,
+      "min_risk": 0.10600373871445841,
+      "chosen_risk": 0.10600373871445841,
+      "kind": "first_click_survival",
+      "upper": 0.8939962612855415
+    },
+    {
+      "seed": 520284,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520285,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "exact_endgame",
+      "upper": 0.8333333333333334,
+      "chosen_then_optimal": 0.8333333333333334
+    },
+    {
+      "seed": 520286,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.5535714285714286,
+      "chosen_then_optimal": 0.5178571428571429
+    },
+    {
+      "seed": 520287,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520288,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.21296296296296297,
+      "chosen_then_optimal": 0.16666666666666666
+    },
+    {
+      "seed": 520289,
+      "min_risk": 0.1251237695235526,
+      "chosen_risk": 0.14095717764642782,
+      "kind": "first_click_survival",
+      "upper": 0.8748762304764474
+    },
+    {
+      "seed": 520290,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520291,
+      "min_risk": 0.076523707028402,
+      "chosen_risk": 0.076523707028402,
+      "kind": "first_click_survival",
+      "upper": 0.9234762929715981
+    },
+    {
+      "seed": 520292,
+      "min_risk": 0.25,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520293,
+      "min_risk": 0.09610249683796318,
+      "chosen_risk": 0.09610249683796318,
+      "kind": "first_click_survival",
+      "upper": 0.9038975031620369
+    },
+    {
+      "seed": 520294,
+      "min_risk": 0.3023255813953488,
+      "chosen_risk": 0.3023255813953488,
+      "kind": "first_click_survival",
+      "upper": 0.6976744186046512
+    },
+    {
+      "seed": 520295,
+      "min_risk": 0.12769152828325084,
+      "chosen_risk": 0.13252269786323412,
+      "kind": "first_click_survival",
+      "upper": 0.8723084717167492
+    },
+    {
+      "seed": 520296,
+      "min_risk": 0.07936507936507936,
+      "chosen_risk": 0.07936507936507936,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520297,
+      "min_risk": 0.17391304347826086,
+      "chosen_risk": 0.17391304347826086,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520298,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520299,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520300,
+      "min_risk": 0.08719346049046321,
+      "chosen_risk": 0.08719346049046321,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520301,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520302,
+      "min_risk": 0.04797558393762723,
+      "chosen_risk": 0.04797558393762723,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520303,
+      "min_risk": 0.10018330961564183,
+      "chosen_risk": 0.10018330961564183,
+      "kind": "first_click_survival",
+      "upper": 0.8998166903843582
+    },
+    {
+      "seed": 520304,
+      "min_risk": 0.05141388174807198,
+      "chosen_risk": 0.05141388174807198,
+      "kind": "first_click_survival",
+      "upper": 0.9485861182519281
+    },
+    {
+      "seed": 520305,
+      "min_risk": 0.13765730880929333,
+      "chosen_risk": 0.13765730880929333,
+      "kind": "first_click_survival",
+      "upper": 0.8623426911907066
+    },
+    {
+      "seed": 520306,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "first_click_survival",
+      "upper": 0.8333333333333334
+    },
+    {
+      "seed": 520307,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520308,
+      "min_risk": 0.09523809523809523,
+      "chosen_risk": 0.10052910052910052,
+      "kind": "first_click_survival",
+      "upper": 0.9047619047619048
+    },
+    {
+      "seed": 520309,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520310,
+      "min_risk": 0.05848826804082544,
+      "chosen_risk": 0.05848826804082544,
+      "kind": "first_click_survival",
+      "upper": 0.9415117319591746
+    },
+    {
+      "seed": 520311,
+      "min_risk": 0.03138910795021006,
+      "chosen_risk": 0.03138910795021006,
+      "kind": "first_click_survival",
+      "upper": 0.9686108920497899
+    },
+    {
+      "seed": 520312,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520313,
+      "min_risk": 0.125,
+      "chosen_risk": 0.125,
+      "kind": "first_click_survival",
+      "upper": 0.875
+    },
+    {
+      "seed": 520314,
+      "min_risk": 0.10965339122623147,
+      "chosen_risk": 0.10965339122623147,
+      "kind": "first_click_survival",
+      "upper": 0.8903466087737686
+    },
+    {
+      "seed": 520315,
+      "min_risk": 0.17254174397031538,
+      "chosen_risk": 0.17254174397031538,
+      "kind": "first_click_survival",
+      "upper": 0.8274582560296846
+    },
+    {
+      "seed": 520316,
+      "min_risk": 0.034482758620689655,
+      "chosen_risk": 0.0351213282247765,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520317,
+      "min_risk": 0.09136605558840923,
+      "chosen_risk": 0.09136605558840923,
+      "kind": "first_click_survival",
+      "upper": 0.9086339444115907
+    },
+    {
+      "seed": 520318,
+      "min_risk": 0.21052631578947367,
+      "chosen_risk": 0.21052631578947367,
+      "kind": "first_click_survival",
+      "upper": 0.7894736842105263
+    },
+    {
+      "seed": 520319,
+      "min_risk": 0.13015399900645802,
+      "chosen_risk": 0.13015399900645802,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520320,
+      "min_risk": 0.047619047619047616,
+      "chosen_risk": 0.047619047619047616,
+      "kind": "first_click_survival",
+      "upper": 0.9523809523809523
+    },
+    {
+      "seed": 520321,
+      "min_risk": 0.09999999999999999,
+      "chosen_risk": 0.1,
+      "kind": "exact_endgame",
+      "upper": 0.7666666666666667,
+      "chosen_then_optimal": 0.7666666666666667
+    },
+    {
+      "seed": 520322,
+      "min_risk": 0.14231057089341798,
+      "chosen_risk": 0.16673327471824795,
+      "kind": "first_click_survival",
+      "upper": 0.857689429106582
+    },
+    {
+      "seed": 520323,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.2222222222222222,
+      "chosen_then_optimal": 0.2222222222222222
+    },
+    {
+      "seed": 520324,
+      "min_risk": 0.03333333333333333,
+      "chosen_risk": 0.03333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.9666666666666667,
+      "chosen_then_optimal": 0.9333333333333333
+    },
+    {
+      "seed": 520325,
+      "min_risk": 0.08882409922315714,
+      "chosen_risk": 0.08882409922315714,
+      "kind": "first_click_survival",
+      "upper": 0.9111759007768429
+    },
+    {
+      "seed": 520326,
+      "min_risk": 0.1111111111111111,
+      "chosen_risk": 0.1111111111111111,
+      "kind": "first_click_survival",
+      "upper": 0.8888888888888888
+    },
+    {
+      "seed": 520327,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520328,
+      "min_risk": 0.2013322231473772,
+      "chosen_risk": 0.2013322231473772,
+      "kind": "first_click_survival",
+      "upper": 0.7986677768526228
+    },
+    {
+      "seed": 520329,
+      "min_risk": 0.2012847965738758,
+      "chosen_risk": 0.2012847965738758,
+      "kind": "first_click_survival",
+      "upper": 0.7987152034261242
+    },
+    {
+      "seed": 520330,
+      "min_risk": 0.045014621966812676,
+      "chosen_risk": 0.045014621966812676,
+      "kind": "first_click_survival",
+      "upper": 0.9549853780331873
+    },
+    {
+      "seed": 520331,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.125,
+      "chosen_then_optimal": 0.125
+    },
+    {
+      "seed": 520332,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520333,
+      "min_risk": 0.13267429760665975,
+      "chosen_risk": 0.13267429760665975,
+      "kind": "first_click_survival",
+      "upper": 0.8673257023933403
+    },
+    {
+      "seed": 520334,
+      "min_risk": 0.1693937654273652,
+      "chosen_risk": 0.1693937654273652,
+      "kind": "first_click_survival",
+      "upper": 0.8306062345726348
+    },
+    {
+      "seed": 520335,
+      "min_risk": 0.07142857142857142,
+      "chosen_risk": 0.07142857142857142,
+      "kind": "exact_endgame",
+      "upper": 0.9285714285714286,
+      "chosen_then_optimal": 0.8571428571428571
+    },
+    {
+      "seed": 520336,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520337,
+      "min_risk": 0.08333333333333333,
+      "chosen_risk": 0.08333333333333333,
+      "kind": "first_click_survival",
+      "upper": 0.9166666666666666
+    },
+    {
+      "seed": 520338,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "first_click_survival",
+      "upper": 0.75
+    },
+    {
+      "seed": 520339,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520340,
+      "min_risk": 0.10390625,
+      "chosen_risk": 0.10390625,
+      "kind": "first_click_survival",
+      "upper": 0.89609375
+    },
+    {
+      "seed": 520341,
+      "min_risk": 0.06100139779936203,
+      "chosen_risk": 0.06100139779936203,
+      "kind": "first_click_survival",
+      "upper": 0.938998602200638
+    },
+    {
+      "seed": 520342,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520343,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520344,
+      "min_risk": 0.08963341954875882,
+      "chosen_risk": 0.08963341954875882,
+      "kind": "first_click_survival",
+      "upper": 0.9103665804512412
+    },
+    {
+      "seed": 520345,
+      "min_risk": 0.08346261247285137,
+      "chosen_risk": 0.08346261247285137,
+      "kind": "first_click_survival",
+      "upper": 0.9165373875271486
+    },
+    {
+      "seed": 520346,
+      "min_risk": 0.2022014294388873,
+      "chosen_risk": 0.2022014294388873,
+      "kind": "first_click_survival",
+      "upper": 0.7977985705611127
+    },
+    {
+      "seed": 520347,
+      "min_risk": 0.056372549019607844,
+      "chosen_risk": 0.056372549019607844,
+      "kind": "first_click_survival",
+      "upper": 0.9436274509803921
+    },
+    {
+      "seed": 520348,
+      "min_risk": 0.13725490196078433,
+      "chosen_risk": 0.13725490196078433,
+      "kind": "exact_endgame",
+      "upper": 0.4117647058823529,
+      "chosen_then_optimal": 0.4117647058823529
+    },
+    {
+      "seed": 520349,
+      "min_risk": 0.1654421981430022,
+      "chosen_risk": 0.1654421981430022,
+      "kind": "first_click_survival",
+      "upper": 0.8345578018569978
+    },
+    {
+      "seed": 520350,
+      "min_risk": 0.19999999999999998,
+      "chosen_risk": 0.2,
+      "kind": "first_click_survival",
+      "upper": 0.8
+    },
+    {
+      "seed": 520351,
+      "min_risk": 0.16917293233082706,
+      "chosen_risk": 0.16917293233082706,
+      "kind": "first_click_survival",
+      "upper": 0.8308270676691729
+    },
+    {
+      "seed": 520352,
+      "min_risk": 0.09870388833499502,
+      "chosen_risk": 0.09870388833499502,
+      "kind": "first_click_survival",
+      "upper": 0.901296111665005
+    },
+    {
+      "seed": 520353,
+      "min_risk": 0.10175272139807419,
+      "chosen_risk": 0.10175272139807419,
+      "kind": "first_click_survival",
+      "upper": 0.8982472786019258
+    },
+    {
+      "seed": 520354,
+      "min_risk": 0.048021749206864806,
+      "chosen_risk": 0.048021749206864806,
+      "kind": "first_click_survival",
+      "upper": 0.9519782507931351
+    },
+    {
+      "seed": 520355,
+      "min_risk": 0.13642397283242608,
+      "chosen_risk": 0.16699569265089256,
+      "kind": "first_click_survival",
+      "upper": 0.8635760271675739
+    },
+    {
+      "seed": 520356,
+      "min_risk": 0.06678383128295255,
+      "chosen_risk": 0.06678383128295255,
+      "kind": "first_click_survival",
+      "upper": 0.9332161687170475
+    },
+    {
+      "seed": 520357,
+      "min_risk": 0.04285840228712485,
+      "chosen_risk": 0.04285840228712485,
+      "kind": "first_click_survival",
+      "upper": 0.9571415977128751
+    },
+    {
+      "seed": 520358,
+      "min_risk": 0.08797943337921006,
+      "chosen_risk": 0.08797943337921006,
+      "kind": "first_click_survival",
+      "upper": 0.9120205666207899
+    },
+    {
+      "seed": 520359,
+      "min_risk": 0.08784897644511515,
+      "chosen_risk": 0.08784897644511515,
+      "kind": "first_click_survival",
+      "upper": 0.9121510235548849
+    },
+    {
+      "seed": 520360,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520361,
+      "min_risk": 0.004283630855821703,
+      "chosen_risk": 0.004283630855821703,
+      "kind": "first_click_survival",
+      "upper": 0.9957163691441783
+    },
+    {
+      "seed": 520362,
+      "min_risk": 0.07932263814616757,
+      "chosen_risk": 0.07932263814616757,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520363,
+      "min_risk": 0.08108108108108109,
+      "chosen_risk": 0.08108108108108109,
+      "kind": "first_click_survival",
+      "upper": 0.9189189189189189
+    },
+    {
+      "seed": 520364,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520365,
+      "min_risk": 0.1081081081081081,
+      "chosen_risk": 0.1081081081081081,
+      "kind": "first_click_survival",
+      "upper": 0.8918918918918919
+    },
+    {
+      "seed": 520366,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520367,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520368,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520369,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520370,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520371,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520372,
+      "min_risk": 0.1744278126508933,
+      "chosen_risk": 0.1744278126508933,
+      "kind": "first_click_survival",
+      "upper": 0.8255721873491066
+    },
+    {
+      "seed": 520373,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520374,
+      "min_risk": 0.054084720121028745,
+      "chosen_risk": 0.054084720121028745,
+      "kind": "first_click_survival",
+      "upper": 0.9459152798789713
+    },
+    {
+      "seed": 520375,
+      "min_risk": 0.07473501326617192,
+      "chosen_risk": 0.07473501326617192,
+      "kind": "first_click_survival",
+      "upper": 0.9252649867338281
+    },
+    {
+      "seed": 520376,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520377,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "first_click_survival",
+      "upper": 0.8
+    },
+    {
+      "seed": 520378,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520379,
+      "min_risk": 0.125,
+      "chosen_risk": 0.125,
+      "kind": "exact_endgame",
+      "upper": 0.8333333333333334,
+      "chosen_then_optimal": 0.75
+    },
+    {
+      "seed": 520380,
+      "min_risk": 0.07142857142857142,
+      "chosen_risk": 0.07142857142857142,
+      "kind": "first_click_survival",
+      "upper": 0.9285714285714286
+    },
+    {
+      "seed": 520381,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520382,
+      "min_risk": 0.23846153846153847,
+      "chosen_risk": 0.23846153846153847,
+      "kind": "first_click_survival",
+      "upper": 0.7615384615384615
+    },
+    {
+      "seed": 520383,
+      "min_risk": 0.10406448756470904,
+      "chosen_risk": 0.10406448756470904,
+      "kind": "first_click_survival",
+      "upper": 0.895935512435291
+    },
+    {
+      "seed": 520384,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520385,
+      "min_risk": 0.04,
+      "chosen_risk": 0.04,
+      "kind": "first_click_survival",
+      "upper": 0.96
+    },
+    {
+      "seed": 520386,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.7142857142857143,
+      "chosen_then_optimal": 0.7142857142857143
+    },
+    {
+      "seed": 520387,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520388,
+      "min_risk": 0.043487232506498996,
+      "chosen_risk": 0.062127271591584474,
+      "kind": "first_click_survival",
+      "upper": 0.956512767493501
+    },
+    {
+      "seed": 520389,
+      "min_risk": 0.10747330837327622,
+      "chosen_risk": 0.10747330837327622,
+      "kind": "first_click_survival",
+      "upper": 0.8925266916267238
+    },
+    {
+      "seed": 520390,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520391,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520392,
+      "min_risk": 0.2016260162601626,
+      "chosen_risk": 0.2016260162601626,
+      "kind": "first_click_survival",
+      "upper": 0.7983739837398374
+    },
+    {
+      "seed": 520393,
+      "min_risk": 0.023880315016921498,
+      "chosen_risk": 0.023880315016921498,
+      "kind": "first_click_survival",
+      "upper": 0.9761196849830786
+    },
+    {
+      "seed": 520394,
+      "min_risk": 0.10094554444709505,
+      "chosen_risk": 0.10094554444709505,
+      "kind": "first_click_survival",
+      "upper": 0.899054455552905
+    },
+    {
+      "seed": 520395,
+      "min_risk": 0.08628574486389474,
+      "chosen_risk": 0.08628574486389474,
+      "kind": "first_click_survival",
+      "upper": 0.9137142551361053
+    },
+    {
+      "seed": 520396,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520397,
+      "min_risk": 0.07473501326617192,
+      "chosen_risk": 0.07473501326617192,
+      "kind": "first_click_survival",
+      "upper": 0.9252649867338281
+    },
+    {
+      "seed": 520398,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520399,
+      "min_risk": 0.09244532803180913,
+      "chosen_risk": 0.09244532803180913,
+      "kind": "first_click_survival",
+      "upper": 0.9075546719681908
+    },
+    {
+      "seed": 520400,
+      "min_risk": 0.09940828402366864,
+      "chosen_risk": 0.09940828402366864,
+      "kind": "first_click_survival",
+      "upper": 0.9005917159763314
+    },
+    {
+      "seed": 520401,
+      "min_risk": 0.05263157894736842,
+      "chosen_risk": 0.05263157894736842,
+      "kind": "first_click_survival",
+      "upper": 0.9473684210526316
+    },
+    {
+      "seed": 520402,
+      "min_risk": 0.11063955268053624,
+      "chosen_risk": 0.11063955268053624,
+      "kind": "first_click_survival",
+      "upper": 0.8893604473194637
+    },
+    {
+      "seed": 520403,
+      "min_risk": 0.08055067369654365,
+      "chosen_risk": 0.08055067369654365,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520404,
+      "min_risk": 0.09430481899930829,
+      "chosen_risk": 0.09430481899930829,
+      "kind": "first_click_survival",
+      "upper": 0.9056951810006917
+    },
+    {
+      "seed": 520405,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520406,
+      "min_risk": 0.09351798205015517,
+      "chosen_risk": 0.09351798205015517,
+      "kind": "first_click_survival",
+      "upper": 0.9064820179498448
+    },
+    {
+      "seed": 520407,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "first_click_survival",
+      "upper": 0.75
+    },
+    {
+      "seed": 520408,
+      "min_risk": 0.05127212242454213,
+      "chosen_risk": 0.058402587769397545,
+      "kind": "first_click_survival",
+      "upper": 0.9487278775754578
+    },
+    {
+      "seed": 520409,
+      "min_risk": 0.09213176600982598,
+      "chosen_risk": 0.09213176600982598,
+      "kind": "first_click_survival",
+      "upper": 0.907868233990174
+    },
+    {
+      "seed": 520410,
+      "min_risk": 0.07692307692307693,
+      "chosen_risk": 0.07692307692307693,
+      "kind": "first_click_survival",
+      "upper": 0.9230769230769231
+    },
+    {
+      "seed": 520411,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520412,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520413,
+      "min_risk": 0.08881578947368422,
+      "chosen_risk": 0.08881578947368422,
+      "kind": "first_click_survival",
+      "upper": 0.9111842105263158
+    },
+    {
+      "seed": 520414,
+      "min_risk": 0.14014124899842811,
+      "chosen_risk": 0.14225604336423064,
+      "kind": "first_click_survival",
+      "upper": 0.8598587510015718
+    },
+    {
+      "seed": 520415,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520416,
+      "min_risk": 0.16934046345811052,
+      "chosen_risk": 0.16934046345811052,
+      "kind": "first_click_survival",
+      "upper": 0.8306595365418895
+    },
+    {
+      "seed": 520417,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520418,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520419,
+      "min_risk": 0.043616256566215095,
+      "chosen_risk": 0.043616256566215095,
+      "kind": "first_click_survival",
+      "upper": 0.956383743433785
+    },
+    {
+      "seed": 520420,
+      "min_risk": 0.09690251754237393,
+      "chosen_risk": 0.09808037820206625,
+      "kind": "first_click_survival",
+      "upper": 0.9030974824576261
+    },
+    {
+      "seed": 520421,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "exact_endgame",
+      "upper": 0.3333333333333333,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520422,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520423,
+      "min_risk": 0.047604345685255955,
+      "chosen_risk": 0.047604345685255955,
+      "kind": "first_click_survival",
+      "upper": 0.952395654314744
+    },
+    {
+      "seed": 520424,
+      "min_risk": 0.029238577923251994,
+      "chosen_risk": 0.029238577923251994,
+      "kind": "first_click_survival",
+      "upper": 0.970761422076748
+    },
+    {
+      "seed": 520425,
+      "min_risk": 0.05,
+      "chosen_risk": 0.05,
+      "kind": "exact_endgame",
+      "upper": 0.9,
+      "chosen_then_optimal": 0.9
+    },
+    {
+      "seed": 520426,
+      "min_risk": 0.07266263331878002,
+      "chosen_risk": 0.07266263331878002,
+      "kind": "first_click_survival",
+      "upper": 0.92733736668122
+    },
+    {
+      "seed": 520427,
+      "min_risk": 0.1276595744680851,
+      "chosen_risk": 0.1276595744680851,
+      "kind": "first_click_survival",
+      "upper": 0.8723404255319149
+    },
+    {
+      "seed": 520428,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520429,
+      "min_risk": 0.06813186813186813,
+      "chosen_risk": 0.06813186813186813,
+      "kind": "first_click_survival",
+      "upper": 0.9318681318681319
+    },
+    {
+      "seed": 520430,
+      "min_risk": 0.07792207792207792,
+      "chosen_risk": 0.07792207792207792,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520431,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520432,
+      "min_risk": 0.060856003805576646,
+      "chosen_risk": 0.060856003805576646,
+      "kind": "first_click_survival",
+      "upper": 0.9391439961944233
+    },
+    {
+      "seed": 520433,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520434,
+      "min_risk": 0.11180124223602485,
+      "chosen_risk": 0.11180124223602485,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520435,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520436,
+      "min_risk": 0.06033832588380601,
+      "chosen_risk": 0.06033832588380601,
+      "kind": "first_click_survival",
+      "upper": 0.939661674116194
+    },
+    {
+      "seed": 520437,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520438,
+      "min_risk": 0.03678929765886287,
+      "chosen_risk": 0.03678929765886287,
+      "kind": "first_click_survival",
+      "upper": 0.9632107023411371
+    },
+    {
+      "seed": 520439,
+      "min_risk": 0.17647058823529413,
+      "chosen_risk": 0.17647058823529413,
+      "kind": "first_click_survival",
+      "upper": 0.8235294117647058
+    },
+    {
+      "seed": 520440,
+      "min_risk": 0.15848257269401117,
+      "chosen_risk": 0.15848257269401117,
+      "kind": "first_click_survival",
+      "upper": 0.8415174273059889
+    },
+    {
+      "seed": 520441,
+      "min_risk": 0.019907671358303583,
+      "chosen_risk": 0.019907671358303583,
+      "kind": "first_click_survival",
+      "upper": 0.9800923286416964
+    },
+    {
+      "seed": 520442,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520443,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520444,
+      "min_risk": 0.03440464391901458,
+      "chosen_risk": 0.03440464391901458,
+      "kind": "first_click_survival",
+      "upper": 0.9655953560809855
+    },
+    {
+      "seed": 520445,
+      "min_risk": 0.10552061495457722,
+      "chosen_risk": 0.1222921034241789,
+      "kind": "first_click_survival",
+      "upper": 0.8944793850454228
+    },
+    {
+      "seed": 520446,
+      "min_risk": 0.1463433061347839,
+      "chosen_risk": 0.17089755213055302,
+      "kind": "first_click_survival",
+      "upper": 0.8536566938652161
+    },
+    {
+      "seed": 520447,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520448,
+      "min_risk": 0.08388777999556442,
+      "chosen_risk": 0.08388777999556442,
+      "kind": "first_click_survival",
+      "upper": 0.9161122200044356
+    },
+    {
+      "seed": 520449,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520450,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520451,
+      "min_risk": 0.008830087706258361,
+      "chosen_risk": 0.008830087706258361,
+      "kind": "first_click_survival",
+      "upper": 0.9911699122937416
+    },
+    {
+      "seed": 520452,
+      "min_risk": 0.10526315789473684,
+      "chosen_risk": 0.10526315789473684,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520453,
+      "min_risk": 0.03957027752909579,
+      "chosen_risk": 0.03957027752909579,
+      "kind": "first_click_survival",
+      "upper": 0.9604297224709042
+    },
+    {
+      "seed": 520454,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520455,
+      "min_risk": 0.014460075833178324,
+      "chosen_risk": 0.014460075833178324,
+      "kind": "first_click_survival",
+      "upper": 0.9855399241668217
+    },
+    {
+      "seed": 520456,
+      "min_risk": 0.14421202675497563,
+      "chosen_risk": 0.14421202675497563,
+      "kind": "first_click_survival",
+      "upper": 0.8557879732450244
+    },
+    {
+      "seed": 520457,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520458,
+      "min_risk": 0.23308270676691728,
+      "chosen_risk": 0.23308270676691728,
+      "kind": "first_click_survival",
+      "upper": 0.7669172932330828
+    },
+    {
+      "seed": 520459,
+      "min_risk": 0.062358118116486866,
+      "chosen_risk": 0.062358118116486866,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520460,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520461,
+      "min_risk": 0.04950495049504951,
+      "chosen_risk": 0.04950495049504951,
+      "kind": "first_click_survival",
+      "upper": 0.9504950495049505
+    },
+    {
+      "seed": 520462,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520463,
+      "min_risk": 0.20495718566252524,
+      "chosen_risk": 0.2947732657999323,
+      "kind": "first_click_survival",
+      "upper": 0.7950428143374748
+    },
+    {
+      "seed": 520464,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520465,
+      "min_risk": 0.0853836495062273,
+      "chosen_risk": 0.09288356466555807,
+      "kind": "first_click_survival",
+      "upper": 0.9146163504937727
+    },
+    {
+      "seed": 520466,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.3333333333333333,
+      "chosen_then_optimal": 0.3333333333333333
+    },
+    {
+      "seed": 520467,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "first_click_survival",
+      "upper": 0.75
+    },
+    {
+      "seed": 520468,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "exact_endgame",
+      "upper": 0.15,
+      "chosen_then_optimal": 0.15
+    },
+    {
+      "seed": 520469,
+      "min_risk": 0.04829083016820401,
+      "chosen_risk": 0.04829083016820401,
+      "kind": "first_click_survival",
+      "upper": 0.951709169831796
+    },
+    {
+      "seed": 520470,
+      "min_risk": 0.13333333333333333,
+      "chosen_risk": 0.13333333333333333,
+      "kind": "first_click_survival",
+      "upper": 0.8666666666666667
+    },
+    {
+      "seed": 520471,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "exact_endgame",
+      "upper": 0.1736111111111111,
+      "chosen_then_optimal": 0.1736111111111111
+    },
+    {
+      "seed": 520472,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520473,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520474,
+      "min_risk": 0.06847148782459259,
+      "chosen_risk": 0.06847148782459259,
+      "kind": "first_click_survival",
+      "upper": 0.9315285121754074
+    },
+    {
+      "seed": 520475,
+      "min_risk": 0.14925373134328357,
+      "chosen_risk": 0.14925373134328357,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520476,
+      "min_risk": 0.2857142857142857,
+      "chosen_risk": 0.2857142857142857,
+      "kind": "exact_endgame",
+      "upper": 0.35714285714285715,
+      "chosen_then_optimal": 0.32142857142857145
+    },
+    {
+      "seed": 520477,
+      "min_risk": 0.1990632318501171,
+      "chosen_risk": 0.1990632318501171,
+      "kind": "first_click_survival",
+      "upper": 0.8009367681498829
+    },
+    {
+      "seed": 520478,
+      "min_risk": 0.125,
+      "chosen_risk": 0.125,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520479,
+      "min_risk": 0.0458789943978562,
+      "chosen_risk": 0.0458789943978562,
+      "kind": "first_click_survival",
+      "upper": 0.9541210056021439
+    },
+    {
+      "seed": 520480,
+      "min_risk": 0.09161472950572895,
+      "chosen_risk": 0.09161472950572895,
+      "kind": "first_click_survival",
+      "upper": 0.9083852704942711
+    },
+    {
+      "seed": 520481,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520482,
+      "min_risk": 0.09615384615384616,
+      "chosen_risk": 0.09615384615384616,
+      "kind": "first_click_survival",
+      "upper": 0.9038461538461539
+    },
+    {
+      "seed": 520483,
+      "min_risk": 0.09477577438742488,
+      "chosen_risk": 0.09477577438742488,
+      "kind": "first_click_survival",
+      "upper": 0.9052242256125751
+    },
+    {
+      "seed": 520484,
+      "min_risk": 0.211864406779661,
+      "chosen_risk": 0.2542372881355932,
+      "kind": "first_click_survival",
+      "upper": 0.788135593220339
+    },
+    {
+      "seed": 520485,
+      "min_risk": 0.09239701616740065,
+      "chosen_risk": 0.09239701616740065,
+      "kind": "first_click_survival",
+      "upper": 0.9076029838325994
+    },
+    {
+      "seed": 520486,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520487,
+      "min_risk": 0.1111111111111111,
+      "chosen_risk": 0.1111111111111111,
+      "kind": "exact_endgame",
+      "upper": 0.8888888888888888,
+      "chosen_then_optimal": 0.8888888888888888
+    },
+    {
+      "seed": 520488,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520489,
+      "min_risk": 0.10028896223143341,
+      "chosen_risk": 0.10028896223143341,
+      "kind": "first_click_survival",
+      "upper": 0.8997110377685666
+    },
+    {
+      "seed": 520490,
+      "min_risk": 0.11224489795918367,
+      "chosen_risk": 0.11224489795918367,
+      "kind": "first_click_survival",
+      "upper": 0.8877551020408163
+    },
+    {
+      "seed": 520491,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "exact_endgame",
+      "upper": 0.43333333333333335,
+      "chosen_then_optimal": 0.43333333333333335
+    },
+    {
+      "seed": 520492,
+      "min_risk": 0.12087209422247891,
+      "chosen_risk": 0.12087209422247891,
+      "kind": "first_click_survival",
+      "upper": 0.8791279057775211
+    },
+    {
+      "seed": 520493,
+      "min_risk": 0.03723171265878231,
+      "chosen_risk": 0.03723171265878231,
+      "kind": "first_click_survival",
+      "upper": 0.9627682873412177
+    },
+    {
+      "seed": 520494,
+      "min_risk": 0.09602400600150038,
+      "chosen_risk": 0.09602400600150038,
+      "kind": "first_click_survival",
+      "upper": 0.9039759939984996
+    },
+    {
+      "seed": 520495,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.7619047619047619,
+      "chosen_then_optimal": 0.7619047619047619
+    },
+    {
+      "seed": 520496,
+      "min_risk": 0.052166984345217625,
+      "chosen_risk": 0.052166984345217625,
+      "kind": "first_click_survival",
+      "upper": 0.9478330156547824
+    },
+    {
+      "seed": 520497,
+      "min_risk": 0.14518773569437612,
+      "chosen_risk": 0.14518773569437612,
+      "kind": "first_click_survival",
+      "upper": 0.8548122643056238
+    },
+    {
+      "seed": 520498,
+      "min_risk": 0.0712201821163685,
+      "chosen_risk": 0.0712201821163685,
+      "kind": "first_click_survival",
+      "upper": 0.9287798178836315
+    },
+    {
+      "seed": 520499,
+      "min_risk": 0.12125,
+      "chosen_risk": 0.125,
+      "kind": "first_click_survival",
+      "upper": 0.87875
+    },
+    {
+      "seed": 520500,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520501,
+      "min_risk": 0.10167731870185857,
+      "chosen_risk": 0.10167731870185857,
+      "kind": "first_click_survival",
+      "upper": 0.8983226812981414
+    },
+    {
+      "seed": 520502,
+      "min_risk": 0.06046766532700036,
+      "chosen_risk": 0.06046766532700036,
+      "kind": "first_click_survival",
+      "upper": 0.9395323346729997
+    },
+    {
+      "seed": 520503,
+      "min_risk": 0.10624509271003202,
+      "chosen_risk": 0.10624509271003202,
+      "kind": "first_click_survival",
+      "upper": 0.893754907289968
+    },
+    {
+      "seed": 520504,
+      "min_risk": 0.14645893155169937,
+      "chosen_risk": 0.14645893155169937,
+      "kind": "first_click_survival",
+      "upper": 0.8535410684483007
+    },
+    {
+      "seed": 520505,
+      "min_risk": 0.06072874493927126,
+      "chosen_risk": 0.06072874493927126,
+      "kind": "first_click_survival",
+      "upper": 0.9392712550607287
+    },
+    {
+      "seed": 520506,
+      "min_risk": 0.06899055918663761,
+      "chosen_risk": 0.06899055918663761,
+      "kind": "first_click_survival",
+      "upper": 0.9310094408133623
+    },
+    {
+      "seed": 520507,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520508,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "first_click_survival",
+      "upper": 0.8571428571428572
+    },
+    {
+      "seed": 520509,
+      "min_risk": 0.10526315789473686,
+      "chosen_risk": 0.10526315789473686,
+      "kind": "first_click_survival",
+      "upper": 0.8947368421052632
+    },
+    {
+      "seed": 520510,
+      "min_risk": 0.19739696312364427,
+      "chosen_risk": 0.19739696312364427,
+      "kind": "first_click_survival",
+      "upper": 0.8026030368763557
+    },
+    {
+      "seed": 520511,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520512,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520513,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520514,
+      "min_risk": 0.04390243902439024,
+      "chosen_risk": 0.04390243902439024,
+      "kind": "first_click_survival",
+      "upper": 0.9560975609756097
+    },
+    {
+      "seed": 520515,
+      "min_risk": 0.13136754853713392,
+      "chosen_risk": 0.13136754853713392,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520516,
+      "min_risk": 0.05990783410138248,
+      "chosen_risk": 0.05990783410138248,
+      "kind": "first_click_survival",
+      "upper": 0.9400921658986175
+    },
+    {
+      "seed": 520517,
+      "min_risk": 0.04929577464788732,
+      "chosen_risk": 0.04929577464788732,
+      "kind": "first_click_survival",
+      "upper": 0.9507042253521126
+    },
+    {
+      "seed": 520518,
+      "min_risk": 0.10098335854765507,
+      "chosen_risk": 0.10098335854765507,
+      "kind": "first_click_survival",
+      "upper": 0.899016641452345
+    },
+    {
+      "seed": 520519,
+      "min_risk": 0.07441860465116279,
+      "chosen_risk": 0.07441860465116279,
+      "kind": "first_click_survival",
+      "upper": 0.9255813953488372
+    },
+    {
+      "seed": 520520,
+      "min_risk": 0.1740081904954134,
+      "chosen_risk": 0.1740081904954134,
+      "kind": "first_click_survival",
+      "upper": 0.8259918095045866
+    },
+    {
+      "seed": 520521,
+      "min_risk": 0.08208955223880597,
+      "chosen_risk": 0.09701492537313433,
+      "kind": "first_click_survival",
+      "upper": 0.917910447761194
+    },
+    {
+      "seed": 520522,
+      "min_risk": 0.16556291390728475,
+      "chosen_risk": 0.16556291390728475,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520523,
+      "min_risk": 0.09205020920502091,
+      "chosen_risk": 0.09205020920502091,
+      "kind": "first_click_survival",
+      "upper": 0.9079497907949791
+    },
+    {
+      "seed": 520524,
+      "min_risk": 0.015351866490633402,
+      "chosen_risk": 0.015351866490633402,
+      "kind": "first_click_survival",
+      "upper": 0.9846481335093666
+    },
+    {
+      "seed": 520525,
+      "min_risk": 0.08578315166670072,
+      "chosen_risk": 0.08578315166670072,
+      "kind": "first_click_survival",
+      "upper": 0.9142168483332993
+    },
+    {
+      "seed": 520526,
+      "min_risk": 0.1111111111111111,
+      "chosen_risk": 0.1111111111111111,
+      "kind": "first_click_survival",
+      "upper": 0.8888888888888888
+    },
+    {
+      "seed": 520527,
+      "min_risk": 0.16666666666666666,
+      "chosen_risk": 0.16666666666666666,
+      "kind": "exact_endgame",
+      "upper": 0.4583333333333333,
+      "chosen_then_optimal": 0.4166666666666667
+    },
+    {
+      "seed": 520528,
+      "min_risk": 0.0836199940544443,
+      "chosen_risk": 0.0836199940544443,
+      "kind": "first_click_survival",
+      "upper": 0.9163800059455557
+    },
+    {
+      "seed": 520529,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520530,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520531,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520532,
+      "min_risk": 0.08256682933935464,
+      "chosen_risk": 0.08256682933935464,
+      "kind": "first_click_survival",
+      "upper": 0.9174331706606453
+    },
+    {
+      "seed": 520533,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520534,
+      "min_risk": 0.15217391304347827,
+      "chosen_risk": 0.15217391304347827,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520535,
+      "min_risk": 0.07586206896551724,
+      "chosen_risk": 0.07586206896551724,
+      "kind": "first_click_survival",
+      "upper": 0.9241379310344827
+    },
+    {
+      "seed": 520536,
+      "min_risk": 0.04634785293795384,
+      "chosen_risk": 0.04634785293795384,
+      "kind": "first_click_survival",
+      "upper": 0.9536521470620462
+    },
+    {
+      "seed": 520537,
+      "min_risk": 0.19999999999999998,
+      "chosen_risk": 0.2,
+      "kind": "first_click_survival",
+      "upper": 0.8
+    },
+    {
+      "seed": 520538,
+      "min_risk": 0.25,
+      "chosen_risk": 0.25,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520539,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520540,
+      "min_risk": 0.20353982300884957,
+      "chosen_risk": 0.2035398230088496,
+      "kind": "first_click_survival",
+      "upper": 0.7964601769911505
+    },
+    {
+      "seed": 520541,
+      "min_risk": 0.23076923076923078,
+      "chosen_risk": 0.23076923076923078,
+      "kind": "first_click_survival",
+      "upper": 0.7692307692307692
+    },
+    {
+      "seed": 520542,
+      "min_risk": 0.12757818878909438,
+      "chosen_risk": 0.12757818878909438,
+      "kind": "first_click_survival",
+      "upper": 0.8724218112109057
+    },
+    {
+      "seed": 520543,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520544,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520545,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520546,
+      "min_risk": 0.11458333333333331,
+      "chosen_risk": 0.11458333333333331,
+      "kind": "first_click_survival",
+      "upper": 0.8854166666666667
+    },
+    {
+      "seed": 520547,
+      "min_risk": 0.17413572343149805,
+      "chosen_risk": 0.17413572343149805,
+      "kind": "first_click_survival",
+      "upper": 0.8258642765685019
+    },
+    {
+      "seed": 520548,
+      "min_risk": 0.12552481244407737,
+      "chosen_risk": 0.12552481244407737,
+      "kind": "first_click_survival",
+      "upper": 0.8744751875559227
+    },
+    {
+      "seed": 520549,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520550,
+      "min_risk": 0.048934842018951215,
+      "chosen_risk": 0.048934842018951215,
+      "kind": "first_click_survival",
+      "upper": 0.9510651579810487
+    },
+    {
+      "seed": 520551,
+      "min_risk": 0.08584905660377358,
+      "chosen_risk": 0.08584905660377358,
+      "kind": "first_click_survival",
+      "upper": 0.9141509433962264
+    },
+    {
+      "seed": 520552,
+      "min_risk": 0.12076755891100435,
+      "chosen_risk": 0.12076755891100435,
+      "kind": "first_click_survival",
+      "upper": 0.8792324410889957
+    },
+    {
+      "seed": 520553,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520554,
+      "min_risk": 0.3333333333333333,
+      "chosen_risk": 0.3333333333333333,
+      "kind": "exact_endgame",
+      "upper": 0.08333333333333333,
+      "chosen_then_optimal": 0.08333333333333333
+    },
+    {
+      "seed": 520555,
+      "min_risk": 0.063196073680599,
+      "chosen_risk": 0.063196073680599,
+      "kind": "first_click_survival",
+      "upper": 0.936803926319401
+    },
+    {
+      "seed": 520556,
+      "min_risk": 0.07692307692307693,
+      "chosen_risk": 0.07692307692307693,
+      "kind": "first_click_survival",
+      "upper": 0.9230769230769231
+    },
+    {
+      "seed": 520557,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520558,
+      "min_risk": 0.006816999376706325,
+      "chosen_risk": 0.006816999376706325,
+      "kind": "first_click_survival",
+      "upper": 0.9931830006232937
+    },
+    {
+      "seed": 520559,
+      "min_risk": 0.09283371790806774,
+      "chosen_risk": 0.09283371790806774,
+      "kind": "first_click_survival",
+      "upper": 0.9071662820919323
+    },
+    {
+      "seed": 520560,
+      "min_risk": 0.15279878971255673,
+      "chosen_risk": 0.16792738275340394,
+      "kind": "first_click_survival",
+      "upper": 0.8472012102874433
+    },
+    {
+      "seed": 520561,
+      "min_risk": 0.06426259824318077,
+      "chosen_risk": 0.06426259824318077,
+      "kind": "first_click_survival",
+      "upper": 0.9357374017568192
+    },
+    {
+      "seed": 520562,
+      "min_risk": 0.2857142857142857,
+      "chosen_risk": 0.2857142857142857,
+      "kind": "exact_endgame",
+      "upper": 0.2857142857142857,
+      "chosen_then_optimal": 0.2857142857142857
+    },
+    {
+      "seed": 520563,
+      "min_risk": 0.14807806099318835,
+      "chosen_risk": 0.17363052638347298,
+      "kind": "first_click_survival",
+      "upper": 0.8519219390068117
+    },
+    {
+      "seed": 520564,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520565,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520566,
+      "min_risk": 0.051875567862242025,
+      "chosen_risk": 0.051875567862242025,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520567,
+      "min_risk": 0.036765537681848,
+      "chosen_risk": 0.036765537681848,
+      "kind": "first_click_survival",
+      "upper": 0.963234462318152
+    },
+    {
+      "seed": 520568,
+      "min_risk": 0.2017167381974249,
+      "chosen_risk": 0.2532188841201717,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520569,
+      "min_risk": 0.0359375,
+      "chosen_risk": 0.0359375,
+      "kind": "first_click_survival",
+      "upper": 0.9640625
+    },
+    {
+      "seed": 520570,
+      "min_risk": 0.08380524380863551,
+      "chosen_risk": 0.08912142887425882,
+      "kind": "first_click_survival",
+      "upper": 0.9161947561913645
+    },
+    {
+      "seed": 520571,
+      "min_risk": 0.18402380407415883,
+      "chosen_risk": 0.18402380407415883,
+      "kind": "first_click_survival",
+      "upper": 0.8159761959258411
+    },
+    {
+      "seed": 520572,
+      "min_risk": 0.022233363123133593,
+      "chosen_risk": 0.022233363123133593,
+      "kind": "first_click_survival",
+      "upper": 0.9777666368768664
+    },
+    {
+      "seed": 520573,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520574,
+      "min_risk": 0.10043668122270742,
+      "chosen_risk": 0.10043668122270742,
+      "kind": "first_click_survival",
+      "upper": 0.8995633187772926
+    },
+    {
+      "seed": 520575,
+      "min_risk": 0.04950495049504951,
+      "chosen_risk": 0.04950495049504951,
+      "kind": "first_click_survival",
+      "upper": 0.9504950495049505
+    },
+    {
+      "seed": 520576,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520577,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520578,
+      "min_risk": 0.05486836405640853,
+      "chosen_risk": 0.05486836405640853,
+      "kind": "first_click_survival",
+      "upper": 0.9451316359435915
+    },
+    {
+      "seed": 520579,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520580,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520581,
+      "min_risk": 0.125,
+      "chosen_risk": 0.125,
+      "kind": "exact_endgame",
+      "upper": 0.4375,
+      "chosen_then_optimal": 0.4375
+    },
+    {
+      "seed": 520582,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520583,
+      "min_risk": 0.09919028340080972,
+      "chosen_risk": 0.09919028340080972,
+      "kind": "first_click_survival",
+      "upper": 0.9008097165991903
+    },
+    {
+      "seed": 520584,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.25,
+      "chosen_then_optimal": 0.25
+    },
+    {
+      "seed": 520585,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.14285714285714285,
+      "kind": "exact_endgame",
+      "upper": 0.7142857142857143,
+      "chosen_then_optimal": 0.7142857142857143
+    },
+    {
+      "seed": 520586,
+      "min_risk": 0.10427786802815812,
+      "chosen_risk": 0.10427786802815812,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520587,
+      "min_risk": 0.1651705565529623,
+      "chosen_risk": 0.1651705565529623,
+      "kind": "first_click_survival",
+      "upper": 0.8348294434470377
+    },
+    {
+      "seed": 520588,
+      "min_risk": 0.14285714285714285,
+      "chosen_risk": 0.1444866920152091,
+      "kind": "first_click_survival",
+      "upper": 0.8571428571428572
+    },
+    {
+      "seed": 520589,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520590,
+      "min_risk": 0.078125,
+      "chosen_risk": 0.078125,
+      "kind": "first_click_survival",
+      "upper": 0.921875
+    },
+    {
+      "seed": 520591,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520592,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "exact_endgame",
+      "upper": 0.4,
+      "chosen_then_optimal": 0.4
+    },
+    {
+      "seed": 520593,
+      "min_risk": 0.05330784418189226,
+      "chosen_risk": 0.05330784418189226,
+      "kind": "unavoidable_pair",
+      "upper": 0.5
+    },
+    {
+      "seed": 520594,
+      "min_risk": 0.08888888888888889,
+      "chosen_risk": 0.08888888888888889,
+      "kind": "first_click_survival",
+      "upper": 0.9111111111111111
+    },
+    {
+      "seed": 520595,
+      "min_risk": 0.13513513513513514,
+      "chosen_risk": 0.13513513513513514,
+      "kind": "first_click_survival",
+      "upper": 0.8648648648648649
+    },
+    {
+      "seed": 520596,
+      "min_risk": 0.5,
+      "chosen_risk": 0.5,
+      "kind": "exact_endgame",
+      "upper": 0.5,
+      "chosen_then_optimal": 0.5
+    },
+    {
+      "seed": 520597,
+      "min_risk": 0.045242537313432835,
+      "chosen_risk": 0.045242537313432835,
+      "kind": "first_click_survival",
+      "upper": 0.9547574626865671
+    },
+    {
+      "seed": 520598,
+      "min_risk": 0.05223880597014925,
+      "chosen_risk": 0.05223880597014925,
+      "kind": "first_click_survival",
+      "upper": 0.9477611940298507
+    },
+    {
+      "seed": 520599,
+      "min_risk": 0.09076923076923077,
+      "chosen_risk": 0.09076923076923077,
+      "kind": "first_click_survival",
+      "upper": 0.9092307692307693
+    },
+    {
+      "seed": 520600,
+      "min_risk": 0.0796548895707385,
+      "chosen_risk": 0.08918567913236321,
+      "kind": "first_click_survival",
+      "upper": 0.9203451104292615
+    },
+    {
+      "seed": 520601,
+      "min_risk": 0.0785669390320553,
+      "chosen_risk": 0.0785669390320553,
+      "kind": "first_click_survival",
+      "upper": 0.9214330609679446
+    },
+    {
+      "seed": 520602,
+      "min_risk": 0.2,
+      "chosen_risk": 0.2,
+      "kind": "exact_endgame",
+      "upper": 0.4,
+      "chosen_then_optimal": 0.4
+    },
+    {
+      "seed": 520603,
+      "min_risk": 0.18518518518518517,
+      "chosen_risk": 0.18518518518518517,
+      "kind": "first_click_survival",
+      "upper": 0.8148148148148149
+    },
+    {
+      "seed": 520604,
+      "min_risk": 0.09090909090909091,
+      "chosen_risk": 0.09090909090909091,
+      "kind": "first_click_survival",
+      "upper": 0.9090909090909091
+    },
+    {
+      "seed": 520605,
+      "min_risk": 0.0623769025011536,
+      "chosen_risk": 0.0623769025011536,
+      "kind": "first_click_survival",
+      "upper": 0.9376230974988464
+    },
+    {
+      "seed": 520606,
+      "kind": "solver_win",
+      "upper": 1.0
+    },
+    {
+      "seed": 520607,
+      "min_risk": 0.2217125382262997,
+      "chosen_risk": 0.27033639143730887,
+      "kind": "first_click_survival",
+      "upper": 0.7782874617737003
+    },
+    {
+      "seed": 520608,
+      "min_risk": 0.18181818181818182,
+      "chosen_risk": 0.18181818181818182,
+      "kind": "first_click_survival",
+      "upper": 0.8181818181818181
+    },
+    {
+      "seed": 520609,
+      "min_risk": 0.08928571428571429,
+      "chosen_risk": 0.08928571428571429,
+      "kind": "first_click_survival",
+      "upper": 0.9107142857142857
+    },
+    {
+      "seed": 520610,
+      "min_risk": 0.13545816733067728,
+      "chosen_risk": 0.13545816733067728,
+      "kind": "first_click_survival",
+      "upper": 0.8645418326693227
+    },
+    {
+      "seed": 520611,
+      "min_risk": 0.11555438508287204,
+      "chosen_risk": 0.12219257278579804,
+      "kind": "first_click_survival",
+      "upper": 0.8844456149171279
+    }
+  ]
+}
