@@ -1,0 +1,71 @@
+{
+  "seed": 412081,
+  "training_examples": 60000,
+  "epochs": 14,
+  "evaluation_seed": 412083,
+  "evaluation_examples": 3600,
+  "min_confidence": 0.995,
+  "classes": {
+    "0": {
+      "examples": 300,
+      "accepted": 0,
+      "wrong_accepted": 0
+    },
+    "1": {
+      "examples": 300,
+      "accepted": 289,
+      "wrong_accepted": 0
+    },
+    "2": {
+      "examples": 300,
+      "accepted": 297,
+      "wrong_accepted": 0
+    },
+    "3": {
+      "examples": 300,
+      "accepted": 296,
+      "wrong_accepted": 0
+    },
+    "4": {
+      "examples": 300,
+      "accepted": 300,
+      "wrong_accepted": 0
+    },
+    "5": {
+      "examples": 300,
+      "accepted": 298,
+      "wrong_accepted": 0
+    },
+    "6": {
+      "examples": 300,
+      "accepted": 300,
+      "wrong_accepted": 0
+    },
+    "7": {
+      "examples": 300,
+      "accepted": 298,
+      "wrong_accepted": 0
+    },
+    "8": {
+      "examples": 300,
+      "accepted": 294,
+      "wrong_accepted": 0
+    },
+    "9": {
+      "examples": 300,
+      "accepted": 294,
+      "wrong_accepted": 0
+    },
+    "10": {
+      "examples": 300,
+      "accepted": 298,
+      "wrong_accepted": 0
+    },
+    "11": {
+      "examples": 300,
+      "accepted": 3,
+      "wrong_accepted": 3
+    }
+  },
+  "weights_sha256": "46a1bf69120042f9b684e13be62bf3da81bb9ca17a246923637b94f90d3949d1"
+}

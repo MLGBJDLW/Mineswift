@@ -3,7 +3,7 @@ from pathlib import Path
 
 root = Path(SPECPATH)
 datas = [(str(root / "ms" / "web_grid.js"), "ms")]
-for name in ("belief_rl.pt", "rl_guess.pt"):
+for name in ("belief_rl.pt", "rl_guess.pt", "tile_vision.pt"):
     datas.append((str(root / "models" / name), "models"))
 for name in ("numpy", "torch", "opencv-python-headless", "pillow", "comtypes", "mss",
              "playwright", "greenlet", "pyee", "sympy", "mpmath", "networkx",

@@ -155,7 +155,14 @@ def _edge_profiles(roi: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     g = _gray(roi)
     gy, gx = np.gradient(g)
     mag = np.sqrt(gy * gy + gx * gx)
-    return mag.mean(axis=0).astype(np.float64), mag.mean(axis=1).astype(np.float64)
+    profiles = mag.mean(axis=0), mag.mean(axis=1)
+    if any(np.ptp(profile) < MIN_CONTRAST for profile in profiles):
+        # Manually selected grids can have clear hue boundaries at equal luminance.
+        gy, gx = np.gradient(roi.astype(np.float32), axis=(0, 1))
+        chroma = np.sqrt((gx * gx + gy * gy).max(axis=2))
+        profiles = tuple(np.maximum(profile, chroma.mean(axis=axis))
+                         for axis, profile in enumerate(profiles))
+    return tuple(profile.astype(np.float64) for profile in profiles)
 
 
 def _strength_profile(profile: np.ndarray) -> np.ndarray:

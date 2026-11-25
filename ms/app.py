@@ -4,6 +4,7 @@ import ctypes
 import queue
 import re
 import threading
+import time
 import tkinter as tk
 from tkinter import ttk
 from urllib.parse import urlsplit
@@ -34,7 +35,7 @@ def game_titles(targets):
         title
         for title in targets
         if re.search(
-            r"\bminesweeper\b|^mines(?:$|\s+[-\[])|扫雷|踩地雷|踩地雷遊戲", title, re.I
+            r"\bminesweeper(?:game)?\b|^mines(?:$|\s+[-\[])|扫雷|踩地雷|踩地雷遊戲", title, re.I
         )
     ]
 
@@ -67,6 +68,7 @@ class App:
         self.image = self.box = self.drag = self.bounds = self.last_spec = None
         self.original = False
         self.rows, self.target, self.neighbors, self.memory = [], None, [], set()
+        self.waiting_for_click = None
         self.accent = TEAL
         self.header = tk.Frame(root, bg=BG)
         self.header.pack(fill="x", padx=16, pady=(12, 2))
@@ -107,7 +109,7 @@ class App:
         self.colors = tk.BooleanVar(value=True)
         tk.Checkbutton(
             prefs,
-            text="经典配色",
+            text="经典旗雷辅助",
             variable=self.colors,
             bg=BG,
             fg=FG,
@@ -490,6 +492,9 @@ class App:
         self.commands.put(("calibrate", changes))
 
     def show(self, name, d):
+        if name in ("observed", "decision", "resynced", "error", "released", "finished",
+                    "input_retry", "flag_unavailable", "chord_unavailable"):
+            self.waiting_for_click = None
         if name == "capture_image":
             self.image, self.box = d["image"], d["box"]
             self.original = True
@@ -516,9 +521,9 @@ class App:
             self.ready = d.get("ready", name == "released" and self.ready)
             if name == "error" and self.image is not None:
                 self.original = True
-            self.caption.config(
-                text={"hint": "校准", "error": "需要处理", "released": "已交还"}[name]
-            )
+            terminal = self.caption.cget("text") in ("胜利", "踩雷")
+            if name != "released" or not terminal:
+                self.caption.config(text={"hint": "校准", "error": "需要处理", "released": "已交还"}[name])
             self.message.set(d["message"])
             self.idle()
         elif name == "attached":
@@ -539,8 +544,16 @@ class App:
             self.message.set(
                 f"第 {d['row']} 行，第 {d['col']} 列{risk}。{d['explanation']}"
             )
+        elif name == "input_sent":
+            self.waiting_for_click = (time.monotonic(), d)
+        elif name == "flag_unavailable":
+            self.message.set("右键后整盘持续无变化，本局改为记住已证实的雷，用左键继续。")
+        elif name == "chord_unavailable":
+            self.message.set("双键后棋盘持续无变化，这一局改用左键逐格展开。")
         elif name == "input_retry":
             self.message.set(f"第 {d['row']} 行，第 {d['col']} 列左击后无变化，正在复核并重试一次。")
+        elif name == "resynced":
+            self.message.set("棋盘继续展开，已重新读盘并计算下一步。")
         elif name == "observed" and d.get("board"):
             self.rows = d["board"]
         elif name in ("finished", "waiting"):
@@ -564,6 +577,11 @@ class App:
                 self.show(name, data)
                 redraw |= name in ("capture_image", "preview", "hint", "error", "released",
                                    "attached", "decision", "observed", "finished", "waiting")
+        if self.waiting_for_click and time.monotonic() - self.waiting_for_click[0] >= .25:
+            _, click = self.waiting_for_click
+            key = {"left": "左键", "right": "右键", "chord": "双键"}[click["button"]]
+            self.message.set(f"第 {click['row']} 行第 {click['col']} 列{key}已发出，正在等棋盘反馈。")
+            self.waiting_for_click = None
         if redraw:
             self.draw()
 

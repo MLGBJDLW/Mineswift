@@ -25,6 +25,9 @@ class ReadbackError(Stuck):
     """The captured board did not reach a readable, stable state."""
 
 
+class BoardChanged(Stuck):
+    """A pre-input check saw a new board. No input has been sent."""
+
 class ChromeGame:
     def __init__(self, sprites):
         self.mouse = WindowsMouse()
@@ -175,7 +178,7 @@ class ChromeGame:
             cursor = self.mouse.cursor()
             if (not self.controls or not self.controls.panel_hwnd or not cursor
                     or _window_at(self.mouse.user32, *cursor) != self.controls.panel_hwnd):
-                raise Stuck("检测到鼠标按键已按下，已归还鼠标。")
+                raise StopRequested("检测到鼠标按键，已交还控制。")
             self.check_escape()
             time.sleep(.02)
 
@@ -196,7 +199,7 @@ class ChromeGame:
 
     def _click_node(self, frame, point, button, node):
         if not self.read().matches(frame):
-            raise Stuck("决定落子后棋盘发生了变化。")
+            raise BoardChanged("决定落子后棋盘发生了变化。")
         x, y = point
         if _window_at(self.mouse.user32, x, y) != self.hwnd:
             raise Stuck("落点被其他窗口遮挡。")
@@ -251,9 +254,11 @@ class ChromeGame:
                 self.r_down = bool(self.mouse.user32.GetAsyncKeyState(ord("R")) & 0x8000)
 
 
-def settled(port, before=None, timeout=3, *, allow_unchanged=False):
+def settled(port, before=None, timeout=3, *, allow_unchanged=False, validate=None,
+            unchanged_timeout=None):
     """Require two matching frames, and after an input require a visible change."""
-    deadline = time.monotonic() + timeout
+    started = time.monotonic()
+    deadline = started + timeout
     last = None
     unchanged = False
     clean = True
@@ -266,8 +271,15 @@ def settled(port, before=None, timeout=3, *, allow_unchanged=False):
             unchanged = False
             if last is not None and current.matches(last):
                 if before is None or not current.matches(before):
+                    if validate is not None:
+                        validate(current)
                     return current
                 unchanged = True
+                # A first chord is optional. End its probe early only if every
+                # read succeeded and matched the pre-click board throughout.
+                if (clean and allow_unchanged and unchanged_timeout is not None
+                        and time.monotonic() - started >= unchanged_timeout):
+                    return current
             last = current
         except Unreadable as exc:
             clean = False

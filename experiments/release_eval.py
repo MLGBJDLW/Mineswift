@@ -20,7 +20,7 @@ from ms.policy import EndgamePolicy
 
 
 def pair(seed):
-    live = play_game(seed, load_policy(seed), EXPERT, opening="random")
+    live = play_game(seed, load_policy(seed, review=False), EXPERT, opening="random")
     endgame = play_game(seed, EndgamePolicy(seed=seed), EXPERT, opening="random")
     return dict(
         seed=seed,

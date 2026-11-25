@@ -147,6 +147,56 @@ def test_swallowed_or_unexpected_click_stops():
         verify_change(before, position([[1, FLAG, FLAG]], 0), (0, 1), "flag")
 
 
+def test_chord_waits_for_all_targets_even_if_partial_frame_repeats():
+    before = position([[FLAG, 1, COVERED], [1, 1, COVERED]], 0)
+    partial = position([[FLAG, 1, 1], [1, 1, COVERED]], 0)
+    complete = position([[FLAG, 1, 1], [1, 1, 1]], 0)
+    frames = iter([partial, partial, complete, complete])
+    from types import SimpleNamespace
+    port = SimpleNamespace(read=lambda: next(frames))
+    result = settled(port, before, timeout=1, validate=lambda candidate:
+                     verify_change(before, candidate, (0, 1), "chord", [(0, 2), (1, 2)], during_update=True))
+    assert result.matches(complete)
+
+
+@pytest.mark.parametrize("early", ["unchanged", "partial", "unreadable"])
+def test_first_chord_shortens_only_a_continuously_unchanged_wait(early, fast_clock, monkeypatch):
+    import time
+    from types import SimpleNamespace
+    monkeypatch.setattr(time, "monotonic", fast_clock.perf_counter)
+    start = time.monotonic()
+    before = position([[FLAG, 1, COVERED], [1, 1, COVERED]], 0)
+    partial = position([[FLAG, 1, 1], [1, 1, COVERED]], 0)
+    complete = position([[FLAG, 1, 1], [1, 1, 1]], 0)
+    def read():
+        elapsed = time.monotonic() - start
+        if early != "unchanged" and elapsed >= 1.4:
+            return complete
+        if .12 <= elapsed < .3:
+            if early == "partial":
+                return partial
+            if early == "unreadable":
+                raise Unreadable("展开动画")
+        return before
+    result = settled(SimpleNamespace(read=read), before, allow_unchanged=True, unchanged_timeout=.4,
+                     validate=lambda candidate: verify_change(before, candidate, (0, 1), "chord",
+                                                              [(0, 2), (1, 2)], during_update=True))
+    if early == "unchanged":
+        assert result.matches(before) and .4 <= time.monotonic() - start < .5
+    else:
+        assert result.matches(complete) and time.monotonic() - start >= 1.4
+
+
+def test_only_monotone_reveals_can_resync_before_input():
+    from ms.play_web import sync_before_input
+    before = position([[1, COVERED, COVERED]], 1)
+    advance = position([[1, 1, COVERED]], 1)
+    assert sync_before_input(None, before, lambda _: advance).matches(advance)
+    for bad in (before, position([[2, 1, COVERED]], 1), position([[1, FLAG, COVERED]], 0)):
+        with pytest.raises(Stuck):
+            sync_before_input(None, before, lambda _: bad)
+
+
 def test_one_retry_for_a_swallowed_open():
     before = position([[COVERED, COVERED]], 1)
     class Delayed:
@@ -161,6 +211,24 @@ def test_one_retry_for_a_swallowed_open():
     play(port, None, before, 1, lambda event, **data: events.append(event),
          read_after=lambda io, **kwargs: io.read())
     assert port.clicks == 2 and events.count("input_retry") == 1
+
+
+@pytest.mark.parametrize("succeeds", [True, False])
+def test_desktop_longer_press_only_retained_after_confirmation(succeeds):
+    from ms.desktop_grid import DesktopGame
+    before = position([[COVERED, COVERED]], 1)
+    port = DesktopGame.__new__(DesktopGame)
+    holds = []
+    port.click = lambda frame, cell, button: holds.append(port.left_hold)
+    def read_after(io, **kw):
+        return Frame(before.layout, "won") if succeeds and len(holds) == 2 else before
+    if succeeds:
+        play(port, None, before, 1, lambda *args, **kw: None, read_after=read_after)
+    else:
+        with pytest.raises(Stuck, match="仍无变化"):
+            play(port, None, before, 1, lambda *args, **kw: None, read_after=read_after)
+    assert holds == [.012, .045]
+    assert port.left_hold == (.045 if succeeds else .012)
 
 
 def test_unreadable_frame_disables_unchanged_retry(monkeypatch):
@@ -180,6 +248,21 @@ def test_unreadable_frame_disables_unchanged_retry(monkeypatch):
             return frame
     with pytest.raises(web_chrome.ReadbackError, match="动画帧"):
         settled(Flicker(), frame, timeout=.25, allow_unchanged=True)
+
+
+def test_changed_but_unreadable_input_reports_feedback_without_repeat():
+    from types import SimpleNamespace
+    from ms.web_chrome import ReadbackError
+    before = position([[COVERED, COVERED]], 1)
+    clicked, events = [], []
+    port = SimpleNamespace(click=lambda frame, cell, key: clicked.append(cell),
+                           target_changed=lambda cell: cell == clicked[-1])
+    def unreadable(port, **kw):
+        raise ReadbackError("无法确认符号")
+    with pytest.raises(ReadbackError, match="左键已发出，目标格画面已变"):
+        play(port, None, before, 1, lambda name, **d: events.append((name, d)), read_after=unreadable)
+    assert len(clicked) == 1 and events[-1][0] == "input_unconfirmed"
+    assert events[-1][1]["target_pixels_changed"] is True
 
 
 def test_native_mouse_up_flags_for_single_click_and_cleanup():
@@ -262,14 +345,37 @@ def test_noop_chord_falls_back_to_single_clicks():
     port = SimulatedPort(660000)
     click = port.click
     attempts = []
+    reads = []
     def no_chord(frame, cell, button):
         attempts.append(button)
         if button != "chord":
             click(frame,cell,button)
     port.click = no_chord
+    def read_after(io, **kw):
+        reads.append((attempts[-1], kw.get("unchanged_timeout")))
+        return io.read()
     play(port,load_policy(1),port.read(),660000,lambda *a,**k: None,
-         read_after=lambda io, **kw: io.read())
+         read_after=read_after)
     assert attempts.count("chord") == 1 and "left" in attempts[attempts.index("chord")+1:]
+    assert [button for button, timeout in reads if timeout is not None] == ["chord"]
+    assert .4 <= next(timeout for button, timeout in reads if button == "chord") <= 3
+
+
+def test_ignored_flag_is_remembered_without_toggling_or_chording():
+    port = SimulatedPort(660000)
+    original = port.click
+    attempts = []
+    def no_flag(frame, cell, button):
+        attempts.append(button)
+        if button != "right":
+            original(frame, cell, button)
+    port.click = no_flag
+    events = []
+    play(port, load_policy(1), port.read(), 660000, lambda name, **kw: events.append(name),
+         read_after=lambda io, **kw: io.read())
+    assert events.count("flag_unavailable") == 1
+    assert set(attempts[attempts.index("right")+1:]) == {"left"}
+    assert attempts.count("right") == 1
 
 
 def test_session_restarts_terminal_once_and_resets_game_statistics(monkeypatch):

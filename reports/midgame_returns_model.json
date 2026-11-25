@@ -1,0 +1,28 @@
+{
+  "seed": 4100000,
+  "games": 1536,
+  "actor_sha256": "505985d5d667df43bc9cd0a6de5475d9fe6108f600167ee30b1a3560a80adcca",
+  "draws": 16,
+  "positions": 350,
+  "features": [
+    "survival",
+    "actor_margin",
+    "safe_zero",
+    "safe_digit_entropy",
+    "safe_decides_neighbors",
+    "covered_neighbors",
+    "edge_neighbors"
+  ],
+  "coefficients": [
+    -0.21160254363691267,
+    0.008717652391941702,
+    -0.02460319838564594,
+    7.172252401870251e-05,
+    -0.0180727924012494,
+    -0.0363441981445485,
+    0.025256858582835724
+  ],
+  "min_edge": 0.025,
+  "cell_limit": 120,
+  "branches": 17392
+}

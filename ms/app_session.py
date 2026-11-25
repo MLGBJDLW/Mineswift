@@ -65,6 +65,34 @@ def activate(hwnd):
         time.sleep(0.02)
 
 
+def game_window(page):
+    """Bind the opened tab to its Chrome process; game state comes from screen pixels."""
+    page.bring_to_front()
+    session = page.context.browser.new_browser_cdp_session()
+    try:
+        processes = session.send("SystemInfo.getProcessInfo")["processInfo"]
+        pid = next(p["id"] for p in processes if p["type"] == "browser")
+    finally:
+        session.detach()
+    handles = {}
+    user = ctypes.windll.user32
+    for handle, title in windows().items():
+        owner = wintypes.DWORD()
+        user.GetWindowThreadProcessId(handle, ctypes.byref(owner))
+        if owner.value == pid:
+            handles[handle] = title
+    if len(handles) == 1:
+        return next(iter(handles))
+    foreground = user.GetForegroundWindow()
+    if foreground in handles and page.evaluate("document.hasFocus()"):
+        return foreground
+    title = page.title()
+    matches = [h for h, t in handles.items() if title and t.startswith(title + " - ")]
+    if len(matches) == 1:
+        return matches[0]
+    raise Stuck("网页已打开。请点选游戏窗口，以截图识别。")
+
+
 def window_capture(hwnd, *, screen=False):
     area = wintypes.RECT()
     u = ctypes.windll.user32
@@ -109,6 +137,20 @@ class Session:
     def emit(self, event, **data):
         self.events.put((event, data))
 
+    def record_recognition(self, stage, message):
+        base = os.environ.get("LOCALAPPDATA")
+        if not base:
+            return
+        record = dict(time=datetime.now().isoformat(timespec="seconds"), stage=stage,
+                      shape=getattr(self, "shape", None), box=getattr(self, "box", None), detail=message)
+        try:
+            folder = Path(base) / "Mineswift" / "runs"
+            folder.mkdir(parents=True, exist_ok=True)
+            with (folder / "recognition.jsonl").open("a", encoding="utf8") as file:
+                print(json.dumps(record, ensure_ascii=False), file=file)
+        except OSError:
+            pass  # diagnostics must not prevent manual calibration
+
     def preview(self, frame):
         bounds = (
             self.port.screen_bounds(frame.layout)
@@ -132,24 +174,10 @@ class Session:
         self.shape = spec["shape"]
         self.hwnd = spec["hwnd"]
         if spec["url"]:
-            from .web_browser import discover, player_tab
+            from .web_browser import player_tab
 
             self.page = stack.enter_context(player_tab(spec["url"]))
-            try:
-                self.port = discover(lambda: [self.page], 12, spec["mines"])
-                self.preview(settled(self.port))
-                return
-            except Stuck:
-                self.port = None
-                titles = windows()
-                names = [
-                    h
-                    for h, t in titles.items()
-                    if t == self.page.title() + " - Google Chrome"
-                ]
-                if len(names) != 1:
-                    raise Stuck("网页已打开。请从窗口列表选择这盘，以截图识别。")
-                self.hwnd = names[0]
+            self.hwnd = game_window(self.page)
         if self.hwnd not in windows():
             raise Stuck("请从列表中选择已打开的游戏，或粘贴网址。")
         if "扫雷游戏网页版 - Minesweeper" in windows().get(self.hwnd, ""):
@@ -164,9 +192,16 @@ class Session:
                 return
             except (Stuck, Unreadable):
                 self.port = None
-        shapes = [self.shape] if self.shape else PRESETS
+        shapes = [self.shape] if self.shape else None
         self.window_rect, self.title, self.image = window_capture(self.hwnd)
-        matches = locate_lattices(np.asarray(self.image), shapes)
+        def candidates():
+            pixels = np.asarray(self.image)
+            matches = locate_lattices(pixels, shapes)
+            if not matches and shapes is None:
+                return locate_lattices(pixels, PRESETS)
+            return matches
+
+        matches = candidates()
         # Chrome can return a complete frame with its accelerated board layer
         # missing. Retry the visible surface while the page paints its tiles.
         deadline = time.monotonic() + 4
@@ -176,7 +211,7 @@ class Session:
             self.window_rect, self.title, self.image = window_capture(
                 self.hwnd, screen=True
             )
-            matches = locate_lattices(np.asarray(self.image), shapes)
+            matches = candidates()
         if len(matches) == 1:
             self.shape, self.box = matches[0]
             self.detected_box = self.box
@@ -189,7 +224,9 @@ class Session:
                     )
         self.emit("capture_image", image=self.image, box=self.box)
         if self.box is None:
-            self.emit("hint", message="在预览上拖出棋盘的外边缘。")
+            reason = (f"发现 {len(matches)} 个可能的棋盘" if matches else "画面中未找到边缘完整的规则棋盘")
+            self.record_recognition("定位", reason)
+            self.emit("hint", message=f"{reason}。请在预览上框出要玩的棋盘。")
             return
         self.calibrate({})
 
@@ -234,7 +271,8 @@ class Session:
                 self.labels[changes["label"]] = cell
         total = self.spec["mines"] or PRESETS.get(self.shape)
         if total is None:
-            raise Stuck("请在盘型中填写行数、列数和总雷数，再识别一次。")
+            raise Stuck(f"已找到 {cal.rows} 行 × {cal.cols} 列。请在盘型中填写 "
+                        f"{cal.rows}x{cal.cols}/总雷数，再点识别游戏。")
         from .desktop_grid import _tile
 
         reader = DesktopReader(
@@ -262,6 +300,8 @@ class Session:
         port = DesktopGame.calibrated(
             self.hwnd, self.window_rect, self.title, box, reader, self.restart
         )
+        if self.page is not None:
+            port.page, port.page_url = self.page, self.page.url
         result = reader.decode(pixels, port.layout)
         self.port = port
         self.preview(result)
@@ -346,10 +386,11 @@ class Session:
                                                 screenshot = Path(log.name).with_suffix(".png")
                                                 crop.save(screenshot)
                                                 emit("readback_failed", board_image=screenshot.name)
-                                        emit("stopped", reason=str(exc))
+                                        emit("control_returned" if isinstance(exc, StopRequested) else "stopped",
+                                             reason=str(exc))
                                         raise
-                    except StopRequested:
-                        self.emit("released", message="鼠标已交还，可以继续自己玩。")
+                    except StopRequested as exc:
+                        self.emit("released", message=str(exc) or "鼠标已交还，可以继续自己玩。")
                     except Exception as exc:
                         if cmd == "bind" or cmd == "calibrate":
                             self.port = None
@@ -358,6 +399,8 @@ class Session:
                             if isinstance(exc, Inconsistent)
                             else str(exc) or type(exc).__name__
                         )
+                        if cmd in ("bind", "calibrate"):
+                            self.record_recognition("识别" if cmd == "bind" else "校准", message)
                         self.emit(
                             "error",
                             message=message,

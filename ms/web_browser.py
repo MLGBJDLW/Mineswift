@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 import numpy as np
 
 from .board import Board, Stuck, Unreadable
-from .web_chrome import RestartRound, StopRequested, settled
+from .web_chrome import BoardChanged, RestartRound, StopRequested, settled
 from .web_vision import Frame, GridLayout
 
 GRID = Path(__file__).with_name("web_grid.js").read_text(encoding="utf-8")
@@ -105,7 +105,7 @@ class BrowserBoard:
     def click(self, before, cell, button):
         if self.canvas:
             if not self.read().matches(before):
-                raise Stuck("落子前棋盘发生变化。")
+                raise BoardChanged("落子前棋盘发生变化。")
             x, y = before.layout.center(cell)
             # Use viewport coordinates for the canvas, including its CSS border.
             if (
@@ -133,7 +133,7 @@ class BrowserBoard:
                 target = self.root.evaluate_handle(GRID, {"mines": self.mines, "expected": expected, "target": idx})
             except Error as exc:
                 if "决定落子后棋盘发生变化" in str(exc):
-                    raise Stuck("落子前棋盘发生变化。") from exc
+                    raise BoardChanged("落子前棋盘发生变化。") from exc
                 raise Unreadable(str(exc).splitlines()[0]) from exc
             try:
                 if button != "chord":

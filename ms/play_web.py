@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
-from contextlib import ExitStack
+from contextlib import ExitStack, nullcontext
 from datetime import datetime
 import hashlib
 import json
@@ -15,10 +15,10 @@ from threading import Event
 
 import numpy as np
 
-from .board import Board, COVERED, FLAG, Stuck
+from .board import Board, COVERED, FLAG, Stuck, Unreadable
 from .chording import chord_candidates
 from .solver import NEIGHBOURS, ORTHOGONAL, Solver, _nbrs, raw_constraints
-from .web_chrome import ChromeGame, RestartRound, StopRequested, settled
+from .web_chrome import BoardChanged, ChromeGame, ReadbackError, RestartRound, StopRequested, settled
 from .web_vision import Sprites
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,10 +26,11 @@ WEIGHTS = ROOT / "models" / "belief_rl.pt"
 VARIANT_WEIGHTS = ROOT / "models" / "rl_guess.pt"
 
 
-def load_policy(seed, rules="classic"):
+def load_policy(seed, rules="classic", *, review=True):
     import torch
     from .belief_rl import BeliefActor
     from .belief_search import RolloutActor
+    from .verified_search import VerifiedActor
 
     torch.set_num_threads(1)
     if rules == "orthogonal":
@@ -41,7 +42,7 @@ def load_policy(seed, rules="classic"):
         return policy
     net = BeliefActor()
     net.load_state_dict(torch.load(WEIGHTS, weights_only=True, map_location="cpu")["model"])
-    return RolloutActor(net.eval(), seed)
+    return (VerifiedActor if review else RolloutActor)(net.eval(), seed)
 
 
 def visible_rows(board):
@@ -49,7 +50,7 @@ def visible_rows(board):
     return ["".join(symbols.get(int(v), str(v)) for v in row) for row in board.cells]
 
 
-def verify_change(before, after, cell, action, targets=()):
+def verify_change(before, after, cell, action, targets=(), *, during_update=False):
     if after.status != "playing":
         # The score panel can shift the entire grid on the winning click.
         if before.layout != after.layout and before.layout.geometry()[:2] != after.layout.geometry()[:2]:
@@ -61,16 +62,54 @@ def verify_change(before, after, cell, action, targets=()):
         raise Stuck("操作过程中棋盘位置或尺寸发生变化。")
     a, b = before.board, after.board
     changed = a.cells != b.cells
+    reveals = (a.cells == COVERED) & (b.cells >= 0)
     if action in ("flag", "unflag"):
         target, delta = (FLAG, -1) if action == "flag" else (COVERED, 1)
-        ok = changed.sum() == 1 and b.cells[cell] == target and b.mines_left == a.mines_left + delta
+        other_changes = changed & ~reveals
+        other_changes[cell] = False
+        possible = not other_changes.any() and b.cells[cell] in (a.cells[cell], target)
+        ok = possible and b.cells[cell] == target and b.mines_left == a.mines_left + delta
+        pending = possible and b.mines_left in (a.mines_left, a.mines_left + delta)
     else:
         opens = targets if action == "chord" else (cell,)
-        ok = (bool(opens) and all(a.cells[p] == COVERED and b.cells[p] >= 0 for p in opens)
-              and b.mines_left == a.mines_left
-              and np.all((a.cells[changed] == COVERED) & (b.cells[changed] >= 0)))
+        pending = b.mines_left == a.mines_left and np.all(~changed | reveals)
+        ok = pending and bool(opens) and all(reveals[p] for p in opens)
     if not ok:
+        if during_update and pending:
+            raise Unreadable("正在等待本次落子的目标格和计数器完成更新")
         raise Stuck("点击后的格子或雷数与预期不符。")
+
+
+def sync_before_input(port, frame, read_after):
+    current = read_after(port)
+    if (current.status == "playing" and current.layout == frame.layout
+            and current.board.mines_left == frame.board.mines_left):
+        changed = frame.board.cells != current.board.cells
+        if changed.any() and np.all((frame.board.cells[changed] == COVERED) & (current.board.cells[changed] >= 0)):
+            return current
+    if current.status == "won" and current.layout.geometry() == frame.layout.geometry():
+        return current
+    raise Stuck("落子前局面已改变，无法确认是同一盘的连续展开。")
+
+
+def click_and_observe(port, frame, cell, button, read_after, validate, emit, *, retry=False,
+                      unchanged_timeout=None):
+    started = time.perf_counter()
+    port.click(frame, cell, button)
+    sent = time.perf_counter()
+    row, col = cell[0] + 1, cell[1] + 1
+    emit("input_sent", row=row, col=col, button=button, attempt=2 if retry else 1,
+         dispatch_ms=round((sent - started)*1000, 1))
+    try:
+        options = {} if unchanged_timeout is None else {"unchanged_timeout": unchanged_timeout}
+        return read_after(port, before=frame, allow_unchanged=True, validate=validate, **options)
+    except ReadbackError as exc:
+        changed = port.target_changed(cell) if hasattr(port, "target_changed") else None
+        emit("input_unconfirmed", row=row, col=col, button=button, target_pixels_changed=changed,
+             feedback_ms=round((time.perf_counter()-sent)*1000, 1))
+        key = {"left": "左键", "right": "右键", "chord": "双键"}[button]
+        detail = {True: "目标格画面已变", False: "目标格画面未变", None: "尚未确认画面变化"}[changed]
+        raise ReadbackError(f"第 {row} 行第 {col} 列{key}已发出，{detail}。{exc}") from exc
 
 
 def best_chord(board, physical, safe):
@@ -107,6 +146,9 @@ def explain(board, cell, action, targets, details):
     if action == "opening":
         return "棋盘还没有数字，均匀随机选择首点。"
     if action == "guess":
+        if details.get("verified_worlds"):
+            return (f"没有确定步。复核了 {details['verified_worlds']} 种相容雷图，"
+                    f"选这格后，后续走最优步可以赢其中 {details['optimal_wins']} 盘。")
         worlds = details.get("rollout_worlds", 0)
         if worlds:
             return f"没有确定步。选这格后，模型在 {worlds} 种相容雷局中试走赢了 {details['rollout_wins']} 局。"
@@ -134,6 +176,7 @@ def play(port, policy, frame, seed, emit, *, chords=True, blind=False, hybrid=Fa
     rng = np.random.default_rng(seed)
     counts = Counter()
     durations = {}
+    slowest_confirmed_input = 0.0
     adapt_to_latency = adapt_to_latency and rules == "classic" and not blind
     open_samples = 0
     flag_cost = chord_cost = 1.0
@@ -210,28 +253,56 @@ def play(port, policy, frame, seed, emit, *, chords=True, blind=False, hybrid=Fa
                            "open":"四邻域约束证明此格安全。"}[action]), **details)
         button = {"chord": "chord", "flag": "right", "unflag": "right"}.get(action, "left")
         started = time.perf_counter()
-        port.click(frame, cell, button)
-        emit("input_sent", row=cell[0]+1, col=cell[1]+1, button=button,
-             dispatch_ms=round((time.perf_counter()-started)*1000, 1))
-        after = read_after(port, before=frame, allow_unchanged=True)
+        def validate_after(candidate):
+            verify_change(frame, candidate, cell, action, targets, during_update=True)
+
+        try:
+            probe = None
+            if action == "chord" and not counts["chords"] and slowest_confirmed_input:
+                probe = max(.4, min(3., 4 * slowest_confirmed_input))
+            after = click_and_observe(port, frame, cell, button, read_after, validate_after, emit,
+                                      unchanged_timeout=probe)
+        except BoardChanged:
+            frame = sync_before_input(port, frame, read_after)
+            emit("resynced", status=frame.status)
+            planning_started = time.perf_counter()
+            continue
         unchanged = after.matches(frame)
         if action == "chord" and unchanged:
             chords = False
-            emit("chord_unavailable")
+            emit("chord_unavailable", row=cell[0]+1, col=cell[1]+1,
+                 input_to_read_ms=round((time.perf_counter()-started)*1000, 1))
             planning_started = time.perf_counter()
             continue
         if unchanged:
+            if action == "flag":
+                # A clean timeout on a proved mine: leave it covered physically.
+                # Suppress chords so no gesture can rely on a missing physical flag.
+                trusted[cell] = True
+                blind, chords = True, False
+                emit("flag_unavailable", row=cell[0]+1, col=cell[1]+1)
+                planning_started = time.perf_counter()
+                continue
             if button != "left":
                 raise Stuck("右键发出后整盘持续无变化，请检查游戏的标旗设置。")
             # Only repeat a left click after a clean unchanged window. Each port
             # rechecks the target window and full board immediately before input.
             emit("input_retry", row=cell[0]+1, col=cell[1]+1)
-            port.click(frame, cell, button)
-            after = read_after(port, before=frame, allow_unchanged=False)
-            if after.matches(frame):
-                raise Stuck("再次左击后整盘仍无变化。")
+            try:
+                duration = port.longer_left_press() if hasattr(port, "longer_left_press") else nullcontext()
+                with duration:
+                    after = click_and_observe(port, frame, cell, button, read_after, validate_after, emit, retry=True)
+                    if after.matches(frame):
+                        raise Stuck(f"第 {cell[0]+1} 行第 {cell[1]+1} 列再次左击后整盘仍无变化。")
+                    verify_change(frame, after, cell, action, targets)
+            except BoardChanged:
+                frame = sync_before_input(port, frame, read_after)
+                emit("resynced", status=frame.status)
+                planning_started = time.perf_counter()
+                continue
         verify_change(frame, after, cell, action, targets)
         elapsed = time.perf_counter() - started
+        slowest_confirmed_input = max(slowest_confirmed_input, elapsed)
         if adapt_to_latency and chords and not unchanged and action in ("flag", "open", "chord"):
             durations[action] = .7 * durations.get(action, elapsed) + .3 * elapsed
             open_samples += int(action == "open")
@@ -324,7 +395,7 @@ def main():
     parser.add_argument("--shape", type=int, nargs=2, metavar=("ROWS","COLS"), help="桌面棋盘行数和列数")
     parser.add_argument("--covered", type=int, nargs=2, metavar=("ROW","COL"), help="框内的已知未开格，行列从 1 开始")
     parser.add_argument("--tiles", type=Path, help="桌面皮肤 PNG 图块目录")
-    parser.add_argument("--classic-colors", action="store_true", help="为经典配色皮肤启用数字颜色识别")
+    parser.add_argument("--classic-colors", action="store_true", help="辅助识别经典灰盘上的红旗和触雷图标")
     parser.add_argument("--sample-tile", action="append", nargs=3, metavar=("LABEL","ROW","COL"),
                         help="从框内指定格保存本皮肤图块，可重复使用；需要 --inspect --tiles")
     parser.add_argument("--mines", type=int, help="桌面或无计数器的语义网格的总雷数")

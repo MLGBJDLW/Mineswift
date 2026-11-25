@@ -32,10 +32,11 @@ Thumbs.db
 /reports/*_replay.json
 /data/**/*.jsonl
 
-# 仅发布运行程序和复现实验用到的五个权重
+# 仅发布运行程序和复现实验使用的权重
 /models/**
 !/models/belief_rl.pt
 !/models/rl_guess.pt
 !/models/raw_group_rl.pt
 !/models/value_rl.pt
 !/models/guess_scorer.pt
+!/models/tile_vision.pt

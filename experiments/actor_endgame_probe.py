@@ -38,7 +38,7 @@ class TreeActor(RolloutActor):
 
 
 def pair(seed):
-    live = load_policy(seed)
+    live = load_policy(seed, review=False)
     tree = TreeActor(live.actor, seed, world_limit=48, cell_limit=28)
     return dict(
         seed=seed,

@@ -1,6 +1,8 @@
 """Read a user-selected rectangular lattice in physical screen coordinates."""
 
 from pathlib import Path
+from contextlib import contextmanager
+from urllib.parse import urlsplit
 import ctypes
 from ctypes import wintypes
 import re
@@ -11,9 +13,9 @@ from PIL import Image, ImageGrab
 
 from .board import Board, COVERED, FLAG, Stuck, Unreadable
 from .executor import WindowsMouse, _window_at
-from .perception import Calibration, GlyphReader, GridFitError, Rect, fit_grid
+from .perception import Calibration, GridFitError, Rect, fit_grid
 from .solver import Inconsistent, NEIGHBOURS, ORTHOGONAL, raw_constraints
-from .web_chrome import StopRequested, settled
+from .web_chrome import BoardChanged, StopRequested, settled
 from .web_vision import Frame, GridLayout
 
 
@@ -29,76 +31,30 @@ def _axis_lines(centres, tolerance):
     return np.array([np.median(group) for group in groups])
 
 
-def locate_lattices(pixels, shapes):
+def locate_lattices(pixels, shapes=None):
     """Fit maximal rectangular groups of tile interiors, including mixed open/closed boards."""
     import cv2
 
-    shapes = set(shapes)
-    gray = cv2.cvtColor(pixels, cv2.COLOR_RGB2GRAY) // 8
-    height, width = gray.shape
-    colors = np.argsort(np.bincount(gray.ravel(), minlength=32))[-8:]
+    height, width = pixels.shape[:2]
     matches = []
-    for color in colors:
-        _, _, stats, _ = cv2.connectedComponentsWithStats(
-            np.uint8(gray == color), connectivity=4
-        )
-        x, y, w, h, area = stats[1:].T
-        keep = (
-            (w >= 5)
-            & (h >= 5)
-            & (w <= 150)
-            & (h <= 150)
-            & (w > 0.75 * h)
-            & (w < 1.33 * h)
-            & (area >= 0.42 * w * h)
-        )
-        tiles = stats[1:][keep]
-        if len(tiles) < 6:
-            continue
-        sizes, counts = np.unique(tiles[:, 2], return_counts=True)
-        for size in sizes[counts >= 4]:
-            similar = tiles[(tiles[:, 2] >= 0.73 * size) & (tiles[:, 2] <= 1.39 * size)]
-            centres = similar[:, :2] + similar[:, 2:4] / 2
-            # Join neighbouring centres locally. A toolbar elsewhere in the same
-            # window must not add an extra row or column to a valid board.
-            cx, cy = (centres / 3).astype(int).T
-            mask = np.zeros((height // 3 + 1, width // 3 + 1), np.uint8)
-            mask[cy, cx] = 1
-            k = int(np.ceil(size * 1.65 / 3))
-            mask = cv2.dilate(mask, np.ones((k, k), np.uint8))
-            _, groups = cv2.connectedComponents(mask)
-            ids = groups[cy, cx]
-            for group in np.unique(ids):
-                pts = centres[ids == group]
-                if len(pts) < 0.65 * min(r * c for r, c in shapes):
-                    continue
-                tol = max(1.6, size * 0.11)
-                xs, ys = (_axis_lines(axis, tol) for axis in pts.T)
-                rows, cols = len(ys), len(xs)
-                if (rows, cols) not in shapes or len(pts) < 0.65 * rows * cols:
-                    continue
-                dx, dy = (axis[-1] - axis[0] for axis in (xs, ys))
-                dx, dy = dx / (cols - 1), dy / (rows - 1)
-                if not (size * 0.9 <= dx <= size * 1.85 and 0.91 < dx / dy < 1.1):
-                    continue
-                if any(
-                    np.max(np.abs(axis - np.linspace(axis[0], axis[-1], len(axis))))
-                    > tol
-                    for axis in (xs, ys)
-                ):
-                    continue
-                box = tuple(
-                    round(v)
-                    for v in (
-                        xs[0] - dx / 2,
-                        ys[0] - dy / 2,
-                        xs[-1] + dx / 2,
-                        ys[-1] + dy / 2,
-                    )
-                )
-                if box[0] < 0 or box[1] < 0 or box[2] > width or box[3] > height:
-                    continue
-                matches.append((len(pts), (rows, cols), box))
+    if shapes is not None:
+        shapes = set(shapes)
+        gray = cv2.cvtColor(pixels, cv2.COLOR_RGB2GRAY) // 8
+        colors = np.argsort(np.bincount(gray.ravel(), minlength=32))[-8:]
+        for colour in colors:
+            matches.extend(_tile_lattices(_square_regions(gray == colour), height, width, shapes))
+    if not matches:
+        # Equal-luminance hues disappear in greyscale. Pool square interiors
+        # from different colours so open and alternating faces can share a lattice.
+        red, green, blue = (pixels[..., :3].astype(np.uint16) >> 4).transpose(2, 0, 1)
+        bins = (red << 8) | (green << 4) | blue
+        counts = np.bincount(bins.ravel(), minlength=4096)
+        groups = [_square_regions(bins == colour) for colour in np.argsort(counts)[-16:]
+                  if counts[colour] >= 25]
+        if groups:
+            matches = _tile_lattices(np.concatenate(groups), height, width, shapes)
+    if not matches:
+        matches = _ruled_lattices(pixels, shapes)
     unique = []
     for _, shape, box in sorted(matches, reverse=True):
         if not any(
@@ -107,6 +63,115 @@ def locate_lattices(pixels, shapes):
         ):
             unique.append((shape, box))
     return unique
+
+
+def _ruled_lattices(pixels, shapes):
+    """Find complete, regularly spaced rulings when textured faces have no solid fill."""
+    import cv2
+
+    edges = cv2.Canny(np.ascontiguousarray(pixels), 22, 65)
+    length = max(16, min(54, min(edges.shape) // 9))
+    horizontal = cv2.morphologyEx(edges, cv2.MORPH_OPEN, np.ones((1, length), np.uint8))
+    vertical = cv2.morphologyEx(edges, cv2.MORPH_OPEN, np.ones((length, 1), np.uint8))
+    joined = cv2.dilate(horizontal | vertical, np.ones((3, 3), np.uint8))
+    _, _, stats, _ = cv2.connectedComponentsWithStats(joined)
+    matches = []
+    for x, y, w, h, _ in stats[1:]:
+        if min(w, h) < 32:
+            continue
+        lines = []
+        for mask, axis in ((vertical, 0), (horizontal, 1)):
+            projection = np.mean(mask[y:y+h, x:x+w] != 0, axis=axis)
+            strong = np.flatnonzero(projection >= .78)
+            if not len(strong):
+                break
+            lines.append(_axis_lines(strong, 3))
+        if len(lines) != 2:
+            continue
+        xs, ys = lines
+        rows, cols = len(ys)-1, len(xs)-1
+        if not (3 <= rows <= 60 and 3 <= cols <= 60):
+            continue
+        if (shapes is not None and (rows, cols) not in shapes) or (shapes is None and min(rows, cols) < 5):
+            continue
+        dx, dy = np.mean(np.diff(xs)), np.mean(np.diff(ys))
+        if not (7 <= dx <= 150 and .91 < dx/dy < 1.1):
+            continue
+        if any(np.max(np.abs(np.diff(axis) - pitch)) > max(1.5, .08*pitch)
+               for axis, pitch in ((xs, dx), (ys, dy))):
+            continue
+        box = tuple(round(n) for n in (x+xs[0], y+ys[0], x+xs[-1], y+ys[-1]))
+        matches.append((rows*cols, (rows, cols), box))
+    return matches
+
+
+def _square_regions(mask):
+    import cv2
+
+    _, _, stats, _ = cv2.connectedComponentsWithStats(np.uint8(mask), connectivity=4)
+    x, y, w, h, area = stats[1:].T
+    keep = ((w >= 5) & (h >= 5) & (w <= 150) & (h <= 150)
+            & (w > 0.75 * h) & (w < 1.33 * h) & (area >= 0.42 * w * h))
+    return stats[1:][keep]
+
+
+def _tile_lattices(tiles, height, width, shapes):
+    import cv2
+
+    matches = []
+    if len(tiles) < 6:
+        return []
+    sizes, counts = np.unique(tiles[:, 2], return_counts=True)
+    for size in sizes[counts >= 4]:
+        similar = tiles[(tiles[:, 2] >= 0.73 * size) & (tiles[:, 2] <= 1.39 * size)]
+        centres = similar[:, :2] + similar[:, 2:4] / 2
+        # Join neighbouring centres locally. A toolbar elsewhere in the same
+        # window must not add an extra row or column to a valid board.
+        cx, cy = (centres / 3).astype(int).T
+        mask = np.zeros((height // 3 + 1, width // 3 + 1), np.uint8)
+        mask[cy, cx] = 1
+        k = int(np.ceil(size * 1.65 / 3))
+        mask = cv2.dilate(mask, np.ones((k, k), np.uint8))
+        _, groups = cv2.connectedComponents(mask)
+        ids = groups[cy, cx]
+        for group in np.unique(ids):
+            pts = centres[ids == group]
+            if len(pts) < (30 if shapes is None else 0.65 * min(r * c for r, c in shapes)):
+                continue
+            tol = max(1.6, size * 0.11)
+            xs, ys = (_axis_lines(axis, tol) for axis in pts.T)
+            rows, cols = len(ys), len(xs)
+            if shapes is None:
+                if not (5 <= rows <= 60 and 5 <= cols <= 60):
+                    continue
+            elif (rows, cols) not in shapes:
+                continue
+            dx, dy = (axis[-1] - axis[0] for axis in (xs, ys))
+            dx, dy = dx / (cols - 1), dy / (rows - 1)
+            if not (size * 0.9 <= dx <= size * 1.85 and 0.91 < dx / dy < 1.1):
+                continue
+            occupied = np.unique(np.rint((pts - (xs[0], ys[0])) / (dx, dy)), axis=0)
+            if len(occupied) < (0.90 if shapes is None else 0.65) * rows * cols:
+                continue
+            if any(
+                np.max(np.abs(axis - np.linspace(axis[0], axis[-1], len(axis))))
+                > tol
+                for axis in (xs, ys)
+            ):
+                continue
+            box = tuple(
+                round(v)
+                for v in (
+                    xs[0] - dx / 2,
+                    ys[0] - dy / 2,
+                    xs[-1] + dx / 2,
+                    ys[-1] + dy / 2,
+                )
+            )
+            if box[0] < 0 or box[1] < 0 or box[2] > width or box[3] > height:
+                continue
+            matches.append((len(occupied), (rows, cols), box))
+    return matches
 
 
 def find_lattice(pixels, rows, cols):
@@ -170,7 +235,7 @@ def _score_message(text):
     ) is not None
 
 
-def _classic_cell(crop):
+def _classic_marker(crop):
     """Windows classic colours, gated by a matching grey bevel on the reference tile."""
     pixels = crop.astype(np.int16)
     red, green, blue = pixels.transpose(2, 0, 1)
@@ -189,28 +254,12 @@ def _classic_cell(crop):
             and pole_x.max() >= flag_x.mean() - 2
         ):
             return FLAG
-    # Six classic digits have a unique saturated ink colour. Flags also contain red
-    # ink but have a black pole/base; ambiguous icons fall through to shape matching.
-    saturation = pixels.max(axis=2) - pixels.min(axis=2)
-    ink = saturation > max(65, 0.88 * saturation.max())
-    if ink.sum() < 3 or (pixels.max(axis=2) < 45).sum() > 2:
-        return None
-    # A classic bevel establishes the skin. Within that skin use channel
-    # separation: the same bright red glyph can be (255,0,0) or (234,51,35)
-    # in a captured browser. Leave a brightness gap between 3/5 and 1/4.
-    r, g, b = pixels[ink].T
-    blue_ink = (b-r > 70) & (b-g > 70) & (abs(r-g) < 48)
-    red_ink = (r-g > 70) & (r-b > 70) & (abs(g-b) < 48)
-    masks = (
-        blue_ink & (b >= 202), (g-r > 53) & (g-b > 65) & (g >= 85) & (g <= 165),
-        red_ink & (r >= 202), blue_ink & (b >= 95) & (b <= 162),
-        red_ink & (r >= 95) & (r <= 162),
-        (g-r > 55) & (b-r > 55) & (abs(g-b) < 30) & (g >= 95) & (g <= 162),
-    )
-    for digit, mask in enumerate(masks, 1):
-        if mask.mean() > 0.85:
-            return digit
     return None
+
+
+def _same_surface(colour, palette):
+    return any(np.max(np.abs(colour - other)) <= 7 for other in palette)
+
 
 
 class DesktopReader:
@@ -253,7 +302,7 @@ class DesktopReader:
             raise ValueError("总雷数必须在 1 与棋盘格数之间")
         self.total = total
         self.offsets = ORTHOGONAL if rules == "orthogonal" else NEIGHBOURS
-        self.glyphs = GlyphReader()
+        self.open_faces = []
         self.templates = {}
         if tiles:
             folder = Path(tiles)
@@ -272,19 +321,14 @@ class DesktopReader:
                         self.templates[value] = self.templates.get(value, []) + [
                             _tile(np.array(im.convert("RGB")))
                         ]
-        if covered is None and COVERED not in self.templates and classic_colors:
+        if covered is None and COVERED not in self.templates:
             for cell in np.ndindex((self.rows, self.cols)):
                 if _plain_bevel(_tile(self.crop(frame, *cell))):
                     covered = cell
                     break
         if covered is None and COVERED not in self.templates:
-            # A fresh flat skin can be calibrated from identical tiles.
-            ref = _tile(self.crop(frame, 0, 0))
-            if all(
-                np.mean((_tile(self.crop(frame, *cell)) - ref) ** 2) <= 8**2
-                for cell in np.ndindex((self.rows, self.cols))
-            ):
-                covered = (0, 0)
+            for cell in self.covered_samples(frame):
+                self.templates.setdefault(COVERED, []).append(_tile(self.crop(frame, *cell)))
         if covered is not None:
             r, c = covered
             if not (0 <= r < self.rows and 0 <= c < self.cols):
@@ -293,12 +337,47 @@ class DesktopReader:
         if COVERED not in self.templates:
             raise Unreadable("请在预览里点一个未开格作为皮肤样本。")
         ref = self.templates[COVERED][0]
-        self.classic = (
-            classic_colors
-            and np.ptp(ref, axis=2).mean() < 4
-            and 145 < np.median(ref) < 250
-            and ref[:3, 3:-3].mean() - ref[-3:, 3:-3].mean() > 45
-        )
+        self.classic = classic_colors and _plain_bevel(ref)
+        self.flat = not _plain_bevel(ref)
+        self.cover_faces = [np.median(tile[5:-5, 5:-5], axis=(0, 1))
+                            for tile in self.templates[COVERED]]
+
+    def observation(self, pixels, r, c):
+        from .tile_vision import observe
+
+        patch = self.crop(pixels, r, c)
+        h, w = patch.shape[:2]
+        dy, dx = max(1, round(h * .10)), max(1, round(w * .10))
+        return observe(patch[dy:-dy, dx:-dx])
+
+    def covered_samples(self, pixels):
+        """A numbered face identifies the open background, irrespective of its hue."""
+        from .tile_vision import classify
+
+        blanks = []
+        symbols = []
+        for cell in np.ndindex(self.rows, self.cols):
+            background, symbol = self.observation(pixels, *cell)
+            if symbol is None:
+                blanks.append((cell, background))
+            else:
+                symbols.append((cell, background, symbol))
+        for (_, colour, _), label in zip(symbols, classify([entry[2] for entry in symbols])):
+            if 1 <= label <= 8 and not _same_surface(colour, self.open_faces):
+                self.open_faces.append(colour)
+        if symbols and not self.open_faces:
+            return []
+        # Solid and checkerboard skins have at most one covered surface on each
+        # square parity. Refuse competing candidates even when one is much more common.
+        samples = {}
+        for cell, colour in blanks:
+            if _same_surface(colour, self.open_faces):
+                continue
+            parity = sum(cell) % 2
+            if parity in samples and not _same_surface(colour, [samples[parity][1]]):
+                return []
+            samples.setdefault(parity, (cell, colour))
+        return [cell for cell, _ in samples.values()]
 
     def crop(self, image, r, c):
         cal = self.cal
@@ -339,14 +418,19 @@ class DesktopReader:
             with path.open("xb") as out:
                 Image.fromarray(pixels).save(out, format="PNG")
 
-    def decode(self, pixels, layout, previous=None):
+    def decode(self, pixels, layout, previous=None, *, final_targets=()):
         # Each live port holds one verified frame from this calibration. Compare
         # the entire tile, including bevel and ink, before reusing any reading.
         cells = (np.empty((self.rows, self.cols), dtype=np.int8)
                  if previous is None else previous[1].copy())
         old_pixels = None if previous is None else previous[0]
         same = old_pixels is not None and np.array_equal(pixels, old_pixels)
+        from .tile_vision import FLAG_CLASS, MINE_CLASS, classify
+
         unknown = []
+        marked = []
+        blanks = []
+        open_faces = self.open_faces.copy()
         for r, c in (() if same else np.ndindex(cells.shape)):
             crop = self.crop(pixels, r, c)
             if old_pixels is not None and np.array_equal(crop, self.crop(old_pixels, r, c)):
@@ -366,32 +450,49 @@ class DesktopReader:
             if distance <= 11 and (len(scores) == 1 or scores[1][0] - distance >= 3):
                 if label == "lost":
                     return Frame(layout, "lost")
-                cells[r, c] = label
-                continue
-            if self.classic and _plain_bevel(patch):
+                if label != COVERED or not self.flat or np.array_equal(patch, self.templates[COVERED][0]):
+                    cells[r, c] = label
+                    if self.flat and label >= 0:
+                        colour, _ = self.observation(pixels, r, c)
+                        if not _same_surface(colour, open_faces):
+                            open_faces.append(colour)
+                    continue
+            if not self.flat and _plain_bevel(patch):
                 cells[r, c] = COVERED
                 continue
             x, y, w, h = self.cal.cell_box(r, c)
             interior = pixels[max(0, y) : y + h, max(0, x) : x + w]
-            classic_value = _classic_cell(interior) if self.classic else None
-            if classic_value == "lost":
+            marker = _classic_marker(interior) if self.classic else None
+            if marker == "lost":
                 return Frame(layout, "lost")
-            if (
-                classic_value is not None
-                and classic_value not in self.templates
-                and distance >= 15
-            ):
-                cells[r, c] = classic_value
+            if marker == FLAG and FLAG not in self.templates:
+                cells[r, c] = FLAG
                 continue
-            reading = self.glyphs.read(interior)
-            if (
-                distance < 15
-                or reading.value < FLAG
-                or reading.confidence < 0.45
-                or reading.value in self.templates
-            ):
+            colour, symbol = self.observation(pixels, r, c)
+            if symbol is None:
+                blanks.append((r, c, colour))
+            else:
+                marked.append((r, c, colour, symbol))
+
+        for (r, c, colour, _), label in zip(marked, classify([entry[3] for entry in marked])):
+            on_cover = self.flat and _same_surface(colour, self.cover_faces)
+            if label == MINE_CLASS:
+                return Frame(layout, "lost")
+            if label == FLAG_CLASS and (on_cover or not self.flat) and FLAG not in self.templates:
+                cells[r, c] = FLAG
+            elif 1 <= label <= 8 and not on_cover and label not in self.templates:
+                cells[r, c] = label
+                if not _same_surface(colour, open_faces):
+                    open_faces.append(colour)
+            else:
                 unknown.append((r + 1, c + 1))
-            cells[r, c] = reading.value
+        for r, c, colour in blanks:
+            if self.flat and _same_surface(colour, self.cover_faces):
+                cells[r, c] = COVERED
+            elif not self.flat or _same_surface(colour, open_faces):
+                cells[r, c] = 0
+            else:
+                unknown.append((r + 1, c + 1))
         if unknown:
             raise Unreadable(
                 f"无法确认 {len(unknown)} 格，首个为 {unknown[0]}；可为当前皮肤提供图块"
@@ -399,7 +500,11 @@ class DesktopReader:
         closed = int(np.count_nonzero(cells < 0))
         if closed < self.total:
             raise Unreadable("未开格少于总雷数，请核对皮肤和总雷数")
+        if final_targets and closed != self.total:
+            raise Unreadable("仍有未确认的安全格")
         if closed == self.total:
+            if any(cells[cell] < 0 for cell in final_targets):
+                raise Unreadable("末次操作的安全格仍未全部展开")
             solved = Board(
                 self.rows,
                 self.cols,
@@ -411,6 +516,7 @@ class DesktopReader:
             except Inconsistent as exc:
                 raise Unreadable("终局线索与剩余雷的位置不相符") from exc
             return Frame(layout, "won")
+        self.open_faces = open_faces
         return Frame(
             layout,
             "playing",
@@ -420,6 +526,24 @@ class DesktopReader:
 
 class DesktopGame:
     name = "desktop"
+    left_hold = .012
+
+    @contextmanager
+    def longer_left_press(self):
+        previous = self.left_hold
+        self.left_hold = .045
+        try:
+            yield
+        except BaseException:
+            self.left_hold = previous
+            raise
+
+    def target_changed(self, cell):
+        """Compare captures already made for this input, including unclassified pixels."""
+        if self.last_pixels is None or self._before_input.shape != self.last_pixels.shape:
+            return None
+        return not np.array_equal(self.reader.crop(self._before_input, *cell),
+                                  self.reader.crop(self.last_pixels, *cell))
 
     @classmethod
     def calibrated(cls, hwnd, window_rect, title, box, reader, restart_point=None):
@@ -576,14 +700,21 @@ class DesktopGame:
         rect, title = self.window_identity()
         if self.mouse.foreground_window() != self.hwnd or rect != self.window_rect:
             raise Stuck("目标窗口、标题或位置已经改变，请重新框选。")
-        if title != self.title:
+        page = getattr(self, "page", None)
+        if page is not None:
+            if page.is_closed() or page.evaluate("document.hidden"):
+                raise Stuck("已离开绑定的扫雷标签，请重新识别。")
+            if page.url != self.page_url:
+                if not getattr(self, "restarting", False) or urlsplit(page.url)[:2] != urlsplit(self.page_url)[:2]:
+                    raise Stuck("扫雷标签已导航，请重新识别。")
+        elif title != self.title:
             if not getattr(self, "restarting", False) or not _new_online_round(
                 self.title, title
             ):
                 raise Stuck("游戏窗口标题已改变，请重新识别游戏。")
             self.title = title
         if any(user.GetAsyncKeyState(v) & 0x8000 for v in (1, 2, 4)):
-            raise Stuck("检测到用户鼠标按键，已停止。")
+            raise StopRequested("检测到鼠标按键，已交还控制。")
         if self.controls and (
             self.controls.again.is_set() or user.GetAsyncKeyState(ord("R")) & 1
         ):
@@ -634,7 +765,12 @@ class DesktopGame:
         self.last_pixels = None
         self.last_pixels = self.capture()
         previous = getattr(self, "_verified", None)
-        frame = self.reader.decode(self.last_pixels, self.layout, previous)
+        try:
+            frame = self.reader.decode(self.last_pixels, self.layout, previous)
+        except Unreadable:
+            frame = self.final_reveal(self.last_pixels)
+            if frame is None:
+                raise
         if frame.board is not None and "minesweeper online" in self.title.casefold():
             cells = frame.board.cells
             padded = np.pad(cells == COVERED, 1)
@@ -650,6 +786,30 @@ class DesktopGame:
         self._verified = ((self.last_pixels.copy(), frame.board.cells.copy())
                           if frame.board is not None else None)
         return frame
+
+    def final_reveal(self, pixels):
+        """Use already confirmed clues only to verify a win under a result banner."""
+        snapshot = getattr(self, "_last_reveal", None)
+        if snapshot is None:
+            return None
+        original, cells, targets = snapshot
+        known = list(zip(*np.where(cells >= 0)))
+        if not known or pixels.shape != original.shape:
+            return None
+        unchanged = sum(np.array_equal(self.reader.crop(pixels, *cell), self.reader.crop(original, *cell))
+                        for cell in known)
+        if unchanged < .75 * len(known):
+            return None
+        # Every previously covered cell must still be read from the *new* image.
+        # Any missed target, mine icon or inconsistent final clue rules out a win.
+        merged = original.copy()
+        for cell in zip(*np.where(cells == COVERED)):
+            self.reader.crop(merged, *cell)[:] = self.reader.crop(pixels, *cell)
+        try:
+            result = self.reader.decode(merged, self.layout, (original, cells), final_targets=targets)
+        except Unreadable:
+            return None
+        return result if result.status == "won" else None
 
     def score_prompt(self):
         """Recognize Chrome's native score prompt on the bound .com window."""
@@ -709,14 +869,28 @@ class DesktopGame:
                 self.mouse.released_together(("right", "left"))
             else:
                 self.mouse.press(button)
-                time.sleep(0.012)
+                time.sleep(self.left_hold if button == "left" else .012)
                 self.mouse.release(button)
         # Leave the pointer here. Readback observes mouseup and the new board.
 
     def click(self, before, cell, button):
         if not self.read().matches(before):
-            raise Stuck("落子前棋盘发生变化。")
+            raise BoardChanged("落子前棋盘发生变化。")
+        self._before_input = self.last_pixels
+        self._last_reveal = None
+        board = before.board
+        targets = []
+        if button == "left" and board.cells[cell] == COVERED:
+            targets = [cell]
+        elif button == "chord" and board.cells[cell] > 0:
+            r, c = cell
+            neighbours = [(r+dr, c+dc) for dr, dc in self.reader.offsets
+                          if 0 <= r+dr < board.rows and 0 <= c+dc < board.cols]
+            if sum(board.cells[p] == FLAG for p in neighbours) == board.cells[cell]:
+                targets = [p for p in neighbours if board.cells[p] == COVERED]
         self.press(self.layout.center(cell), button)
+        if targets and len(targets) == int(board.covered().sum()) - board.mines_left:
+            self._last_reveal = (*self._verified, targets)
 
     def restart(self):
         if self.restart_point is None:
@@ -733,6 +907,7 @@ class DesktopGame:
             self.guard()
             cancel.GetCurrentPattern(u.UIA_InvokePatternId).QueryInterface(u.IUIAutomationInvokePattern).Invoke()
         before = settled(self)
+        self._last_reveal = None
         if before.board is not None and before.board.covered().all():
             return before
         self.press(tuple(self.restart_point), "left")
@@ -743,4 +918,6 @@ class DesktopGame:
             self.restarting = False
         if after.board is None or not after.board.covered().all():
             raise Stuck("重开后没有识别到全新棋盘。")
+        if getattr(self, "page", None) is not None:
+            self.page_url = self.page.url
         return after

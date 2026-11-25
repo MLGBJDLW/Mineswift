@@ -81,6 +81,21 @@ def test_large_state_digit_predictions_use_only_visible_information():
     assert ((first.planes[4:] >= 0) & (first.planes[4:] <= 1)).all()
 
 
+def test_guess_pattern_training_uses_the_public_budget_and_safe_reveals():
+    from experiments.guess_patterns import pattern
+    policy = BeliefPolicy(BeliefActor(), 1)
+    def position(row, remaining):
+        return policy.position(Board(1, len(row), np.array([row], dtype=np.int8), remaining))
+    row = [-1, 1, -1, 1, -1, -1, -1, -1]
+    low = position(row, 2)
+    high = position(row, 4)
+    assert (low.planes[0, 0, 2], high.planes[0, 0, 2]) == (.75, .25)
+    assert pattern(high) == "one_mine_unequal_risk"
+    tie = position([0, 1, -2, -1, -1, -1, -2, 1, 0], 1)
+    assert pattern(tie) == "equal_risk_different_information"
+    assert pattern(position([-1, 1, -1], 1)) == "other"
+
+
 def test_terminal_rollout_actor_improves_on_its_own_continuation():
     from ms.belief_search import RolloutActor
     from tests.test_endgame import RISK_TRADEOFF

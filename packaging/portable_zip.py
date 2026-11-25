@@ -10,7 +10,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 def main():
     root = Path(__file__).resolve().parents[1]
     bundle = root / "dist" / "Mineswift"
-    for required in ("Mineswift.exe", "_internal/models/belief_rl.pt", "_internal/ms/web_grid.js"):
+    for required in ("Mineswift.exe", "_internal/models/belief_rl.pt", "_internal/models/tile_vision.pt",
+                     "_internal/ms/web_grid.js"):
         if not (bundle / required).is_file():
             raise SystemExit(f"缺少 {required}，请先运行 python -m PyInstaller Mineswift.spec")
     destination = root / "release"

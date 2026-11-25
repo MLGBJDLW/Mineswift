@@ -14,7 +14,8 @@ jobs:
           python-version: '3.14'
       - run: python -m pip install -r requirements-web.txt -c requirements-eval.txt
       - run: python -m pytest -q
-      - run: python -m experiments.verify_release
+      - name: Verify archived results and replay 11 endgames with the default desktop policy
+        run: python -m experiments.verify_release
       - run: python -m experiments.release_eval --games 4 --jobs 1 --out replay.json
       - name: Compare replay with the published boards
         shell: python
